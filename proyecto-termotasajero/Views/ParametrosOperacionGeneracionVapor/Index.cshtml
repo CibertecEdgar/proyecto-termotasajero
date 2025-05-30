@@ -1,0 +1,432 @@
+﻿@model IEnumerable<proyecto_termotasajero.Models.ParametrosOperacionGeneracionVapor>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaHoraInicio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaHoraFinalizacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CorreoElectronico)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreOperador)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OperadorTurno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AirePurgaA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AirePurgaB)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CorrienteAirePurgaA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CorrienteAirePurgaB)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VTIA_PresionAceiteEntrada)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VTIA_PresionAceiteSalida)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VTIA_TempAceiteEntrada)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VTIA_TempAceiteSalida)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VTIB_PresionAceiteEntrada)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VTIB_PresionAceiteSalida)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VTIB_TempAceiteEntrada)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VTIB_TempAceiteSalida)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PresionFluidizadorA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PresionFluidizadorB)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SopladorFluidizadorA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SopladorFluidizadorB)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SopladorTransporteA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SopladorTransporteB)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VTFB_PresionEntrada)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VTFB_PresionSalida)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VTFB_TempEntrada)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VTFB_TempSalida)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VTFA_PresionEntrada)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VTFA_PresionSalida)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VTFA_TempEntrada)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VTFA_TempSalida)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BandaAC1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Scrapper)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PresionAguaLadoA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PresionAguaLadoB)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TempAceiteMolinoD)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TempAceiteMolinoC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TempAceiteMolinoB)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TempAceiteMolinoA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PresionCojineteSoporteA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PresionCojineteSoporteB)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PresionCojineteSoporteC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PresionCojineteSoporteD)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LjungstromB)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LjungstromA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PresionTk)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Apertura)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VibradorA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VibradorB)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VibradorC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ZarandaA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TrituradorA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ZarandaB)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TrituradorB)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FluidizadorB)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FluidizadorA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Observaciones)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TrenSeleccionadoSubirCarbon)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MolinoD_Seleccion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MolinoC_Seleccion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MolinoB_Seleccion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MolinoA_Seleccion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LjungstromA_Seleccion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LjungstromB_Seleccion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaCreacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UsuarioCreacion)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaHoraInicio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaHoraFinalizacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CorreoElectronico)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreOperador)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OperadorTurno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AirePurgaA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AirePurgaB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CorrienteAirePurgaA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CorrienteAirePurgaB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VTIA_PresionAceiteEntrada)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VTIA_PresionAceiteSalida)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VTIA_TempAceiteEntrada)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VTIA_TempAceiteSalida)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VTIB_PresionAceiteEntrada)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VTIB_PresionAceiteSalida)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VTIB_TempAceiteEntrada)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VTIB_TempAceiteSalida)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PresionFluidizadorA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PresionFluidizadorB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SopladorFluidizadorA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SopladorFluidizadorB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SopladorTransporteA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SopladorTransporteB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VTFB_PresionEntrada)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VTFB_PresionSalida)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VTFB_TempEntrada)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VTFB_TempSalida)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VTFA_PresionEntrada)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VTFA_PresionSalida)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VTFA_TempEntrada)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VTFA_TempSalida)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BandaAC1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Scrapper)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PresionAguaLadoA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PresionAguaLadoB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TempAceiteMolinoD)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TempAceiteMolinoC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TempAceiteMolinoB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TempAceiteMolinoA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PresionCojineteSoporteA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PresionCojineteSoporteB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PresionCojineteSoporteC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PresionCojineteSoporteD)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LjungstromB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LjungstromA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PresionTk)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Apertura)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VibradorA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VibradorB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VibradorC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ZarandaA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TrituradorA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ZarandaB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TrituradorB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FluidizadorB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FluidizadorA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Observaciones)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TrenSeleccionadoSubirCarbon)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MolinoD_Seleccion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MolinoC_Seleccion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MolinoB_Seleccion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MolinoA_Seleccion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LjungstromA_Seleccion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LjungstromB_Seleccion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaCreacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UsuarioCreacion)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

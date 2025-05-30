@@ -1,17 +1,17 @@
 ﻿@model proyecto_termotasajero.Models.ParametrosOperacionGeneracionVapor
 
 @{
-    ViewData["Title"] = "RegistrarParametroOperacionGeneracionVapor";
+    ViewData["Title"] = "Registrar";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>RegistrarParametroOperacionGeneracionVapor</h1>
+<h1>Registrar</h1>
 
 <h4>ParametrosOperacionGeneracionVapor</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="RegistrarParametroOperacionGeneracionVapor">
+        <form asp-action="Registrar">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="ID" class="control-label"></label>
@@ -359,6 +359,3 @@
     <a asp-action="Index">Back to List</a>
 </div>
 
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
