@@ -11,7 +11,6 @@ using Microsoft.Data.SqlClient;
 
 namespace proyecto_termotasajero.Controllers
 {
-    [Route("[controller]")]
     public class ParametrosOperacionGeneracionVaporController : Controller
     {
         private readonly ILogger<ParametrosOperacionGeneracionVaporController> _logger;
@@ -20,7 +19,7 @@ namespace proyecto_termotasajero.Controllers
         public ParametrosOperacionGeneracionVaporController(ILogger<ParametrosOperacionGeneracionVaporController> logger, IConfiguration configuration)
         {
             _logger = logger;
-            _connectionString = configuration.GetConnectionString("sqlConUser");
+            _connectionString = configuration.GetConnectionString("sql");
         }
 
         // Listar registros usando procedimiento almacenado
