@@ -20,98 +20,10 @@ namespace proyecto_termotasajero.Controllers
         public ParametrosOperacionGeneracionVaporController(ILogger<ParametrosOperacionGeneracionVaporController> logger, IConfiguration configuration)
         {
             _logger = logger;
-            _connectionString = configuration.GetConnectionString("sqlConUser");
+            _connectionString = configuration.GetConnectionString("sql");
         }
 
-        // Listar registros usando procedimiento almacenado
-        [HttpGet]
-        public IActionResult Index()
-        {
-            var lista = new List<proyecto_termotasajero.Models.ParametrosOperacionGeneracionVapor>();
-            using (var conn = new SqlConnection(_connectionString))
-            {
-                conn.Open();
-                var cmd = new SqlCommand("ListarParametrosOperacionGeneracionVapor", conn);
-                cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                using (var reader = cmd.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        lista.Add(new proyecto_termotasajero.Models.ParametrosOperacionGeneracionVapor
-                        {
-                            ID = reader.GetInt32(reader.GetOrdinal("ID")),
-                            FechaHoraInicio = reader.GetDateTime(reader.GetOrdinal("FechaHoraInicio")),
-                            FechaHoraFinalizacion = reader.GetDateTime(reader.GetOrdinal("FechaHoraFinalizacion")),
-                            CorreoElectronico = reader.IsDBNull(reader.GetOrdinal("CorreoElectronico")) ? null : reader.GetString(reader.GetOrdinal("CorreoElectronico")),
-                            NombreOperador = reader.IsDBNull(reader.GetOrdinal("NombreOperador")) ? null : reader.GetString(reader.GetOrdinal("NombreOperador")),
-                            OperadorTurno = reader.IsDBNull(reader.GetOrdinal("OperadorTurno")) ? null : reader.GetString(reader.GetOrdinal("OperadorTurno")),
-                            AirePurgaA = reader.IsDBNull(reader.GetOrdinal("AirePurgaA")) ? null : reader.GetString(reader.GetOrdinal("AirePurgaA")),
-                            AirePurgaB = reader.IsDBNull(reader.GetOrdinal("AirePurgaB")) ? null : reader.GetString(reader.GetOrdinal("AirePurgaB")),
-                            CorrienteAirePurgaA = reader.GetDecimal(reader.GetOrdinal("CorrienteAirePurgaA")),
-                            CorrienteAirePurgaB = reader.GetDecimal(reader.GetOrdinal("CorrienteAirePurgaB")),
-                            VTIA_PresionAceiteEntrada = reader.GetDecimal(reader.GetOrdinal("VTIA_PresionAceiteEntrada")),
-                            VTIA_PresionAceiteSalida = reader.GetDecimal(reader.GetOrdinal("VTIA_PresionAceiteSalida")),
-                            VTIA_TempAceiteEntrada = reader.GetDecimal(reader.GetOrdinal("VTIA_TempAceiteEntrada")),
-                            VTIA_TempAceiteSalida = reader.GetDecimal(reader.GetOrdinal("VTIA_TempAceiteSalida")),
-                            VTIB_PresionAceiteEntrada = reader.GetDecimal(reader.GetOrdinal("VTIB_PresionAceiteEntrada")),
-                            VTIB_PresionAceiteSalida = reader.GetDecimal(reader.GetOrdinal("VTIB_PresionAceiteSalida")),
-                            VTIB_TempAceiteEntrada = reader.GetDecimal(reader.GetOrdinal("VTIB_TempAceiteEntrada")),
-                            VTIB_TempAceiteSalida = reader.GetDecimal(reader.GetOrdinal("VTIB_TempAceiteSalida")),
-                            PresionFluidizadorA = reader.GetDecimal(reader.GetOrdinal("PresionFluidizadorA")),
-                            PresionFluidizadorB = reader.GetDecimal(reader.GetOrdinal("PresionFluidizadorB")),
-                            SopladorFluidizadorA = reader.IsDBNull(reader.GetOrdinal("SopladorFluidizadorA")) ? null : reader.GetString(reader.GetOrdinal("SopladorFluidizadorA")),
-                            SopladorFluidizadorB = reader.IsDBNull(reader.GetOrdinal("SopladorFluidizadorB")) ? null : reader.GetString(reader.GetOrdinal("SopladorFluidizadorB")),
-                            SopladorTransporteA = reader.IsDBNull(reader.GetOrdinal("SopladorTransporteA")) ? null : reader.GetString(reader.GetOrdinal("SopladorTransporteA")),
-                            SopladorTransporteB = reader.IsDBNull(reader.GetOrdinal("SopladorTransporteB")) ? null : reader.GetString(reader.GetOrdinal("SopladorTransporteB")),
-                            VTFB_PresionEntrada = reader.GetDecimal(reader.GetOrdinal("VTFB_PresionEntrada")),
-                            VTFB_PresionSalida = reader.GetDecimal(reader.GetOrdinal("VTFB_PresionSalida")),
-                            VTFB_TempEntrada = reader.GetDecimal(reader.GetOrdinal("VTFB_TempEntrada")),
-                            VTFB_TempSalida = reader.GetDecimal(reader.GetOrdinal("VTFB_TempSalida")),
-                            VTFA_PresionEntrada = reader.GetDecimal(reader.GetOrdinal("VTFA_PresionEntrada")),
-                            VTFA_PresionSalida = reader.GetDecimal(reader.GetOrdinal("VTFA_PresionSalida")),
-                            VTFA_TempEntrada = reader.GetDecimal(reader.GetOrdinal("VTFA_TempEntrada")),
-                            VTFA_TempSalida = reader.GetDecimal(reader.GetOrdinal("VTFA_TempSalida")),
-                            BandaAC1 = reader.IsDBNull(reader.GetOrdinal("BandaAC1")) ? null : reader.GetString(reader.GetOrdinal("BandaAC1")),
-                            Scrapper = reader.IsDBNull(reader.GetOrdinal("Scrapper")) ? null : reader.GetString(reader.GetOrdinal("Scrapper")),
-                            PresionAguaLadoA = reader.GetDecimal(reader.GetOrdinal("PresionAguaLadoA")),
-                            PresionAguaLadoB = reader.GetDecimal(reader.GetOrdinal("PresionAguaLadoB")),
-                            TempAceiteMolinoD = reader.GetDecimal(reader.GetOrdinal("TempAceiteMolinoD")),
-                            TempAceiteMolinoC = reader.GetDecimal(reader.GetOrdinal("TempAceiteMolinoC")),
-                            TempAceiteMolinoB = reader.GetDecimal(reader.GetOrdinal("TempAceiteMolinoB")),
-                            TempAceiteMolinoA = reader.GetDecimal(reader.GetOrdinal("TempAceiteMolinoA")),
-                            PresionCojineteSoporteA = reader.GetDecimal(reader.GetOrdinal("PresionCojineteSoporteA")),
-                            PresionCojineteSoporteB = reader.GetDecimal(reader.GetOrdinal("PresionCojineteSoporteB")),
-                            PresionCojineteSoporteC = reader.GetDecimal(reader.GetOrdinal("PresionCojineteSoporteC")),
-                            PresionCojineteSoporteD = reader.GetDecimal(reader.GetOrdinal("PresionCojineteSoporteD")),
-                            LjungstromB = reader.IsDBNull(reader.GetOrdinal("LjungstromB")) ? null : reader.GetString(reader.GetOrdinal("LjungstromB")),
-                            LjungstromA = reader.IsDBNull(reader.GetOrdinal("LjungstromA")) ? null : reader.GetString(reader.GetOrdinal("LjungstromA")),
-                            PresionTk = reader.GetDecimal(reader.GetOrdinal("PresionTk")),
-                            Apertura = reader.IsDBNull(reader.GetOrdinal("Apertura")) ? null : reader.GetString(reader.GetOrdinal("Apertura")),
-                            VibradorA = reader.IsDBNull(reader.GetOrdinal("VibradorA")) ? null : reader.GetString(reader.GetOrdinal("VibradorA")),
-                            VibradorB = reader.IsDBNull(reader.GetOrdinal("VibradorB")) ? null : reader.GetString(reader.GetOrdinal("VibradorB")),
-                            VibradorC = reader.IsDBNull(reader.GetOrdinal("VibradorC")) ? null : reader.GetString(reader.GetOrdinal("VibradorC")),
-                            ZarandaA = reader.IsDBNull(reader.GetOrdinal("ZarandaA")) ? null : reader.GetString(reader.GetOrdinal("ZarandaA")),
-                            TrituradorA = reader.IsDBNull(reader.GetOrdinal("TrituradorA")) ? null : reader.GetString(reader.GetOrdinal("TrituradorA")),
-                            ZarandaB = reader.IsDBNull(reader.GetOrdinal("ZarandaB")) ? null : reader.GetString(reader.GetOrdinal("ZarandaB")),
-                            TrituradorB = reader.IsDBNull(reader.GetOrdinal("TrituradorB")) ? null : reader.GetString(reader.GetOrdinal("TrituradorB")),
-                            FluidizadorB = reader.IsDBNull(reader.GetOrdinal("FluidizadorB")) ? null : reader.GetString(reader.GetOrdinal("FluidizadorB")),
-                            FluidizadorA = reader.IsDBNull(reader.GetOrdinal("FluidizadorA")) ? null : reader.GetString(reader.GetOrdinal("FluidizadorA")),
-                            Observaciones = reader.IsDBNull(reader.GetOrdinal("Observaciones")) ? null : reader.GetString(reader.GetOrdinal("Observaciones")),
-                            TrenSeleccionadoSubirCarbon = reader.IsDBNull(reader.GetOrdinal("TrenSeleccionadoSubirCarbon")) ? null : reader.GetString(reader.GetOrdinal("TrenSeleccionadoSubirCarbon")),
-                            MolinoD_Seleccion = reader.IsDBNull(reader.GetOrdinal("MolinoD_Seleccion")) ? null : reader.GetString(reader.GetOrdinal("MolinoD_Seleccion")),
-                            MolinoC_Seleccion = reader.IsDBNull(reader.GetOrdinal("MolinoC_Seleccion")) ? null : reader.GetString(reader.GetOrdinal("MolinoC_Seleccion")),
-                            MolinoB_Seleccion = reader.IsDBNull(reader.GetOrdinal("MolinoB_Seleccion")) ? null : reader.GetString(reader.GetOrdinal("MolinoB_Seleccion")),
-                            MolinoA_Seleccion = reader.IsDBNull(reader.GetOrdinal("MolinoA_Seleccion")) ? null : reader.GetString(reader.GetOrdinal("MolinoA_Seleccion")),
-                            LjungstromA_Seleccion = reader.IsDBNull(reader.GetOrdinal("LjungstromA_Seleccion")) ? null : reader.GetString(reader.GetOrdinal("LjungstromA_Seleccion")),
-                            LjungstromB_Seleccion = reader.IsDBNull(reader.GetOrdinal("LjungstromB_Seleccion")) ? null : reader.GetString(reader.GetOrdinal("LjungstromB_Seleccion")),
-                            FechaCreacion = reader.GetDateTime(reader.GetOrdinal("FechaCreacion")),
-                            UsuarioCreacion = reader.IsDBNull(reader.GetOrdinal("UsuarioCreacion")) ? null : reader.GetString(reader.GetOrdinal("UsuarioCreacion"))
-                        });
-                    }
-                }
-            }
-            return View(lista);
-        }
+        
 
 
         // Registrar nuevo registro usando procedimiento almacenado
