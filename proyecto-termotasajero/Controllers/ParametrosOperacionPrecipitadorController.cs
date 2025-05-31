@@ -10,7 +10,6 @@ using Microsoft.Data.SqlClient;
 
 namespace proyecto_termotasajero.Controllers
 {
-    [Route("[controller]")]
     public class ParametrosOperacionPrecipitadorController : Controller
     {
         private readonly ILogger<ParametrosOperacionPrecipitadorController> _logger;
@@ -30,7 +29,8 @@ namespace proyecto_termotasajero.Controllers
             using (var conn = new SqlConnection(_connectionString))
             {
                 conn.Open();
-                var cmd = new SqlCommand("SELECT * FROM ParametrosOperacionPrecipitador", conn);
+                var cmd = new SqlCommand("Sp_ListarParametrosOperacionPrecipitador", conn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
                 using (var reader = cmd.ExecuteReader())
                 {
                     while (reader.Read())
@@ -91,12 +91,17 @@ namespace proyecto_termotasajero.Controllers
                         item.Nivel2A1 = reader.IsDBNull(reader.GetOrdinal("Nivel2A1")) ? null : reader.GetString(reader.GetOrdinal("Nivel2A1"));
                         item.Temp1A1 = reader.GetDecimal(reader.GetOrdinal("Temp1A1"));
                         item.Nivel1A1 = reader.IsDBNull(reader.GetOrdinal("Nivel1A1")) ? null : reader.GetString(reader.GetOrdinal("Nivel1A1"));
-                        // ...continúa con el resto de campos del modelo...
                         lista.Add(item);
                     }
                 }
             }
             return View(lista);
+        }
+
+        [HttpGet]
+        public IActionResult Registrar()
+        {
+            return View("Registrar");
         }
 
         // Registrar nuevo registro usando Store Procedure
@@ -109,7 +114,7 @@ namespace proyecto_termotasajero.Controllers
             using (var conn = new SqlConnection(_connectionString))
             {
                 conn.Open();
-                var cmd = new SqlCommand("InsertParametrosOperacionPrecipitador", conn);
+                var cmd = new SqlCommand("Sp_InsertParametrosOperacionPrecipitador", conn);
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@FechaHoraInicio", modelo.FechaHoraInicio);
                 cmd.Parameters.AddWithValue("@FechaHoraFinalizacion", modelo.FechaHoraFinalizacion);

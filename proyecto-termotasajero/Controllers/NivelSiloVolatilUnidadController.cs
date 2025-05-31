@@ -11,7 +11,6 @@ using Microsoft.Data.SqlClient;
 
 namespace proyecto_termotasajero.Controllers
 {
-    [Route("[controller]")]
     public class NivelSiloVolatilUnidadController : Controller
     {
         private readonly ILogger<NivelSiloVolatilUnidadController> _logger;
@@ -31,7 +30,8 @@ namespace proyecto_termotasajero.Controllers
             using (var conn = new SqlConnection(_connectionString))
             {
                 conn.Open();
-                var cmd = new SqlCommand("SELECT ID, HoraInicio, HoraFinalizacion, OperadorTurno, NivelSiloVolatilMetros FROM NivelSiloVolatilUnidad", conn);
+                var cmd = new SqlCommand("Sp_ListarNivelSiloVolatilUnidad", conn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
                 using (var reader = cmd.ExecuteReader())
                 {
                     while (reader.Read())
@@ -48,6 +48,12 @@ namespace proyecto_termotasajero.Controllers
                 }
             }
             return View(lista);
+        }
+
+        [HttpGet]
+        public IActionResult Registrar()
+        {
+            return View("Registrar");
         }
 
         // Registrar nuevo registro usando Store Procedure
