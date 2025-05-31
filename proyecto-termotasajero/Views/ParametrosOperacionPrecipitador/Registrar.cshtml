@@ -6,850 +6,869 @@
 }
 
 <h1>Registrar</h1>
-
 <h4>ParametrosOperacionPrecipitador</h4>
 <hr />
 <div class="row">
-    <div class="col-md-4">
-        <form asp-action="Registrar">
+    <div class="col-md-12">
+        <form asp-action="Registrar" id="multiStepForm">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            @* <div class="form-group">
-                <label asp-for="ID" class="control-label"></label>
-                <input asp-for="ID" class="form-control" />
-                <span asp-validation-for="ID" class="text-danger"></span>
-            </div> *@
-            <div class="form-group">
-                <label asp-for="FechaHoraInicio" class="control-label"></label>
-                <input asp-for="FechaHoraInicio" class="form-control" />
-                <span asp-validation-for="FechaHoraInicio" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="FechaHoraFinalizacion" class="control-label"></label>
-                <input asp-for="FechaHoraFinalizacion" class="form-control" />
-                <span asp-validation-for="FechaHoraFinalizacion" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="NombreOperador" class="control-label"></label>
-                <input asp-for="NombreOperador" class="form-control" />
-                <span asp-validation-for="NombreOperador" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="OperadorTurno" class="control-label"></label>
-                <input asp-for="OperadorTurno" class="form-control" />
-                <span asp-validation-for="OperadorTurno" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="IPF14" class="control-label"></label>
-                <input asp-for="IPF14" class="form-control" />
-                <span asp-validation-for="IPF14" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="IPF13" class="control-label"></label>
-                <input asp-for="IPF13" class="form-control" />
-                <span asp-validation-for="IPF13" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="IPF15" class="control-label"></label>
-                <input asp-for="IPF15" class="form-control" />
-                <span asp-validation-for="IPF15" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="IPF16" class="control-label"></label>
-                <input asp-for="IPF16" class="form-control" />
-                <span asp-validation-for="IPF16" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="IPF12" class="control-label"></label>
-                <input asp-for="IPF12" class="form-control" />
-                <span asp-validation-for="IPF12" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="IPF11" class="control-label"></label>
-                <input asp-for="IPF11" class="form-control" />
-                <span asp-validation-for="IPF11" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="IPF10" class="control-label"></label>
-                <input asp-for="IPF10" class="form-control" />
-                <span asp-validation-for="IPF10" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="IPF9" class="control-label"></label>
-                <input asp-for="IPF9" class="form-control" />
-                <span asp-validation-for="IPF9" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="IPF5" class="control-label"></label>
-                <input asp-for="IPF5" class="form-control" />
-                <span asp-validation-for="IPF5" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="IPF6" class="control-label"></label>
-                <input asp-for="IPF6" class="form-control" />
-                <span asp-validation-for="IPF6" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="IPF7" class="control-label"></label>
-                <input asp-for="IPF7" class="form-control" />
-                <span asp-validation-for="IPF7" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="IPF8" class="control-label"></label>
-                <input asp-for="IPF8" class="form-control" />
-                <span asp-validation-for="IPF8" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="IPF4" class="control-label"></label>
-                <input asp-for="IPF4" class="form-control" />
-                <span asp-validation-for="IPF4" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="IPF3" class="control-label"></label>
-                <input asp-for="IPF3" class="form-control" />
-                <span asp-validation-for="IPF3" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="IPF2" class="control-label"></label>
-                <input asp-for="IPF2" class="form-control" />
-                <span asp-validation-for="IPF2" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="IPF1" class="control-label"></label>
-                <input asp-for="IPF1" class="form-control" />
-                <span asp-validation-for="IPF1" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Temp1B2" class="control-label"></label>
-                <input asp-for="Temp1B2" class="form-control" />
-                <span asp-validation-for="Temp1B2" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Nivel1B2" class="control-label"></label>
-                <input asp-for="Nivel1B2" class="form-control" />
-                <span asp-validation-for="Nivel1B2" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Temp2B2" class="control-label"></label>
-                <input asp-for="Temp2B2" class="form-control" />
-                <span asp-validation-for="Temp2B2" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Nivel2B2" class="control-label"></label>
-                <input asp-for="Nivel2B2" class="form-control" />
-                <span asp-validation-for="Nivel2B2" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Temp3B2" class="control-label"></label>
-                <input asp-for="Temp3B2" class="form-control" />
-                <span asp-validation-for="Temp3B2" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Nivel3B2" class="control-label"></label>
-                <input asp-for="Nivel3B2" class="form-control" />
-                <span asp-validation-for="Nivel3B2" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Temp4B2" class="control-label"></label>
-                <input asp-for="Temp4B2" class="form-control" />
-                <span asp-validation-for="Temp4B2" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Nivel4B2" class="control-label"></label>
-                <input asp-for="Nivel4B2" class="form-control" />
-                <span asp-validation-for="Nivel4B2" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Temp4B1" class="control-label"></label>
-                <input asp-for="Temp4B1" class="form-control" />
-                <span asp-validation-for="Temp4B1" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Nivel4B1" class="control-label"></label>
-                <input asp-for="Nivel4B1" class="form-control" />
-                <span asp-validation-for="Nivel4B1" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Temp3B1" class="control-label"></label>
-                <input asp-for="Temp3B1" class="form-control" />
-                <span asp-validation-for="Temp3B1" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Nivel3B1" class="control-label"></label>
-                <input asp-for="Nivel3B1" class="form-control" />
-                <span asp-validation-for="Nivel3B1" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Temp2B1" class="control-label"></label>
-                <input asp-for="Temp2B1" class="form-control" />
-                <span asp-validation-for="Temp2B1" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Nivel2B1" class="control-label"></label>
-                <input asp-for="Nivel2B1" class="form-control" />
-                <span asp-validation-for="Nivel2B1" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Temp1B1" class="control-label"></label>
-                <input asp-for="Temp1B1" class="form-control" />
-                <span asp-validation-for="Temp1B1" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Nivel1B1" class="control-label"></label>
-                <input asp-for="Nivel1B1" class="form-control" />
-                <span asp-validation-for="Nivel1B1" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Temp1A2" class="control-label"></label>
-                <input asp-for="Temp1A2" class="form-control" />
-                <span asp-validation-for="Temp1A2" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Nivel1A2" class="control-label"></label>
-                <input asp-for="Nivel1A2" class="form-control" />
-                <span asp-validation-for="Nivel1A2" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Temp2A2" class="control-label"></label>
-                <input asp-for="Temp2A2" class="form-control" />
-                <span asp-validation-for="Temp2A2" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Nivel2A2" class="control-label"></label>
-                <input asp-for="Nivel2A2" class="form-control" />
-                <span asp-validation-for="Nivel2A2" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Temp3A2" class="control-label"></label>
-                <input asp-for="Temp3A2" class="form-control" />
-                <span asp-validation-for="Temp3A2" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Nivel3A2" class="control-label"></label>
-                <input asp-for="Nivel3A2" class="form-control" />
-                <span asp-validation-for="Nivel3A2" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Temp4A2" class="control-label"></label>
-                <input asp-for="Temp4A2" class="form-control" />
-                <span asp-validation-for="Temp4A2" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Nivel4A2" class="control-label"></label>
-                <input asp-for="Nivel4A2" class="form-control" />
-                <span asp-validation-for="Nivel4A2" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Temp4A1" class="control-label"></label>
-                <input asp-for="Temp4A1" class="form-control" />
-                <span asp-validation-for="Temp4A1" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Nivel4A1" class="control-label"></label>
-                <input asp-for="Nivel4A1" class="form-control" />
-                <span asp-validation-for="Nivel4A1" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Temp3A1" class="control-label"></label>
-                <input asp-for="Temp3A1" class="form-control" />
-                <span asp-validation-for="Temp3A1" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Nivel3A1" class="control-label"></label>
-                <input asp-for="Nivel3A1" class="form-control" />
-                <span asp-validation-for="Nivel3A1" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Temp2A1" class="control-label"></label>
-                <input asp-for="Temp2A1" class="form-control" />
-                <span asp-validation-for="Temp2A1" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Nivel2A1" class="control-label"></label>
-                <input asp-for="Nivel2A1" class="form-control" />
-                <span asp-validation-for="Nivel2A1" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Temp1A1" class="control-label"></label>
-                <input asp-for="Temp1A1" class="form-control" />
-                <span asp-validation-for="Temp1A1" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Nivel1A1" class="control-label"></label>
-                <input asp-for="Nivel1A1" class="form-control" />
-                <span asp-validation-for="Nivel1A1" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo1A1_Amps" class="control-label"></label>
-                <input asp-for="Campo1A1_Amps" class="form-control" />
-                <span asp-validation-for="Campo1A1_Amps" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo1A1_Volts" class="control-label"></label>
-                <input asp-for="Campo1A1_Volts" class="form-control" />
-                <span asp-validation-for="Campo1A1_Volts" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo1A1_mA" class="control-label"></label>
-                <input asp-for="Campo1A1_mA" class="form-control" />
-                <span asp-validation-for="Campo1A1_mA" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo1A1_KV" class="control-label"></label>
-                <input asp-for="Campo1A1_KV" class="form-control" />
-                <span asp-validation-for="Campo1A1_KV" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo1A1_SPM" class="control-label"></label>
-                <input asp-for="Campo1A1_SPM" class="form-control" />
-                <span asp-validation-for="Campo1A1_SPM" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo1A1_KW" class="control-label"></label>
-                <input asp-for="Campo1A1_KW" class="form-control" />
-                <span asp-validation-for="Campo1A1_KW" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo1A1_Deg" class="control-label"></label>
-                <input asp-for="Campo1A1_Deg" class="form-control" />
-                <span asp-validation-for="Campo1A1_Deg" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo1A2_Amps" class="control-label"></label>
-                <input asp-for="Campo1A2_Amps" class="form-control" />
-                <span asp-validation-for="Campo1A2_Amps" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo1A2_Volts" class="control-label"></label>
-                <input asp-for="Campo1A2_Volts" class="form-control" />
-                <span asp-validation-for="Campo1A2_Volts" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo1A2_mA" class="control-label"></label>
-                <input asp-for="Campo1A2_mA" class="form-control" />
-                <span asp-validation-for="Campo1A2_mA" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo1A2_KV" class="control-label"></label>
-                <input asp-for="Campo1A2_KV" class="form-control" />
-                <span asp-validation-for="Campo1A2_KV" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo1A2_SPM" class="control-label"></label>
-                <input asp-for="Campo1A2_SPM" class="form-control" />
-                <span asp-validation-for="Campo1A2_SPM" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo1A2_KW" class="control-label"></label>
-                <input asp-for="Campo1A2_KW" class="form-control" />
-                <span asp-validation-for="Campo1A2_KW" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo1A2_Deg" class="control-label"></label>
-                <input asp-for="Campo1A2_Deg" class="form-control" />
-                <span asp-validation-for="Campo1A2_Deg" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo1B1_Amps" class="control-label"></label>
-                <input asp-for="Campo1B1_Amps" class="form-control" />
-                <span asp-validation-for="Campo1B1_Amps" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo1B1_Volts" class="control-label"></label>
-                <input asp-for="Campo1B1_Volts" class="form-control" />
-                <span asp-validation-for="Campo1B1_Volts" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo1B1_mA" class="control-label"></label>
-                <input asp-for="Campo1B1_mA" class="form-control" />
-                <span asp-validation-for="Campo1B1_mA" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo1B1_KV" class="control-label"></label>
-                <input asp-for="Campo1B1_KV" class="form-control" />
-                <span asp-validation-for="Campo1B1_KV" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo1B1_SPM" class="control-label"></label>
-                <input asp-for="Campo1B1_SPM" class="form-control" />
-                <span asp-validation-for="Campo1B1_SPM" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo1B1_KW" class="control-label"></label>
-                <input asp-for="Campo1B1_KW" class="form-control" />
-                <span asp-validation-for="Campo1B1_KW" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo1B1_Deg" class="control-label"></label>
-                <input asp-for="Campo1B1_Deg" class="form-control" />
-                <span asp-validation-for="Campo1B1_Deg" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo1B2_Amps" class="control-label"></label>
-                <input asp-for="Campo1B2_Amps" class="form-control" />
-                <span asp-validation-for="Campo1B2_Amps" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo1B2_Volts" class="control-label"></label>
-                <input asp-for="Campo1B2_Volts" class="form-control" />
-                <span asp-validation-for="Campo1B2_Volts" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo1B2_mA" class="control-label"></label>
-                <input asp-for="Campo1B2_mA" class="form-control" />
-                <span asp-validation-for="Campo1B2_mA" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo1B2_KV" class="control-label"></label>
-                <input asp-for="Campo1B2_KV" class="form-control" />
-                <span asp-validation-for="Campo1B2_KV" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo1B2_SPM" class="control-label"></label>
-                <input asp-for="Campo1B2_SPM" class="form-control" />
-                <span asp-validation-for="Campo1B2_SPM" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo1B2_KW" class="control-label"></label>
-                <input asp-for="Campo1B2_KW" class="form-control" />
-                <span asp-validation-for="Campo1B2_KW" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo1B2_Deg" class="control-label"></label>
-                <input asp-for="Campo1B2_Deg" class="form-control" />
-                <span asp-validation-for="Campo1B2_Deg" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo2A1_Amps" class="control-label"></label>
-                <input asp-for="Campo2A1_Amps" class="form-control" />
-                <span asp-validation-for="Campo2A1_Amps" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo2A1_Volts" class="control-label"></label>
-                <input asp-for="Campo2A1_Volts" class="form-control" />
-                <span asp-validation-for="Campo2A1_Volts" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo2A1_mA" class="control-label"></label>
-                <input asp-for="Campo2A1_mA" class="form-control" />
-                <span asp-validation-for="Campo2A1_mA" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo2A1_KV" class="control-label"></label>
-                <input asp-for="Campo2A1_KV" class="form-control" />
-                <span asp-validation-for="Campo2A1_KV" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo2A1_SPM" class="control-label"></label>
-                <input asp-for="Campo2A1_SPM" class="form-control" />
-                <span asp-validation-for="Campo2A1_SPM" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo2A1_KW" class="control-label"></label>
-                <input asp-for="Campo2A1_KW" class="form-control" />
-                <span asp-validation-for="Campo2A1_KW" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo2A1_Deg" class="control-label"></label>
-                <input asp-for="Campo2A1_Deg" class="form-control" />
-                <span asp-validation-for="Campo2A1_Deg" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo2B2_Amps" class="control-label"></label>
-                <input asp-for="Campo2B2_Amps" class="form-control" />
-                <span asp-validation-for="Campo2B2_Amps" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo2B2_Volts" class="control-label"></label>
-                <input asp-for="Campo2B2_Volts" class="form-control" />
-                <span asp-validation-for="Campo2B2_Volts" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo2B2_mA" class="control-label"></label>
-                <input asp-for="Campo2B2_mA" class="form-control" />
-                <span asp-validation-for="Campo2B2_mA" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo2B2_KV" class="control-label"></label>
-                <input asp-for="Campo2B2_KV" class="form-control" />
-                <span asp-validation-for="Campo2B2_KV" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo2B2_SPM" class="control-label"></label>
-                <input asp-for="Campo2B2_SPM" class="form-control" />
-                <span asp-validation-for="Campo2B2_SPM" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo2B2_KW" class="control-label"></label>
-                <input asp-for="Campo2B2_KW" class="form-control" />
-                <span asp-validation-for="Campo2B2_KW" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo2B2_Deg" class="control-label"></label>
-                <input asp-for="Campo2B2_Deg" class="form-control" />
-                <span asp-validation-for="Campo2B2_Deg" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo2B1_Amps" class="control-label"></label>
-                <input asp-for="Campo2B1_Amps" class="form-control" />
-                <span asp-validation-for="Campo2B1_Amps" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo2B1_Volts" class="control-label"></label>
-                <input asp-for="Campo2B1_Volts" class="form-control" />
-                <span asp-validation-for="Campo2B1_Volts" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo2B1_mA" class="control-label"></label>
-                <input asp-for="Campo2B1_mA" class="form-control" />
-                <span asp-validation-for="Campo2B1_mA" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo2B1_KV" class="control-label"></label>
-                <input asp-for="Campo2B1_KV" class="form-control" />
-                <span asp-validation-for="Campo2B1_KV" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo2B1_SPM" class="control-label"></label>
-                <input asp-for="Campo2B1_SPM" class="form-control" />
-                <span asp-validation-for="Campo2B1_SPM" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo2B1_KW" class="control-label"></label>
-                <input asp-for="Campo2B1_KW" class="form-control" />
-                <span asp-validation-for="Campo2B1_KW" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo2B1_Deg" class="control-label"></label>
-                <input asp-for="Campo2B1_Deg" class="form-control" />
-                <span asp-validation-for="Campo2B1_Deg" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo2A2_Amps" class="control-label"></label>
-                <input asp-for="Campo2A2_Amps" class="form-control" />
-                <span asp-validation-for="Campo2A2_Amps" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo2A2_Volts" class="control-label"></label>
-                <input asp-for="Campo2A2_Volts" class="form-control" />
-                <span asp-validation-for="Campo2A2_Volts" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo2A2_mA" class="control-label"></label>
-                <input asp-for="Campo2A2_mA" class="form-control" />
-                <span asp-validation-for="Campo2A2_mA" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo2A2_KV" class="control-label"></label>
-                <input asp-for="Campo2A2_KV" class="form-control" />
-                <span asp-validation-for="Campo2A2_KV" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo2A2_SPM" class="control-label"></label>
-                <input asp-for="Campo2A2_SPM" class="form-control" />
-                <span asp-validation-for="Campo2A2_SPM" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo2A2_KW" class="control-label"></label>
-                <input asp-for="Campo2A2_KW" class="form-control" />
-                <span asp-validation-for="Campo2A2_KW" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo2A2_Deg" class="control-label"></label>
-                <input asp-for="Campo2A2_Deg" class="form-control" />
-                <span asp-validation-for="Campo2A2_Deg" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo3A1_Amps" class="control-label"></label>
-                <input asp-for="Campo3A1_Amps" class="form-control" />
-                <span asp-validation-for="Campo3A1_Amps" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo3A1_Volts" class="control-label"></label>
-                <input asp-for="Campo3A1_Volts" class="form-control" />
-                <span asp-validation-for="Campo3A1_Volts" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo3A1_mA" class="control-label"></label>
-                <input asp-for="Campo3A1_mA" class="form-control" />
-                <span asp-validation-for="Campo3A1_mA" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo3A1_KV" class="control-label"></label>
-                <input asp-for="Campo3A1_KV" class="form-control" />
-                <span asp-validation-for="Campo3A1_KV" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo3A1_SCR" class="control-label"></label>
-                <input asp-for="Campo3A1_SCR" class="form-control" />
-                <span asp-validation-for="Campo3A1_SCR" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo3A1_KW" class="control-label"></label>
-                <input asp-for="Campo3A1_KW" class="form-control" />
-                <span asp-validation-for="Campo3A1_KW" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo3A1_SM" class="control-label"></label>
-                <input asp-for="Campo3A1_SM" class="form-control" />
-                <span asp-validation-for="Campo3A1_SM" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo3A2_Amps" class="control-label"></label>
-                <input asp-for="Campo3A2_Amps" class="form-control" />
-                <span asp-validation-for="Campo3A2_Amps" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo3A2_Volts" class="control-label"></label>
-                <input asp-for="Campo3A2_Volts" class="form-control" />
-                <span asp-validation-for="Campo3A2_Volts" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo3A2_mA" class="control-label"></label>
-                <input asp-for="Campo3A2_mA" class="form-control" />
-                <span asp-validation-for="Campo3A2_mA" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo3A2_KV" class="control-label"></label>
-                <input asp-for="Campo3A2_KV" class="form-control" />
-                <span asp-validation-for="Campo3A2_KV" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo3A2_SCR" class="control-label"></label>
-                <input asp-for="Campo3A2_SCR" class="form-control" />
-                <span asp-validation-for="Campo3A2_SCR" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo3A2_KW" class="control-label"></label>
-                <input asp-for="Campo3A2_KW" class="form-control" />
-                <span asp-validation-for="Campo3A2_KW" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo3A2_SM" class="control-label"></label>
-                <input asp-for="Campo3A2_SM" class="form-control" />
-                <span asp-validation-for="Campo3A2_SM" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo4A1_Amps" class="control-label"></label>
-                <input asp-for="Campo4A1_Amps" class="form-control" />
-                <span asp-validation-for="Campo4A1_Amps" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo4A1_Volts" class="control-label"></label>
-                <input asp-for="Campo4A1_Volts" class="form-control" />
-                <span asp-validation-for="Campo4A1_Volts" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo4A1_mA" class="control-label"></label>
-                <input asp-for="Campo4A1_mA" class="form-control" />
-                <span asp-validation-for="Campo4A1_mA" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo4A1_KV" class="control-label"></label>
-                <input asp-for="Campo4A1_KV" class="form-control" />
-                <span asp-validation-for="Campo4A1_KV" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo4A1_SCR" class="control-label"></label>
-                <input asp-for="Campo4A1_SCR" class="form-control" />
-                <span asp-validation-for="Campo4A1_SCR" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo4A1_KW" class="control-label"></label>
-                <input asp-for="Campo4A1_KW" class="form-control" />
-                <span asp-validation-for="Campo4A1_KW" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo4A1_SM" class="control-label"></label>
-                <input asp-for="Campo4A1_SM" class="form-control" />
-                <span asp-validation-for="Campo4A1_SM" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo4A2_Amps" class="control-label"></label>
-                <input asp-for="Campo4A2_Amps" class="form-control" />
-                <span asp-validation-for="Campo4A2_Amps" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo4A2_Volts" class="control-label"></label>
-                <input asp-for="Campo4A2_Volts" class="form-control" />
-                <span asp-validation-for="Campo4A2_Volts" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo4A2_mA" class="control-label"></label>
-                <input asp-for="Campo4A2_mA" class="form-control" />
-                <span asp-validation-for="Campo4A2_mA" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo4A2_KV" class="control-label"></label>
-                <input asp-for="Campo4A2_KV" class="form-control" />
-                <span asp-validation-for="Campo4A2_KV" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo4A2_SCR" class="control-label"></label>
-                <input asp-for="Campo4A2_SCR" class="form-control" />
-                <span asp-validation-for="Campo4A2_SCR" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo4A2_KW" class="control-label"></label>
-                <input asp-for="Campo4A2_KW" class="form-control" />
-                <span asp-validation-for="Campo4A2_KW" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo4A2_SM" class="control-label"></label>
-                <input asp-for="Campo4A2_SM" class="form-control" />
-                <span asp-validation-for="Campo4A2_SM" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo3B1_Amps" class="control-label"></label>
-                <input asp-for="Campo3B1_Amps" class="form-control" />
-                <span asp-validation-for="Campo3B1_Amps" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo3B1_Volts" class="control-label"></label>
-                <input asp-for="Campo3B1_Volts" class="form-control" />
-                <span asp-validation-for="Campo3B1_Volts" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo3B1_mA" class="control-label"></label>
-                <input asp-for="Campo3B1_mA" class="form-control" />
-                <span asp-validation-for="Campo3B1_mA" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo3B1_KV" class="control-label"></label>
-                <input asp-for="Campo3B1_KV" class="form-control" />
-                <span asp-validation-for="Campo3B1_KV" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo3B1_SCR" class="control-label"></label>
-                <input asp-for="Campo3B1_SCR" class="form-control" />
-                <span asp-validation-for="Campo3B1_SCR" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo3B1_KW" class="control-label"></label>
-                <input asp-for="Campo3B1_KW" class="form-control" />
-                <span asp-validation-for="Campo3B1_KW" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo3B1_SM" class="control-label"></label>
-                <input asp-for="Campo3B1_SM" class="form-control" />
-                <span asp-validation-for="Campo3B1_SM" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo3B2_Amps" class="control-label"></label>
-                <input asp-for="Campo3B2_Amps" class="form-control" />
-                <span asp-validation-for="Campo3B2_Amps" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo3B2_Volts" class="control-label"></label>
-                <input asp-for="Campo3B2_Volts" class="form-control" />
-                <span asp-validation-for="Campo3B2_Volts" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo3B2_mA" class="control-label"></label>
-                <input asp-for="Campo3B2_mA" class="form-control" />
-                <span asp-validation-for="Campo3B2_mA" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo3B2_KV" class="control-label"></label>
-                <input asp-for="Campo3B2_KV" class="form-control" />
-                <span asp-validation-for="Campo3B2_KV" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo3B2_SCR" class="control-label"></label>
-                <input asp-for="Campo3B2_SCR" class="form-control" />
-                <span asp-validation-for="Campo3B2_SCR" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo3B2_KW" class="control-label"></label>
-                <input asp-for="Campo3B2_KW" class="form-control" />
-                <span asp-validation-for="Campo3B2_KW" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo3B2_SM" class="control-label"></label>
-                <input asp-for="Campo3B2_SM" class="form-control" />
-                <span asp-validation-for="Campo3B2_SM" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo4B1_Amps" class="control-label"></label>
-                <input asp-for="Campo4B1_Amps" class="form-control" />
-                <span asp-validation-for="Campo4B1_Amps" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo4B1_Volts" class="control-label"></label>
-                <input asp-for="Campo4B1_Volts" class="form-control" />
-                <span asp-validation-for="Campo4B1_Volts" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo4B1_mA" class="control-label"></label>
-                <input asp-for="Campo4B1_mA" class="form-control" />
-                <span asp-validation-for="Campo4B1_mA" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo4B1_KV" class="control-label"></label>
-                <input asp-for="Campo4B1_KV" class="form-control" />
-                <span asp-validation-for="Campo4B1_KV" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo4B1_SCR" class="control-label"></label>
-                <input asp-for="Campo4B1_SCR" class="form-control" />
-                <span asp-validation-for="Campo4B1_SCR" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo4B1_KW" class="control-label"></label>
-                <input asp-for="Campo4B1_KW" class="form-control" />
-                <span asp-validation-for="Campo4B1_KW" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo4B1_SM" class="control-label"></label>
-                <input asp-for="Campo4B1_SM" class="form-control" />
-                <span asp-validation-for="Campo4B1_SM" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo4B2_Amps" class="control-label"></label>
-                <input asp-for="Campo4B2_Amps" class="form-control" />
-                <span asp-validation-for="Campo4B2_Amps" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo4B2_Volts" class="control-label"></label>
-                <input asp-for="Campo4B2_Volts" class="form-control" />
-                <span asp-validation-for="Campo4B2_Volts" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo4B2_mA" class="control-label"></label>
-                <input asp-for="Campo4B2_mA" class="form-control" />
-                <span asp-validation-for="Campo4B2_mA" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo4B2_KV" class="control-label"></label>
-                <input asp-for="Campo4B2_KV" class="form-control" />
-                <span asp-validation-for="Campo4B2_KV" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo4B2_SCR" class="control-label"></label>
-                <input asp-for="Campo4B2_SCR" class="form-control" />
-                <span asp-validation-for="Campo4B2_SCR" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo4B2_KW" class="control-label"></label>
-                <input asp-for="Campo4B2_KW" class="form-control" />
-                <span asp-validation-for="Campo4B2_KW" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Campo4B2_SM" class="control-label"></label>
-                <input asp-for="Campo4B2_SM" class="form-control" />
-                <span asp-validation-for="Campo4B2_SM" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Observaciones" class="control-label"></label>
-                <input asp-for="Observaciones" class="form-control" />
-                <span asp-validation-for="Observaciones" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+            <!-- Sección 1 -->
+            <div class="form-section" id="section-1">
+                <div class="form-group">
+                    <label asp-for="FechaHoraInicio"></label>
+                    <input asp-for="FechaHoraInicio" class="form-control" />
+                    <span asp-validation-for="FechaHoraInicio" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="FechaHoraFinalizacion"></label>
+                    <input asp-for="FechaHoraFinalizacion" class="form-control" />
+                    <span asp-validation-for="FechaHoraFinalizacion" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Email"></label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="NombreOperador"></label>
+                    <input asp-for="NombreOperador" class="form-control" />
+                    <span asp-validation-for="NombreOperador" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="OperadorTurno"></label>
+                    <input asp-for="OperadorTurno" class="form-control" />
+                    <span asp-validation-for="OperadorTurno" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="IPF14"></label>
+                    <input asp-for="IPF14" class="form-control" />
+                    <span asp-validation-for="IPF14" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="IPF13"></label>
+                    <input asp-for="IPF13" class="form-control" />
+                    <span asp-validation-for="IPF13" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="IPF15"></label>
+                    <input asp-for="IPF15" class="form-control" />
+                    <span asp-validation-for="IPF15" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="IPF16"></label>
+                    <input asp-for="IPF16" class="form-control" />
+                    <span asp-validation-for="IPF16" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="IPF12"></label>
+                    <input asp-for="IPF12" class="form-control" />
+                    <span asp-validation-for="IPF12" class="text-danger"></span>
+                </div>
+                <div class="form-group mt-3">
+                    <button type="button" class="btn btn-primary" id="nextBtn1">Siguiente</button>
+                </div>
+            </div>
+            <!-- Sección 2 -->
+            <div class="form-section" id="section-2" style="display:none;">
+                <div class="form-group">
+                    <label asp-for="IPF11"></label>
+                    <input asp-for="IPF11" class="form-control" />
+                    <span asp-validation-for="IPF11" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="IPF10"></label>
+                    <input asp-for="IPF10" class="form-control" />
+                    <span asp-validation-for="IPF10" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="IPF9"></label>
+                    <input asp-for="IPF9" class="form-control" />
+                    <span asp-validation-for="IPF9" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="IPF5"></label>
+                    <input asp-for="IPF5" class="form-control" />
+                    <span asp-validation-for="IPF5" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="IPF6"></label>
+                    <input asp-for="IPF6" class="form-control" />
+                    <span asp-validation-for="IPF6" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="IPF7"></label>
+                    <input asp-for="IPF7" class="form-control" />
+                    <span asp-validation-for="IPF7" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="IPF8"></label>
+                    <input asp-for="IPF8" class="form-control" />
+                    <span asp-validation-for="IPF8" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="IPF4"></label>
+                    <input asp-for="IPF4" class="form-control" />
+                    <span asp-validation-for="IPF4" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="IPF3"></label>
+                    <input asp-for="IPF3" class="form-control" />
+                    <span asp-validation-for="IPF3" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="IPF2"></label>
+                    <input asp-for="IPF2" class="form-control" />
+                    <span asp-validation-for="IPF2" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="IPF1"></label>
+                    <input asp-for="IPF1" class="form-control" />
+                    <span asp-validation-for="IPF1" class="text-danger"></span>
+                </div>
+                <div class="form-group mt-3">
+                    <button type="button" class="btn btn-secondary" id="prevBtn2">Volver</button>
+                    <button type="button" class="btn btn-primary" id="nextBtn2">Siguiente</button>
+                </div>
+            </div>
+            <!-- Sección 3 -->
+            <div class="form-section" id="section-3" style="display:none;">
+                <div class="form-group">
+                    <label asp-for="Temp1B2"></label>
+                    <input asp-for="Temp1B2" class="form-control" />
+                    <span asp-validation-for="Temp1B2" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Nivel1B2"></label>
+                    <input asp-for="Nivel1B2" class="form-control" />
+                    <span asp-validation-for="Nivel1B2" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Temp2B2"></label>
+                    <input asp-for="Temp2B2" class="form-control" />
+                    <span asp-validation-for="Temp2B2" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Nivel2B2"></label>
+                    <input asp-for="Nivel2B2" class="form-control" />
+                    <span asp-validation-for="Nivel2B2" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Temp3B2"></label>
+                    <input asp-for="Temp3B2" class="form-control" />
+                    <span asp-validation-for="Temp3B2" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Nivel3B2"></label>
+                    <input asp-for="Nivel3B2" class="form-control" />
+                    <span asp-validation-for="Nivel3B2" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Temp4B2"></label>
+                    <input asp-for="Temp4B2" class="form-control" />
+                    <span asp-validation-for="Temp4B2" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Nivel4B2"></label>
+                    <input asp-for="Nivel4B2" class="form-control" />
+                    <span asp-validation-for="Nivel4B2" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Temp4B1"></label>
+                    <input asp-for="Temp4B1" class="form-control" />
+                    <span asp-validation-for="Temp4B1" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Nivel4B1"></label>
+                    <input asp-for="Nivel4B1" class="form-control" />
+                    <span asp-validation-for="Nivel4B1" class="text-danger"></span>
+                </div>
+                <div class="form-group mt-3">
+                    <button type="button" class="btn btn-secondary" id="prevBtn3">Volver</button>
+                    <button type="button" class="btn btn-primary" id="nextBtn3">Siguiente</button>
+                </div>
+            </div>
+            <!-- Sección 4 -->
+            <div class="form-section" id="section-4" style="display:none;">
+                <div class="form-group">
+                    <label asp-for="Temp3B1"></label>
+                    <input asp-for="Temp3B1" class="form-control" />
+                    <span asp-validation-for="Temp3B1" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Nivel3B1"></label>
+                    <input asp-for="Nivel3B1" class="form-control" />
+                    <span asp-validation-for="Nivel3B1" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Temp2B1"></label>
+                    <input asp-for="Temp2B1" class="form-control" />
+                    <span asp-validation-for="Temp2B1" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Nivel2B1"></label>
+                    <input asp-for="Nivel2B1" class="form-control" />
+                    <span asp-validation-for="Nivel2B1" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Temp1B1"></label>
+                    <input asp-for="Temp1B1" class="form-control" />
+                    <span asp-validation-for="Temp1B1" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Nivel1B1"></label>
+                    <input asp-for="Nivel1B1" class="form-control" />
+                    <span asp-validation-for="Nivel1B1" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Temp1A2"></label>
+                    <input asp-for="Temp1A2" class="form-control" />
+                    <span asp-validation-for="Temp1A2" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Nivel1A2"></label>
+                    <input asp-for="Nivel1A2" class="form-control" />
+                    <span asp-validation-for="Nivel1A2" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Temp2A2"></label>
+                    <input asp-for="Temp2A2" class="form-control" />
+                    <span asp-validation-for="Temp2A2" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Nivel2A2"></label>
+                    <input asp-for="Nivel2A2" class="form-control" />
+                    <span asp-validation-for="Nivel2A2" class="text-danger"></span>
+                </div>
+                <div class="form-group mt-3">
+                    <button type="button" class="btn btn-secondary" id="prevBtn4">Volver</button>
+                    <button type="button" class="btn btn-primary" id="nextBtn4">Siguiente</button>
+                </div>
+            </div>
+            <!-- Sección 5 -->
+            <div class="form-section" id="section-5" style="display:none;">
+                <div class="form-group">
+                    <label asp-for="Temp3A2"></label>
+                    <input asp-for="Temp3A2" class="form-control" />
+                    <span asp-validation-for="Temp3A2" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Nivel3A2"></label>
+                    <input asp-for="Nivel3A2" class="form-control" />
+                    <span asp-validation-for="Nivel3A2" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Temp4A2"></label>
+                    <input asp-for="Temp4A2" class="form-control" />
+                    <span asp-validation-for="Temp4A2" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Nivel4A2"></label>
+                    <input asp-for="Nivel4A2" class="form-control" />
+                    <span asp-validation-for="Nivel4A2" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Temp4A1"></label>
+                    <input asp-for="Temp4A1" class="form-control" />
+                    <span asp-validation-for="Temp4A1" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Nivel4A1"></label>
+                    <input asp-for="Nivel4A1" class="form-control" />
+                    <span asp-validation-for="Nivel4A1" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Temp3A1"></label>
+                    <input asp-for="Temp3A1" class="form-control" />
+                    <span asp-validation-for="Temp3A1" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Nivel3A1"></label>
+                    <input asp-for="Nivel3A1" class="form-control" />
+                    <span asp-validation-for="Nivel3A1" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Temp2A1"></label>
+                    <input asp-for="Temp2A1" class="form-control" />
+                    <span asp-validation-for="Temp2A1" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Nivel2A1"></label>
+                    <input asp-for="Nivel2A1" class="form-control" />
+                    <span asp-validation-for="Nivel2A1" class="text-danger"></span>
+                </div>
+                <div class="form-group mt-3">
+                    <button type="button" class="btn btn-secondary" id="prevBtn5">Volver</button>
+                    <button type="button" class="btn btn-primary" id="nextBtn5">Siguiente</button>
+                </div>
+            </div>
+            <!-- Sección 6 -->
+            <div class="form-section" id="section-6" style="display:none;">
+                <div class="form-group">
+                    <label asp-for="Temp1A1"></label>
+                    <input asp-for="Temp1A1" class="form-control" />
+                    <span asp-validation-for="Temp1A1" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Nivel1A1"></label>
+                    <input asp-for="Nivel1A1" class="form-control" />
+                    <span asp-validation-for="Nivel1A1" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo1A1_Amps"></label>
+                    <input asp-for="Campo1A1_Amps" class="form-control" />
+                    <span asp-validation-for="Campo1A1_Amps" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo1A1_Volts"></label>
+                    <input asp-for="Campo1A1_Volts" class="form-control" />
+                    <span asp-validation-for="Campo1A1_Volts" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo1A1_mA"></label>
+                    <input asp-for="Campo1A1_mA" class="form-control" />
+                    <span asp-validation-for="Campo1A1_mA" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo1A1_KV"></label>
+                    <input asp-for="Campo1A1_KV" class="form-control" />
+                    <span asp-validation-for="Campo1A1_KV" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo1A1_SPM"></label>
+                    <input asp-for="Campo1A1_SPM" class="form-control" />
+                    <span asp-validation-for="Campo1A1_SPM" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo1A1_KW"></label>
+                    <input asp-for="Campo1A1_KW" class="form-control" />
+                    <span asp-validation-for="Campo1A1_KW" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo1A1_Deg"></label>
+                    <input asp-for="Campo1A1_Deg" class="form-control" />
+                    <span asp-validation-for="Campo1A1_Deg" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo1A2_Amps"></label>
+                    <input asp-for="Campo1A2_Amps" class="form-control" />
+                    <span asp-validation-for="Campo1A2_Amps" class="text-danger"></span>
+                </div>
+                <div class="form-group mt-3">
+                    <button type="button" class="btn btn-secondary" id="prevBtn6">Volver</button>
+                    <button type="button" class="btn btn-primary" id="nextBtn6">Siguiente</button>
+                </div>
+            </div>
+            <!-- Sección 7 -->
+            <div class="form-section" id="section-7" style="display:none;">
+                <div class="form-group">
+                    <label asp-for="Campo1A2_Volts"></label>
+                    <input asp-for="Campo1A2_Volts" class="form-control" />
+                    <span asp-validation-for="Campo1A2_Volts" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo1A2_mA"></label>
+                    <input asp-for="Campo1A2_mA" class="form-control" />
+                    <span asp-validation-for="Campo1A2_mA" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo1A2_KV"></label>
+                    <input asp-for="Campo1A2_KV" class="form-control" />
+                    <span asp-validation-for="Campo1A2_KV" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo1A2_SPM"></label>
+                    <input asp-for="Campo1A2_SPM" class="form-control" />
+                    <span asp-validation-for="Campo1A2_SPM" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo1A2_KW"></label>
+                    <input asp-for="Campo1A2_KW" class="form-control" />
+                    <span asp-validation-for="Campo1A2_KW" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo1A2_Deg"></label>
+                    <input asp-for="Campo1A2_Deg" class="form-control" />
+                    <span asp-validation-for="Campo1A2_Deg" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo1B1_Amps"></label>
+                    <input asp-for="Campo1B1_Amps" class="form-control" />
+                    <span asp-validation-for="Campo1B1_Amps" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo1B1_Volts"></label>
+                    <input asp-for="Campo1B1_Volts" class="form-control" />
+                    <span asp-validation-for="Campo1B1_Volts" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo1B1_mA"></label>
+                    <input asp-for="Campo1B1_mA" class="form-control" />
+                    <span asp-validation-for="Campo1B1_mA" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo1B1_KV"></label>
+                    <input asp-for="Campo1B1_KV" class="form-control" />
+                    <span asp-validation-for="Campo1B1_KV" class="text-danger"></span>
+                </div>
+                <div class="form-group mt-3">
+                    <button type="button" class="btn btn-secondary" id="prevBtn7">Volver</button>
+                    <button type="button" class="btn btn-primary" id="nextBtn7">Siguiente</button>
+                </div>
+            </div>
+            <!-- Sección 8 -->
+            <div class="form-section" id="section-8" style="display:none;">
+                <div class="form-group">
+                    <label asp-for="Campo1B1_SPM"></label>
+                    <input asp-for="Campo1B1_SPM" class="form-control" />
+                    <span asp-validation-for="Campo1B1_SPM" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo1B1_KW"></label>
+                    <input asp-for="Campo1B1_KW" class="form-control" />
+                    <span asp-validation-for="Campo1B1_KW" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo1B1_Deg"></label>
+                    <input asp-for="Campo1B1_Deg" class="form-control" />
+                    <span asp-validation-for="Campo1B1_Deg" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo2A1_Amps"></label>
+                    <input asp-for="Campo2A1_Amps" class="form-control" />
+                    <span asp-validation-for="Campo2A1_Amps" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo2A1_Volts"></label>
+                    <input asp-for="Campo2A1_Volts" class="form-control" />
+                    <span asp-validation-for="Campo2A1_Volts" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo2A1_mA"></label>
+                    <input asp-for="Campo2A1_mA" class="form-control" />
+                    <span asp-validation-for="Campo2A1_mA" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo2A1_KV"></label>
+                    <input asp-for="Campo2A1_KV" class="form-control" />
+                    <span asp-validation-for="Campo2A1_KV" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo2A1_SPM"></label>
+                    <input asp-for="Campo2A1_SPM" class="form-control" />
+                    <span asp-validation-for="Campo2A1_SPM" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo2A1_KW"></label>
+                    <input asp-for="Campo2A1_KW" class="form-control" />
+                    <span asp-validation-for="Campo2A1_KW" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo2A1_Deg"></label>
+                    <input asp-for="Campo2A1_Deg" class="form-control" />
+                    <span asp-validation-for="Campo2A1_Deg" class="text-danger"></span>
+                </div>
+                <div class="form-group mt-3">
+                    <button type="button" class="btn btn-secondary" id="prevBtn8">Volver</button>
+                    <button type="button" class="btn btn-primary" id="nextBtn8">Siguiente</button>
+                </div>
+            </div>
+            <!-- Sección 9 -->
+            <div class="form-section" id="section-9" style="display:none;">
+                <div class="form-group">
+                    <label asp-for="Campo2B1_Amps"></label>
+                    <input asp-for="Campo2B1_Amps" class="form-control" />
+                    <span asp-validation-for="Campo2B1_Amps" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo2B1_Volts"></label>
+                    <input asp-for="Campo2B1_Volts" class="form-control" />
+                    <span asp-validation-for="Campo2B1_Volts" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo2B1_mA"></label>
+                    <input asp-for="Campo2B1_mA" class="form-control" />
+                    <span asp-validation-for="Campo2B1_mA" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo2B1_KV"></label>
+                    <input asp-for="Campo2B1_KV" class="form-control" />
+                    <span asp-validation-for="Campo2B1_KV" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo2B1_SPM"></label>
+                    <input asp-for="Campo2B1_SPM" class="form-control" />
+                    <span asp-validation-for="Campo2B1_SPM" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo2B1_KW"></label>
+                    <input asp-for="Campo2B1_KW" class="form-control" />
+                    <span asp-validation-for="Campo2B1_KW" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo2B1_Deg"></label>
+                    <input asp-for="Campo2B1_Deg" class="form-control" />
+                    <span asp-validation-for="Campo2B1_Deg" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo2A2_Amps"></label>
+                    <input asp-for="Campo2A2_Amps" class="form-control" />
+                    <span asp-validation-for="Campo2A2_Amps" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo2A2_Volts"></label>
+                    <input asp-for="Campo2A2_Volts" class="form-control" />
+                    <span asp-validation-for="Campo2A2_Volts" class="text-danger"></span>
+                </div>
+                <div class="form-group mt-3">
+                    <button type="button" class="btn btn-secondary" id="prevBtn9">Volver</button>
+                    <button type="button" class="btn btn-primary" id="nextBtn9">Siguiente</button>
+                </div>
+            </div>
+            <!-- Sección 10 -->
+            <div class="form-section" id="section-10" style="display:none;">
+                <div class="form-group">
+                    <label asp-for="Campo2A2_mA"></label>
+                    <input asp-for="Campo2A2_mA" class="form-control" />
+                    <span asp-validation-for="Campo2A2_mA" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo2A2_KV"></label>
+                    <input asp-for="Campo2A2_KV" class="form-control" />
+                    <span asp-validation-for="Campo2A2_KV" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo2A2_SPM"></label>
+                    <input asp-for="Campo2A2_SPM" class="form-control" />
+                    <span asp-validation-for="Campo2A2_SPM" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo2A2_KW"></label>
+                    <input asp-for="Campo2A2_KW" class="form-control" />
+                    <span asp-validation-for="Campo2A2_KW" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo2A2_Deg"></label>
+                    <input asp-for="Campo2A2_Deg" class="form-control" />
+                    <span asp-validation-for="Campo2A2_Deg" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo3A1_Amps"></label>
+                    <input asp-for="Campo3A1_Amps" class="form-control" />
+                    <span asp-validation-for="Campo3A1_Amps" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo3A1_Volts"></label>
+                    <input asp-for="Campo3A1_Volts" class="form-control" />
+                    <span asp-validation-for="Campo3A1_Volts" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo3A1_mA"></label>
+                    <input asp-for="Campo3A1_mA" class="form-control" />
+                    <span asp-validation-for="Campo3A1_mA" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo3A1_KV"></label>
+                    <input asp-for="Campo3A1_KV" class="form-control" />
+                    <span asp-validation-for="Campo3A1_KV" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo3A1_SCR"></label>
+                    <input asp-for="Campo3A1_SCR" class="form-control" />
+                    <span asp-validation-for="Campo3A1_SCR" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo3A1_KW"></label>
+                    <input asp-for="Campo3A1_KW" class="form-control" />
+                    <span asp-validation-for="Campo3A1_KW" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo3A1_SM"></label>
+                    <input asp-for="Campo3A1_SM" class="form-control" />
+                    <span asp-validation-for="Campo3A1_SM" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo3A2_Amps"></label>
+                    <input asp-for="Campo3A2_Amps" class="form-control" />
+                    <span asp-validation-for="Campo3A2_Amps" class="text-danger"></span>
+                </div>
+                <div class="form-group mt-3">
+                    <button type="button" class="btn btn-secondary" id="prevBtn10">Volver</button>
+                    <button type="button" class="btn btn-primary" id="nextBtn10">Siguiente</button>
+                </div>
+            </div>
+            <!-- Sección 11 -->
+            <div class="form-section" id="section-11" style="display:none;">
+                <div class="form-group">
+                    <label asp-for="Campo3A2_Volts"></label>
+                    <input asp-for="Campo3A2_Volts" class="form-control" />
+                    <span asp-validation-for="Campo3A2_Volts" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo3A2_mA"></label>
+                    <input asp-for="Campo3A2_mA" class="form-control" />
+                    <span asp-validation-for="Campo3A2_mA" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo3A2_KV"></label>
+                    <input asp-for="Campo3A2_KV" class="form-control" />
+                    <span asp-validation-for="Campo3A2_KV" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo3A2_SCR"></label>
+                    <input asp-for="Campo3A2_SCR" class="form-control" />
+                    <span asp-validation-for="Campo3A2_SCR" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo3A2_KW"></label>
+                    <input asp-for="Campo3A2_KW" class="form-control" />
+                    <span asp-validation-for="Campo3A2_KW" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo3A2_SM"></label>
+                    <input asp-for="Campo3A2_SM" class="form-control" />
+                    <span asp-validation-for="Campo3A2_SM" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo4A1_Amps"></label>
+                    <input asp-for="Campo4A1_Amps" class="form-control" />
+                    <span asp-validation-for="Campo4A1_Amps" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo4A1_Volts"></label>
+                    <input asp-for="Campo4A1_Volts" class="form-control" />
+                    <span asp-validation-for="Campo4A1_Volts" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo4A1_mA"></label>
+                    <input asp-for="Campo4A1_mA" class="form-control" />
+                    <span asp-validation-for="Campo4A1_mA" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo4A1_KV"></label>
+                    <input asp-for="Campo4A1_KV" class="form-control" />
+                    <span asp-validation-for="Campo4A1_KV" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo4A1_SCR"></label>
+                    <input asp-for="Campo4A1_SCR" class="form-control" />
+                    <span asp-validation-for="Campo4A1_SCR" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo4A1_KW"></label>
+                    <input asp-for="Campo4A1_KW" class="form-control" />
+                    <span asp-validation-for="Campo4A1_KW" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo4A1_SM"></label>
+                    <input asp-for="Campo4A1_SM" class="form-control" />
+                    <span asp-validation-for="Campo4A1_SM" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo4A2_Amps"></label>
+                    <input asp-for="Campo4A2_Amps" class="form-control" />
+                    <span asp-validation-for="Campo4A2_Amps" class="text-danger"></span>
+                </div>
+                <div class="form-group mt-3">
+                    <button type="button" class="btn btn-secondary" id="prevBtn11">Volver</button>
+                    <button type="button" class="btn btn-primary" id="nextBtn11">Siguiente</button>
+                </div>
+            </div>
+            <!-- Sección 12 -->
+            <div class="form-section" id="section-12" style="display:none;">
+                <div class="form-group">
+                    <label asp-for="Campo4A2_Volts"></label>
+                    <input asp-for="Campo4A2_Volts" class="form-control" />
+                    <span asp-validation-for="Campo4A2_Volts" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo4A2_mA"></label>
+                    <input asp-for="Campo4A2_mA" class="form-control" />
+                    <span asp-validation-for="Campo4A2_mA" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo4A2_KV"></label>
+                    <input asp-for="Campo4A2_KV" class="form-control" />
+                    <span asp-validation-for="Campo4A2_KV" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo4A2_SCR"></label>
+                    <input asp-for="Campo4A2_SCR" class="form-control" />
+                    <span asp-validation-for="Campo4A2_SCR" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo4A2_KW"></label>
+                    <input asp-for="Campo4A2_KW" class="form-control" />
+                    <span asp-validation-for="Campo4A2_KW" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo4A2_SM"></label>
+                    <input asp-for="Campo4A2_SM" class="form-control" />
+                    <span asp-validation-for="Campo4A2_SM" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo3B1_Amps"></label>
+                    <input asp-for="Campo3B1_Amps" class="form-control" />
+                    <span asp-validation-for="Campo3B1_Amps" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo3B1_Volts"></label>
+                    <input asp-for="Campo3B1_Volts" class="form-control" />
+                    <span asp-validation-for="Campo3B1_Volts" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo3B1_mA"></label>
+                    <input asp-for="Campo3B1_mA" class="form-control" />
+                    <span asp-validation-for="Campo3B1_mA" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo3B1_KV"></label>
+                    <input asp-for="Campo3B1_KV" class="form-control" />
+                    <span asp-validation-for="Campo3B1_KV" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo3B1_SCR"></label>
+                    <input asp-for="Campo3B1_SCR" class="form-control" />
+                    <span asp-validation-for="Campo3B1_SCR" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo3B1_KW"></label>
+                    <input asp-for="Campo3B1_KW" class="form-control" />
+                    <span asp-validation-for="Campo3B1_KW" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo3B1_SM"></label>
+                    <input asp-for="Campo3B1_SM" class="form-control" />
+                    <span asp-validation-for="Campo3B1_SM" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo3B2_Amps"></label>
+                    <input asp-for="Campo3B2_Amps" class="form-control" />
+                    <span asp-validation-for="Campo3B2_Amps" class="text-danger"></span>
+                </div>
+                <div class="form-group mt-3">
+                    <button type="button" class="btn btn-secondary" id="prevBtn12">Volver</button>
+                    <button type="button" class="btn btn-primary" id="nextBtn12">Siguiente</button>
+                </div>
+            </div>
+            <!-- Sección 13 -->
+            <div class="form-section" id="section-13" style="display:none;">
+                <div class="form-group">
+                    <label asp-for="Campo3B2_Volts"></label>
+                    <input asp-for="Campo3B2_Volts" class="form-control" />
+                    <span asp-validation-for="Campo3B2_Volts" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo3B2_mA"></label>
+                    <input asp-for="Campo3B2_mA" class="form-control" />
+                    <span asp-validation-for="Campo3B2_mA" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo3B2_KV"></label>
+                    <input asp-for="Campo3B2_KV" class="form-control" />
+                    <span asp-validation-for="Campo3B2_KV" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo3B2_SCR"></label>
+                    <input asp-for="Campo3B2_SCR" class="form-control" />
+                    <span asp-validation-for="Campo3B2_SCR" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo3B2_KW"></label>
+                    <input asp-for="Campo3B2_KW" class="form-control" />
+                    <span asp-validation-for="Campo3B2_KW" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo3B2_SM"></label>
+                    <input asp-for="Campo3B2_SM" class="form-control" />
+                    <span asp-validation-for="Campo3B2_SM" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo4B1_Amps"></label>
+                    <input asp-for="Campo4B1_Amps" class="form-control" />
+                    <span asp-validation-for="Campo4B1_Amps" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo4B1_Volts"></label>
+                    <input asp-for="Campo4B1_Volts" class="form-control" />
+                    <span asp-validation-for="Campo4B1_Volts" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo4B1_mA"></label>
+                    <input asp-for="Campo4B1_mA" class="form-control" />
+                    <span asp-validation-for="Campo4B1_mA" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo4B1_KV"></label>
+                    <input asp-for="Campo4B1_KV" class="form-control" />
+                    <span asp-validation-for="Campo4B1_KV" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo4B1_SCR"></label>
+                    <input asp-for="Campo4B1_SCR" class="form-control" />
+                    <span asp-validation-for="Campo4B1_SCR" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo4B1_KW"></label>
+                    <input asp-for="Campo4B1_KW" class="form-control" />
+                    <span asp-validation-for="Campo4B1_KW" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo4B1_SM"></label>
+                    <input asp-for="Campo4B1_SM" class="form-control" />
+                    <span asp-validation-for="Campo4B1_SM" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo4B2_Amps"></label>
+                    <input asp-for="Campo4B2_Amps" class="form-control" />
+                    <span asp-validation-for="Campo4B2_Amps" class="text-danger"></span>
+                </div>
+                <div class="form-group mt-3">
+                    <button type="button" class="btn btn-secondary" id="prevBtn13">Volver</button>
+                    <button type="button" class="btn btn-primary" id="nextBtn13">Siguiente</button>
+                </div>
+            </div>
+            <!-- Sección 14 -->
+            <div class="form-section" id="section-14" style="display:none;">
+                <div class="form-group">
+                    <label asp-for="Campo4B2_Volts"></label>
+                    <input asp-for="Campo4B2_Volts" class="form-control" />
+                    <span asp-validation-for="Campo4B2_Volts" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo4B2_mA"></label>
+                    <input asp-for="Campo4B2_mA" class="form-control" />
+                    <span asp-validation-for="Campo4B2_mA" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo4B2_KV"></label>
+                    <input asp-for="Campo4B2_KV" class="form-control" />
+                    <span asp-validation-for="Campo4B2_KV" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo4B2_SCR"></label>
+                    <input asp-for="Campo4B2_SCR" class="form-control" />
+                    <span asp-validation-for="Campo4B2_SCR" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo4B2_KW"></label>
+                    <input asp-for="Campo4B2_KW" class="form-control" />
+                    <span asp-validation-for="Campo4B2_KW" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo4B2_SM"></label>
+                    <input asp-for="Campo4B2_SM" class="form-control" />
+                    <span asp-validation-for="Campo4B2_SM" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Observaciones"  class="control-label"></label>
+                    <input asp-for="Observaciones" class="form-control" />
+                    <span asp-validation-for="Observaciones" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mt-3">
+                    <button type="button" class="btn btn-secondary" id="prevBtn14">Volver</button>
+                    <input type="submit" value="Registrar" class="btn btn-success" />
+                </div>
             </div>
         </form>
     </div>
@@ -858,4 +877,45 @@
 <div>
     <a asp-action="Index">Back to List</a>
 </div>
+
+@section Scripts {
+    <script>
+        // Control de secciones
+        let currentSection = 1;
+        const totalSections = 14; // Ajusta si agregas más secciones
+        function showSection(n) {
+            for (let i = 1; i <= totalSections; i++) {
+                document.getElementById('section-' + i).style.display = (i === n) ? '' : 'none';
+            }
+            currentSection = n;
+        }
+        // Botones de navegación
+        document.getElementById('nextBtn1').onclick = function () { showSection(2); };
+        document.getElementById('prevBtn2').onclick = function () { showSection(1); };
+        document.getElementById('nextBtn2').onclick = function () { showSection(3); };
+        document.getElementById('prevBtn3').onclick = function () { showSection(2); };
+        document.getElementById('nextBtn3').onclick = function () { showSection(4); };
+        document.getElementById('prevBtn4').onclick = function () { showSection(3); };
+        document.getElementById('nextBtn4').onclick = function () { showSection(5); };
+        document.getElementById('prevBtn5').onclick = function () { showSection(4); };
+        document.getElementById('nextBtn5').onclick = function () { showSection(6); };
+        document.getElementById('prevBtn6').onclick = function () { showSection(5); };
+        document.getElementById('nextBtn6').onclick = function () { showSection(7); };
+        document.getElementById('prevBtn7').onclick = function () { showSection(6); };
+        document.getElementById('nextBtn7').onclick = function () { showSection(8); };
+        document.getElementById('prevBtn8').onclick = function () { showSection(7); };
+        document.getElementById('nextBtn8').onclick = function () { showSection(9); };
+        document.getElementById('prevBtn9').onclick = function () { showSection(8); };
+        document.getElementById('nextBtn9').onclick = function () { showSection(10); };
+        document.getElementById('prevBtn10').onclick = function () { showSection(9); };
+        document.getElementById('nextBtn10').onclick = function () { showSection(11); };
+        document.getElementById('prevBtn11').onclick = function () { showSection(10); };
+        document.getElementById('nextBtn11').onclick = function () { showSection(12); };
+        document.getElementById('prevBtn12').onclick = function () { showSection(11); };
+        document.getElementById('nextBtn12').onclick = function () { showSection(13); };
+        document.getElementById('prevBtn13').onclick = function () { showSection(12); };
+        document.getElementById('nextBtn13').onclick = function () { showSection(14); };
+        document.getElementById('prevBtn14').onclick = function () { showSection(13); };
+    </script>
+}
 

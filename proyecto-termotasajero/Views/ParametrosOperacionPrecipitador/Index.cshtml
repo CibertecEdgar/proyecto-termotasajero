@@ -10,1023 +10,253 @@
 <p>
     <a asp-action="Registrar">Create New</a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.ID)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.FechaHoraInicio)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.FechaHoraFinalizacion)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.NombreOperador)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.OperadorTurno)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IPF14)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IPF13)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IPF15)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IPF16)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IPF12)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IPF11)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IPF10)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IPF9)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IPF5)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IPF6)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IPF7)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IPF8)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IPF4)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IPF3)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IPF2)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IPF1)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Temp1B2)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Nivel1B2)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Temp2B2)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Nivel2B2)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Temp3B2)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Nivel3B2)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Temp4B2)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Nivel4B2)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Temp4B1)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Nivel4B1)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Temp3B1)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Nivel3B1)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Temp2B1)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Nivel2B1)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Temp1B1)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Nivel1B1)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Temp1A2)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Nivel1A2)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Temp2A2)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Nivel2A2)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Temp3A2)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Nivel3A2)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Temp4A2)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Nivel4A2)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Temp4A1)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Nivel4A1)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Temp3A1)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Nivel3A1)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Temp2A1)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Nivel2A1)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Temp1A1)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Nivel1A1)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo1A1_Amps)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo1A1_Volts)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo1A1_mA)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo1A1_KV)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo1A1_SPM)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo1A1_KW)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo1A1_Deg)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo1A2_Amps)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo1A2_Volts)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo1A2_mA)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo1A2_KV)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo1A2_SPM)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo1A2_KW)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo1A2_Deg)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo1B1_Amps)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo1B1_Volts)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo1B1_mA)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo1B1_KV)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo1B1_SPM)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo1B1_KW)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo1B1_Deg)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo1B2_Amps)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo1B2_Volts)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo1B2_mA)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo1B2_KV)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo1B2_SPM)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo1B2_KW)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo1B2_Deg)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo2A1_Amps)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo2A1_Volts)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo2A1_mA)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo2A1_KV)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo2A1_SPM)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo2A1_KW)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo2A1_Deg)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo2B2_Amps)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo2B2_Volts)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo2B2_mA)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo2B2_KV)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo2B2_SPM)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo2B2_KW)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo2B2_Deg)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo2B1_Amps)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo2B1_Volts)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo2B1_mA)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo2B1_KV)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo2B1_SPM)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo2B1_KW)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo2B1_Deg)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo2A2_Amps)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo2A2_Volts)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo2A2_mA)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo2A2_KV)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo2A2_SPM)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo2A2_KW)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo2A2_Deg)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo3A1_Amps)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo3A1_Volts)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo3A1_mA)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo3A1_KV)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo3A1_SCR)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo3A1_KW)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo3A1_SM)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo3A2_Amps)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo3A2_Volts)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo3A2_mA)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo3A2_KV)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo3A2_SCR)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo3A2_KW)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo3A2_SM)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo4A1_Amps)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo4A1_Volts)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo4A1_mA)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo4A1_KV)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo4A1_SCR)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo4A1_KW)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo4A1_SM)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo4A2_Amps)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo4A2_Volts)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo4A2_mA)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo4A2_KV)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo4A2_SCR)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo4A2_KW)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo4A2_SM)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo3B1_Amps)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo3B1_Volts)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo3B1_mA)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo3B1_KV)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo3B1_SCR)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo3B1_KW)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo3B1_SM)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo3B2_Amps)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo3B2_Volts)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo3B2_mA)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo3B2_KV)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo3B2_SCR)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo3B2_KW)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo3B2_SM)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo4B1_Amps)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo4B1_Volts)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo4B1_mA)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo4B1_KV)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo4B1_SCR)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo4B1_KW)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo4B1_SM)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo4B2_Amps)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo4B2_Volts)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo4B2_mA)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo4B2_KV)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo4B2_SCR)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo4B2_KW)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campo4B2_SM)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Observaciones)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.ID)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FechaHoraInicio)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FechaHoraFinalizacion)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NombreOperador)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.OperadorTurno)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IPF14)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IPF13)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IPF15)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IPF16)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IPF12)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IPF11)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IPF10)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IPF9)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IPF5)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IPF6)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IPF7)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IPF8)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IPF4)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IPF3)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IPF2)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IPF1)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Temp1B2)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nivel1B2)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Temp2B2)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nivel2B2)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Temp3B2)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nivel3B2)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Temp4B2)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nivel4B2)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Temp4B1)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nivel4B1)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Temp3B1)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nivel3B1)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Temp2B1)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nivel2B1)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Temp1B1)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nivel1B1)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Temp1A2)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nivel1A2)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Temp2A2)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nivel2A2)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Temp3A2)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nivel3A2)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Temp4A2)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nivel4A2)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Temp4A1)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nivel4A1)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Temp3A1)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nivel3A1)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Temp2A1)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nivel2A1)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Temp1A1)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nivel1A1)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo1A1_Amps)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo1A1_Volts)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo1A1_mA)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo1A1_KV)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo1A1_SPM)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo1A1_KW)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo1A1_Deg)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo1A2_Amps)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo1A2_Volts)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo1A2_mA)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo1A2_KV)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo1A2_SPM)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo1A2_KW)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo1A2_Deg)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo1B1_Amps)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo1B1_Volts)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo1B1_mA)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo1B1_KV)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo1B1_SPM)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo1B1_KW)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo1B1_Deg)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo1B2_Amps)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo1B2_Volts)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo1B2_mA)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo1B2_KV)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo1B2_SPM)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo1B2_KW)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo1B2_Deg)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo2A1_Amps)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo2A1_Volts)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo2A1_mA)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo2A1_KV)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo2A1_SPM)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo2A1_KW)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo2A1_Deg)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo2B2_Amps)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo2B2_Volts)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo2B2_mA)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo2B2_KV)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo2B2_SPM)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo2B2_KW)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo2B2_Deg)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo2B1_Amps)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo2B1_Volts)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo2B1_mA)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo2B1_KV)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo2B1_SPM)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo2B1_KW)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo2B1_Deg)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo2A2_Amps)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo2A2_Volts)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo2A2_mA)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo2A2_KV)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo2A2_SPM)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo2A2_KW)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo2A2_Deg)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo3A1_Amps)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo3A1_Volts)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo3A1_mA)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo3A1_KV)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo3A1_SCR)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo3A1_KW)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo3A1_SM)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo3A2_Amps)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo3A2_Volts)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo3A2_mA)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo3A2_KV)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo3A2_SCR)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo3A2_KW)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo3A2_SM)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo4A1_Amps)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo4A1_Volts)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo4A1_mA)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo4A1_KV)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo4A1_SCR)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo4A1_KW)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo4A1_SM)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo4A2_Amps)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo4A2_Volts)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo4A2_mA)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo4A2_KV)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo4A2_SCR)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo4A2_KW)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo4A2_SM)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo3B1_Amps)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo3B1_Volts)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo3B1_mA)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo3B1_KV)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo3B1_SCR)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo3B1_KW)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo3B1_SM)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo3B2_Amps)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo3B2_Volts)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo3B2_mA)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo3B2_KV)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo3B2_SCR)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo3B2_KW)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo3B2_SM)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo4B1_Amps)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo4B1_Volts)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo4B1_mA)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo4B1_KV)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo4B1_SCR)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo4B1_KW)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo4B1_SM)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo4B2_Amps)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo4B2_Volts)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo4B2_mA)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo4B2_KV)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo4B2_SCR)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo4B2_KW)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Campo4B2_SM)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Observaciones)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
-        </tr>
+
+<div id="paginado-listado">
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr id="header-row">
+                    <!-- Los headers se llenan por JS -->
+                </tr>
+            </thead>
+            <tbody id="body-rows">
+                <!-- Las filas se llenan por JS -->
+            </tbody>
+        </table>
+    </div>
+    <div class="d-flex justify-content-between mt-3">
+        <button class="btn btn-secondary" id="prevSectionBtn" style="display:none;">Anterior sección</button>
+        <button class="btn btn-primary" id="nextSectionBtn">Siguiente sección</button>
+    </div>
+</div>
+
+@section Scripts {
+<script>
+    // Obtén los datos del modelo en JS
+    const data = [
+        @foreach (var item in Model) {
+            @: {
+            @: ID: @(item.ID),
+            @: FechaHoraInicio: '@item.FechaHoraInicio',
+            @: FechaHoraFinalizacion: '@item.FechaHoraFinalizacion',
+            @: Email: '@item.Email',
+            @: NombreOperador: '@item.NombreOperador',
+            @: OperadorTurno: '@item.OperadorTurno',
+            @: IPF14: '@item.IPF14',
+            @: IPF13: '@item.IPF13',
+            @: IPF15: '@item.IPF15',
+            @: IPF16: '@item.IPF16',
+            @: IPF12: '@item.IPF12',
+            @: IPF11: '@item.IPF11',
+            @: IPF10: '@item.IPF10',
+            @: IPF9: '@item.IPF9',
+            @: IPF5: '@item.IPF5',
+            @: IPF6: '@item.IPF6',
+            @: IPF7: '@item.IPF7',
+            @: IPF8: '@item.IPF8',
+            @: IPF4: '@item.IPF4',
+            @: IPF3: '@item.IPF3',
+            @: IPF2: '@item.IPF2',
+            @: IPF1: '@item.IPF1',
+            @: Temp1B2: '@item.Temp1B2',
+            @: Nivel1B2: '@item.Nivel1B2',
+            @: Temp2B2: '@item.Temp2B2',
+            @: Nivel2B2: '@item.Nivel2B2',
+            @: Temp3B2: '@item.Temp3B2',
+            @: Nivel3B2: '@item.Nivel3B2',
+            @: Temp4B2: '@item.Temp4B2',
+            @: Nivel4B2: '@item.Nivel4B2',
+            @: Temp4B1: '@item.Temp4B1',
+            @: Nivel4B1: '@item.Nivel4B1',
+            @: Temp3B1: '@item.Temp3B1',
+            @: Nivel3B1: '@item.Nivel3B1',
+            @: Temp2B1: '@item.Temp2B1',
+            @: Nivel2B1: '@item.Nivel2B1',
+            @: Temp1B1: '@item.Temp1B1',
+            @: Nivel1B1: '@item.Nivel1B1',
+            @: Temp1A2: '@item.Temp1A2',
+            @: Nivel1A2: '@item.Nivel1A2',
+            @: Temp2A2: '@item.Temp2A2',
+            @: Nivel2A2: '@item.Nivel2A2',
+            @: Temp3A2: '@item.Temp3A2',
+            @: Nivel3A2: '@item.Nivel3A2',
+            @: Temp4A2: '@item.Temp4A2',
+            @: Nivel4A2: '@item.Nivel4A2',
+            @: Temp4A1: '@item.Temp4A1',
+            @: Nivel4A1: '@item.Nivel4A1',
+            @: Temp3A1: '@item.Temp3A1',
+            @: Nivel3A1: '@item.Nivel3A1',
+            @: Temp2A1: '@item.Temp2A1',
+            @: Nivel2A1: '@item.Nivel2A1',
+            @: Temp1A1: '@item.Temp1A1',
+            @: Nivel1A1: '@item.Nivel1A1',
+            @: Campo1A1_Amps: '@item.Campo1A1_Amps',
+            @: Campo1A1_Volts: '@item.Campo1A1_Volts',
+            @: Campo1A1_mA: '@item.Campo1A1_mA',
+            @: Campo1A1_KV: '@item.Campo1A1_KV',
+            @: Campo1A1_SPM: '@item.Campo1A1_SPM',
+            @: Campo1A1_KW: '@item.Campo1A1_KW',
+            @: Campo1A1_Deg: '@item.Campo1A1_Deg',
+            @: Campo1A2_Amps: '@item.Campo1A2_Amps',
+            @: Campo1A2_Volts: '@item.Campo1A2_Volts',
+            @: Campo1A2_mA: '@item.Campo1A2_mA',
+            @: Campo1A2_KV: '@item.Campo1A2_KV',
+            @: Campo1A2_SPM: '@item.Campo1A2_SPM',
+            @: Campo1A2_KW: '@item.Campo1A2_KW',
+            @: Campo1A2_Deg: '@item.Campo1A2_Deg',
+            @: Campo1B1_Amps: '@item.Campo1B1_Amps',
+            @: Campo1B1_Volts: '@item.Campo1B1_Volts',
+            @: Campo1B1_mA: '@item.Campo1B1_mA',
+            @: Campo1B1_KV: '@item.Campo1B1_KV',
+            @: Campo1B1_SPM: '@item.Campo1B1_SPM',
+            @: Campo1B1_KW: '@item.Campo1B1_KW',
+            @: Campo1B1_Deg: '@item.Campo1B1_Deg',
+            @: Campo1B2_Amps: '@item.Campo1B2_Amps',
+            @: Campo1B2_Volts: '@item.Campo1B2_Volts',
+            @: Campo1B2_mA: '@item.Campo1B2_mA',
+            @: Campo1B2_KV: '@item.Campo1B2_KV',
+            @: Campo1B2_SPM: '@item.Campo1B2_SPM',
+            @: Campo1B2_KW: '@item.Campo1B2_KW',
+            @: Campo1B2_Deg: '@item.Campo1B2_Deg',
+            @: Campo2A1_Amps: '@item.Campo2A1_Amps',
+            @: Campo2A1_Volts: '@item.Campo2A1_Volts',
+            @: Campo2A1_mA: '@item.Campo2A1_mA',
+            @: Campo2A1_KV: '@item.Campo2A1_KV',
+            @: Campo2A1_SPM: '@item.Campo2A1_SPM',
+            @: Campo2A1_KW: '@item.Campo2A1_KW',
+            @: Campo2A1_Deg: '@item.Campo2A1_Deg',
+            @: Campo2B2_Amps: '@item.Campo2B2_Amps',
+            @: Campo2B2_Volts: '@item.Campo2B2_Volts',
+            @: Campo2B2_mA: '@item.Campo2B2_mA',
+            @: Campo2B2_KV: '@item.Campo2B2_KV',
+            @: Campo2B2_SPM: '@item.Campo2B2_SPM',
+            @: Campo2B2_KW: '@item.Campo2B2_KW',
+            @: Campo2B2_Deg: '@item.Campo2B2_Deg',
+            @: Campo2B1_Amps: '@item.Campo2B1_Amps',
+            @: Campo2B1_Volts: '@item.Campo2B1_Volts',
+            @: Campo2B1_mA: '@item.Campo2B1_mA',
+            @: Campo2B1_KV: '@item.Campo2B1_KV',
+            @: Campo2B1_SPM: '@item.Campo2B1_SPM',
+            @: Campo2B1_KW: '@item.Campo2B1_KW',
+            @: Campo2B1_Deg: '@item.Campo2B1_Deg',
+            @: Campo2A2_Amps: '@item.Campo2A2_Amps',
+            @: Campo2A2_Volts: '@item.Campo2A2_Volts',
+            @: Campo2A2_mA: '@item.Campo2A2_mA',
+            @: Campo2A2_KV: '@item.Campo2A2_KV',
+            @: Campo2A2_SPM: '@item.Campo2A2_SPM',
+            @: Campo2A2_KW: '@item.Campo2A2_KW',
+            @: Campo2A2_Deg: '@item.Campo2A2_Deg',
+            @: Campo3A1_Amps: '@item.Campo3A1_Amps',
+            @: Campo3A1_Volts: '@item.Campo3A1_Volts',
+            @: Campo3A1_mA: '@item.Campo3A1_mA',
+            @: Campo3A1_KV: '@item.Campo3A1_KV',
+            @: Campo3A1_SCR: '@item.Campo3A1_SCR',
+            @: Campo3A1_KW: '@item.Campo3A1_KW',
+            @: Campo3A1_SM: '@item.Campo3A1_SM',
+            @: Campo3A2_Amps: '@item.Campo3A2_Amps',
+            @: Campo3A2_Volts: '@item.Campo3A2_Volts',
+            @: Campo3A2_mA: '@item.Campo3A2_mA',
+            @: Campo3A2_KV: '@item.Campo3A2_KV',
+            @: Campo3A2_SCR: '@item.Campo3A2_SCR',
+            @: Campo3A2_KW: '@item.Campo3A2_KW',
+            @: Campo3A2_SM: '@item.Campo3A2_SM',
+            @: Campo4A1_Amps: '@item.Campo4A1_Amps',
+            @: Campo4A1_Volts: '@item.Campo4A1_Volts',
+            @: Campo4A1_mA: '@item.Campo4A1_mA',
+            @: Campo4A1_KV: '@item.Campo4A1_KV',
+            @: Campo4A1_SCR: '@item.Campo4A1_SCR',
+            @: Campo4A1_KW: '@item.Campo4A1_KW',
+            @: Campo4A1_SM: '@item.Campo4A1_SM',
+            @: Campo4A2_Amps: '@item.Campo4A2_Amps',
+            @: Campo4A2_Volts: '@item.Campo4A2_Volts',
+            @: Campo4A2_mA: '@item.Campo4A2_mA',
+            @: Campo4A2_KV: '@item.Campo4A2_KV',
+            @: Campo4A2_SCR: '@item.Campo4A2_SCR',
+            @: Campo4A2_KW: '@item.Campo4A2_KW',
+            @: Campo4A2_SM: '@item.Campo4A2_SM',
+            @: Campo3B1_Amps: '@item.Campo3B1_Amps',
+            @: Campo3B1_Volts: '@item.Campo3B1_Volts',
+            @: Campo3B1_mA: '@item.Campo3B1_mA',
+            @: Campo3B1_KV: '@item.Campo3B1_KV',
+            @: Campo3B1_SCR: '@item.Campo3B1_SCR',
+            @: Campo3B1_KW: '@item.Campo3B1_KW',
+            @: Campo3B1_SM: '@item.Campo3B1_SM',
+            @: Campo3B2_Amps: '@item.Campo3B2_Amps',
+            @: Campo3B2_Volts: '@item.Campo3B2_Volts',
+            @: Campo3B2_mA: '@item.Campo3B2_mA',
+            @: Campo3B2_KV: '@item.Campo3B2_KV',
+            @: Campo3B2_SCR: '@item.Campo3B2_SCR',
+            @: Campo3B2_KW: '@item.Campo3B2_KW',
+            @: Campo3B2_SM: '@item.Campo3B2_SM',
+            @: Campo4B1_Amps: '@item.Campo4B1_Amps',
+            @: Campo4B1_Volts: '@item.Campo4B1_Volts',
+            @: Campo4B1_mA: '@item.Campo4B1_mA',
+            @: Campo4B1_KV: '@item.Campo4B1_KV',
+            @: Campo4B1_SCR: '@item.Campo4B1_SCR',
+            @: Campo4B1_KW: '@item.Campo4B1_KW',
+            @: Campo4B1_SM: '@item.Campo4B1_SM',
+            @: Campo4B2_Amps: '@item.Campo4B2_Amps',
+            @: Campo4B2_Volts: '@item.Campo4B2_Volts',
+            @: Campo4B2_mA: '@item.Campo4B2_mA',
+            @: Campo4B2_KV: '@item.Campo4B2_KV',
+            @: Campo4B2_SCR: '@item.Campo4B2_SCR',
+            @: Campo4B2_KW: '@item.Campo4B2_KW',
+            @: Campo4B2_SM: '@item.Campo4B2_SM',
+            @: Observaciones: '@item.Observaciones',
+            @: },
+        }
+    ];
+    // Nombres de columnas en orden
+    const columns = [
+        'ID','FechaHoraInicio','FechaHoraFinalizacion','Email','NombreOperador','OperadorTurno','IPF14','IPF13','IPF15','IPF16','IPF12','IPF11','IPF10','IPF9','IPF5','IPF6','IPF7','IPF8','IPF4','IPF3','IPF2','IPF1','Temp1B2','Nivel1B2','Temp2B2','Nivel2B2','Temp3B2','Nivel3B2','Temp4B2','Nivel4B2','Temp4B1','Nivel4B1','Temp3B1','Nivel3B1','Temp2B1','Nivel2B1','Temp1B1','Nivel1B1','Temp1A2','Nivel1A2','Temp2A2','Nivel2A2','Temp3A2','Nivel3A2','Temp4A2','Nivel4A2','Temp4A1','Nivel4A1','Temp3A1','Nivel3A1','Temp2A1','Nivel2A1','Temp1A1','Nivel1A1','Campo1A1_Amps','Campo1A1_Volts','Campo1A1_mA','Campo1A1_KV','Campo1A1_SPM','Campo1A1_KW','Campo1A1_Deg','Campo1A2_Amps','Campo1A2_Volts','Campo1A2_mA','Campo1A2_KV','Campo1A2_SPM','Campo1A2_KW','Campo1A2_Deg','Campo1B1_Amps','Campo1B1_Volts','Campo1B1_mA','Campo1B1_KV','Campo1B1_SPM','Campo1B1_KW','Campo1B1_Deg','Campo1B2_Amps','Campo1B2_Volts','Campo1B2_mA','Campo1B2_KV','Campo1B2_SPM','Campo1B2_KW','Campo1B2_Deg','Campo2A1_Amps','Campo2A1_Volts','Campo2A1_mA','Campo2A1_KV','Campo2A1_SPM','Campo2A1_KW','Campo2A1_Deg','Campo2B2_Amps','Campo2B2_Volts','Campo2B2_mA','Campo2B2_KV','Campo2B2_SPM','Campo2B2_KW','Campo2B2_Deg','Campo2B1_Amps','Campo2B1_Volts','Campo2B1_mA','Campo2B1_KV','Campo2B1_SPM','Campo2B1_KW','Campo2B1_Deg','Campo2A2_Amps','Campo2A2_Volts','Campo2A2_mA','Campo2A2_KV','Campo2A2_SPM','Campo2A2_KW','Campo2A2_Deg','Campo3A1_Amps','Campo3A1_Volts','Campo3A1_mA','Campo3A1_KV','Campo3A1_SCR','Campo3A1_KW','Campo3A1_SM','Campo3A2_Amps','Campo3A2_Volts','Campo3A2_mA','Campo3A2_KV','Campo3A2_SCR','Campo3A2_KW','Campo3A2_SM','Campo4A1_Amps','Campo4A1_Volts','Campo4A1_mA','Campo4A1_KV','Campo4A1_SCR','Campo4A1_KW','Campo4A1_SM','Campo4A2_Amps','Campo4A2_Volts','Campo4A2_mA','Campo4A2_KV','Campo4A2_SCR','Campo4A2_KW','Campo4A2_SM','Campo3B1_Amps','Campo3B1_Volts','Campo3B1_mA','Campo3B1_KV','Campo3B1_SCR','Campo3B1_KW','Campo3B1_SM','Campo3B2_Amps','Campo3B2_Volts','Campo3B2_mA','Campo3B2_KV','Campo3B2_SCR','Campo3B2_KW','Campo3B2_SM','Campo4B1_Amps','Campo4B1_Volts','Campo4B1_mA','Campo4B1_KV','Campo4B1_SCR','Campo4B1_KW','Campo4B1_SM','Campo4B2_Amps','Campo4B2_Volts','Campo4B2_mA','Campo4B2_KV','Campo4B2_SCR','Campo4B2_KW','Campo4B2_SM','Observaciones'
+    ];
+    // Nombres legibles para los headers (puedes personalizar estos nombres)
+    const columnHeaders = columns.map(c => c);
+    // Paginación de columnas
+    const pageSize = 8;
+    let currentSection = 0;
+    function renderTable() {
+        // Renderiza los headers y las filas según la sección actual
+        const start = currentSection * pageSize;
+        const end = Math.min(start + pageSize, columns.length);
+        const visibleColumns = columns.slice(start, end);
+        const visibleHeaders = columnHeaders.slice(start, end);
+        // Render headers
+        const headerRow = document.getElementById('header-row');
+        headerRow.innerHTML = '';
+        visibleHeaders.forEach(h => {
+            const th = document.createElement('th');
+            th.textContent = h;
+            headerRow.appendChild(th);
+        });
+        // Render rows
+        const bodyRows = document.getElementById('body-rows');
+        bodyRows.innerHTML = '';
+        data.forEach(row => {
+            const tr = document.createElement('tr');
+            visibleColumns.forEach(col => {
+                const td = document.createElement('td');
+                td.textContent = row[col];
+                tr.appendChild(td);
+            });
+            bodyRows.appendChild(tr);
+        });
+        // Botones
+        document.getElementById('prevSectionBtn').style.display = currentSection > 0 ? '' : 'none';
+        document.getElementById('nextSectionBtn').style.display = end < columns.length ? '' : 'none';
+    }
+    document.getElementById('prevSectionBtn').onclick = function () {
+        if (currentSection > 0) {
+            currentSection--;
+            renderTable();
+        }
+    };
+    document.getElementById('nextSectionBtn').onclick = function () {
+        if ((currentSection + 1) * pageSize < columns.length) {
+            currentSection++;
+            renderTable();
+        }
+    };
+    renderTable();
+</script>
 }
-    </tbody>
-</table>
