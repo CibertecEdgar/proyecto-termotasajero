@@ -174,7 +174,5 @@ namespace proyecto_termotasajero.Models
         public decimal Campo4B2_KW { get; set; }
         public string? Campo4B2_SM { get; set; }
         public string? Observaciones { get; set; }
-        public DateTime FechaCreacion { get; set; }
-        public string? UsuarioCreacion { get; set; }
     }
 }

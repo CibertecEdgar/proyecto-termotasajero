@@ -8,245 +8,138 @@
 <h1>Index</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Registrar">Create New</a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.ID)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Inicio)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Finalizacion)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CorreoElectronico)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Nombre)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.OperadorTurno)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.VoltajeBarraBPW_kV)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Corriente_A)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.BBT_A_Estado)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TempAceiteReductor_A)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PresAceitePrincipal_A_kgcm2)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PresNormalLubricacion_A_kgcm2)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PresAguaEnfriamiento_A_kgcm2)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TempDevanadosFaseR_A)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TempDevanadosFaseS_A)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TempDevanadosFaseT_A)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.BBT_B_Estado)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TempAceiteReductor_B)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PresAceitePrincipal_B_kgcm2)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PresNormalLubricacion_B_kgcm2)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PresAguaEnfriamiento_B_kgcm2)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TempRodamientoLadoLibre_B)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TempDevanadosFaseR_B)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TempDevanadosFaseS_B)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TempDevanadosFaseT_B)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TempRodamientoLadoAcople_B)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.BBT_C_Estado)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TempAceiteReductor_C)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PresAceitePrincipal_C_kgcm2)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PresNormalLubricacion_C_kgcm2)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PresAguaEnfriamiento_C_kgcm2)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TempDevanadosFaseR_C)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TempDevanadosFaseS_C)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TempDevanadosFaseT_C)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.BbaB_CircuitoCerrado)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.BbaA_CircuitoCerrado)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PresDescargaCabezal_kgcm2)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.ID)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Inicio)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Finalizacion)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CorreoElectronico)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nombre)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.OperadorTurno)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.VoltajeBarraBPW_kV)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Corriente_A)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.BBT_A_Estado)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TempAceiteReductor_A)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PresAceitePrincipal_A_kgcm2)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PresNormalLubricacion_A_kgcm2)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PresAguaEnfriamiento_A_kgcm2)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TempDevanadosFaseR_A)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TempDevanadosFaseS_A)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TempDevanadosFaseT_A)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.BBT_B_Estado)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TempAceiteReductor_B)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PresAceitePrincipal_B_kgcm2)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PresNormalLubricacion_B_kgcm2)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PresAguaEnfriamiento_B_kgcm2)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TempRodamientoLadoLibre_B)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TempDevanadosFaseR_B)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TempDevanadosFaseS_B)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TempDevanadosFaseT_B)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TempRodamientoLadoAcople_B)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.BBT_C_Estado)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TempAceiteReductor_C)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PresAceitePrincipal_C_kgcm2)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PresNormalLubricacion_C_kgcm2)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PresAguaEnfriamiento_C_kgcm2)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TempDevanadosFaseR_C)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TempDevanadosFaseS_C)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TempDevanadosFaseT_C)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.BbaB_CircuitoCerrado)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.BbaA_CircuitoCerrado)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PresDescargaCabezal_kgcm2)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
-        </tr>
+
+<div id="paginado-listado">
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr id="header-row">
+                    <!-- Los headers se llenan por JS -->
+                </tr>
+            </thead>
+            <tbody id="body-rows">
+                <!-- Las filas se llenan por JS -->
+            </tbody>
+        </table>
+    </div>
+    <div class="d-flex justify-content-between mt-3">
+        <button class="btn btn-secondary" id="prevSectionBtn" style="display:none;">Anterior sección</button>
+        <button class="btn btn-primary" id="nextSectionBtn">Siguiente sección</button>
+    </div>
+</div>
+
+@section Scripts {
+<script>
+    // Obtén los datos del modelo en JS
+    const data = [
+        @foreach (var item in Model) {
+            @: {
+            @: ID: @(item.ID),
+            @: Inicio: '@item.Inicio',
+            @: Finalizacion: '@item.Finalizacion',
+            @: CorreoElectronico: '@item.CorreoElectronico',
+            @: Nombre: '@item.Nombre',
+            @: OperadorTurno: '@item.OperadorTurno',
+            @: VoltajeBarraBPW_kV: '@item.VoltajeBarraBPW_kV',
+            @: Corriente_A: '@item.Corriente_A',
+            @: BBT_A_Estado: '@item.BBT_A_Estado',
+            @: TempAceiteReductor_A: '@item.TempAceiteReductor_A',
+            @: PresAceitePrincipal_A_kgcm2: '@item.PresAceitePrincipal_A_kgcm2',
+            @: PresNormalLubricacion_A_kgcm2: '@item.PresNormalLubricacion_A_kgcm2',
+            @: PresAguaEnfriamiento_A_kgcm2: '@item.PresAguaEnfriamiento_A_kgcm2',
+            @: TempDevanadosFaseR_A: '@item.TempDevanadosFaseR_A',
+            @: TempDevanadosFaseS_A: '@item.TempDevanadosFaseS_A',
+            @: TempDevanadosFaseT_A: '@item.TempDevanadosFaseT_A',
+            @: BBT_B_Estado: '@item.BBT_B_Estado',
+            @: TempAceiteReductor_B: '@item.TempAceiteReductor_B',
+            @: PresAceitePrincipal_B_kgcm2: '@item.PresAceitePrincipal_B_kgcm2',
+            @: PresNormalLubricacion_B_kgcm2: '@item.PresNormalLubricacion_B_kgcm2',
+            @: PresAguaEnfriamiento_B_kgcm2: '@item.PresAguaEnfriamiento_B_kgcm2',
+            @: TempRodamientoLadoLibre_B: '@item.TempRodamientoLadoLibre_B',
+            @: TempDevanadosFaseR_B: '@item.TempDevanadosFaseR_B',
+            @: TempDevanadosFaseS_B: '@item.TempDevanadosFaseS_B',
+            @: TempDevanadosFaseT_B: '@item.TempDevanadosFaseT_B',
+            @: TempRodamientoLadoAcople_B: '@item.TempRodamientoLadoAcople_B',
+            @: BBT_C_Estado: '@item.BBT_C_Estado',
+            @: TempAceiteReductor_C: '@item.TempAceiteReductor_C',
+            @: PresAceitePrincipal_C_kgcm2: '@item.PresAceitePrincipal_C_kgcm2',
+            @: PresNormalLubricacion_C_kgcm2: '@item.PresNormalLubricacion_C_kgcm2',
+            @: PresAguaEnfriamiento_C_kgcm2: '@item.PresAguaEnfriamiento_C_kgcm2',
+            @: TempDevanadosFaseR_C: '@item.TempDevanadosFaseR_C',
+            @: TempDevanadosFaseS_C: '@item.TempDevanadosFaseS_C',
+            @: TempDevanadosFaseT_C: '@item.TempDevanadosFaseT_C',
+            @: BbaB_CircuitoCerrado: '@item.BbaB_CircuitoCerrado',
+            @: BbaA_CircuitoCerrado: '@item.BbaA_CircuitoCerrado',
+            @: PresDescargaCabezal_kgcm2: '@item.PresDescargaCabezal_kgcm2'
+            @: },
+        }
+    ];
+    // Nombres de columnas en orden
+    const columns = [
+        'ID','Inicio','Finalizacion','CorreoElectronico','Nombre','OperadorTurno','VoltajeBarraBPW_kV','Corriente_A',
+        'BBT_A_Estado','TempAceiteReductor_A','PresAceitePrincipal_A_kgcm2','PresNormalLubricacion_A_kgcm2','PresAguaEnfriamiento_A_kgcm2',
+        'TempDevanadosFaseR_A','TempDevanadosFaseS_A','TempDevanadosFaseT_A','BBT_B_Estado','TempAceiteReductor_B',
+        'PresAceitePrincipal_B_kgcm2','PresNormalLubricacion_B_kgcm2','PresAguaEnfriamiento_B_kgcm2','TempRodamientoLadoLibre_B',
+        'TempDevanadosFaseR_B','TempDevanadosFaseS_B','TempDevanadosFaseT_B','TempRodamientoLadoAcople_B','BBT_C_Estado',
+        'TempAceiteReductor_C','PresAceitePrincipal_C_kgcm2','PresNormalLubricacion_C_kgcm2','PresAguaEnfriamiento_C_kgcm2',
+        'TempDevanadosFaseR_C','TempDevanadosFaseS_C','TempDevanadosFaseT_C','BbaB_CircuitoCerrado','BbaA_CircuitoCerrado','PresDescargaCabezal_kgcm2'
+    ];
+    // Nombres legibles para los headers
+    const columnHeaders = [
+        'ID','Inicio','Finalización','Correo Electrónico','Nombre','Operador Turno','Voltaje Barra BPW (kV)','Corriente (A)',
+        'BBT A Estado','Temp. Aceite Reductor A','Pres. Aceite Principal A (kg/cm2)','Pres. Normal Lubricación A (kg/cm2)','Pres. Agua Enfriamiento A (kg/cm2)',
+        'Temp. Devanados Fase R A','Temp. Devanados Fase S A','Temp. Devanados Fase T A','BBT B Estado','Temp. Aceite Reductor B',
+        'Pres. Aceite Principal B (kg/cm2)','Pres. Normal Lubricación B (kg/cm2)','Pres. Agua Enfriamiento B (kg/cm2)','Temp. Rodamiento Lado Libre B',
+        'Temp. Devanados Fase R B','Temp. Devanados Fase S B','Temp. Devanados Fase T B','Temp. Rodamiento Lado Acople B','BBT C Estado',
+        'Temp. Aceite Reductor C','Pres. Aceite Principal C (kg/cm2)','Pres. Normal Lubricación C (kg/cm2)','Pres. Agua Enfriamiento C (kg/cm2)',
+        'Temp. Devanados Fase R C','Temp. Devanados Fase S C','Temp. Devanados Fase T C','BbaB Circuito Cerrado','BbaA Circuito Cerrado','Pres. Descarga Cabezal (kg/cm2)'
+    ];
+    // Paginación de columnas
+    const pageSize = 8;
+    let currentSection = 0;
+    function renderTableSection() {
+        // Renderiza headers
+        let headerRow = '';
+        for (let i = currentSection * pageSize; i < Math.min((currentSection + 1) * pageSize, columns.length); i++) {
+            headerRow += `<th>${columnHeaders[i]}</th>`;
+        }
+        headerRow += '<th>Acciones</th>';
+        document.getElementById('header-row').innerHTML = headerRow;
+        // Renderiza filas
+        let bodyRows = '';
+        data.forEach((row, idx) => {
+            bodyRows += '<tr>';
+            for (let i = currentSection * pageSize; i < Math.min((currentSection + 1) * pageSize, columns.length); i++) {
+                bodyRows += `<td>${row[columns[i]] ?? ''}</td>`;
+            }
+            // Acciones (puedes personalizar los enlaces)
+            bodyRows += `<td>
+                <a href="Edit/${row.ID - 1}">Edit</a> |
+                <a href="Details/${row.ID - 1}">Details</a> |
+                <a href="Delete/${row.ID - 1}">Delete</a>
+            </td>`;
+            bodyRows += '</tr>';
+        });
+        document.getElementById('body-rows').innerHTML = bodyRows;
+        // Botones
+        document.getElementById('prevSectionBtn').style.display = currentSection === 0 ? 'none' : '';
+        document.getElementById('nextSectionBtn').style.display = ((currentSection + 1) * pageSize < columns.length) ? '' : 'none';
+    }
+    document.getElementById('nextSectionBtn').onclick = function () {
+        if ((currentSection + 1) * pageSize < columns.length) {
+            currentSection++;
+            renderTableSection();
+        }
+    };
+    document.getElementById('prevSectionBtn').onclick = function () {
+        if (currentSection > 0) {
+            currentSection--;
+            renderTableSection();
+        }
+    };
+    // Inicializa
+    document.addEventListener('DOMContentLoaded', renderTableSection);
+</script>
 }
-    </tbody>
-</table>
