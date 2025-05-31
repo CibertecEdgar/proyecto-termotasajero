@@ -191,7 +191,5 @@ namespace proyecto_termotasajero.Models
         public string? BombaHidracinaCicloB { get; set; }
         public string? BombaHidracinaCtoCerradoA { get; set; }
         public string? BombaHidracinaCtoCerradoB { get; set; }
-        public DateTime FechaCreacion { get; set; }
-        public string? UsuarioCreacion { get; set; }
     }
 }
