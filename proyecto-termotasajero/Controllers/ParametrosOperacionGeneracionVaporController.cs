@@ -103,9 +103,7 @@ namespace proyecto_termotasajero.Controllers
                             MolinoA_Seleccion = reader.IsDBNull(reader.GetOrdinal("MolinoA_Seleccion")) ? null : reader.GetString(reader.GetOrdinal("MolinoA_Seleccion")),
                             LjungstromA_Seleccion = reader.IsDBNull(reader.GetOrdinal("LjungstromA_Seleccion")) ? null : reader.GetString(reader.GetOrdinal("LjungstromA_Seleccion")),
                             LjungstromB_Seleccion = reader.IsDBNull(reader.GetOrdinal("LjungstromB_Seleccion")) ? null : reader.GetString(reader.GetOrdinal("LjungstromB_Seleccion")),
-                            FechaCreacion = reader.GetDateTime(reader.GetOrdinal("FechaCreacion")),
-                            UsuarioCreacion = reader.IsDBNull(reader.GetOrdinal("UsuarioCreacion")) ? null : reader.GetString(reader.GetOrdinal("UsuarioCreacion"))
-                        });
+                           });
                     }
                 }
             }
@@ -188,8 +186,6 @@ namespace proyecto_termotasajero.Controllers
                 cmd.Parameters.AddWithValue("@MolinoA_Seleccion", (object?)modelo.MolinoA_Seleccion ?? DBNull.Value);
                 cmd.Parameters.AddWithValue("@LjungstromA_Seleccion", (object?)modelo.LjungstromA_Seleccion ?? DBNull.Value);
                 cmd.Parameters.AddWithValue("@LjungstromB_Seleccion", (object?)modelo.LjungstromB_Seleccion ?? DBNull.Value);
-                cmd.Parameters.AddWithValue("@FechaCreacion", modelo.FechaCreacion);
-                cmd.Parameters.AddWithValue("@UsuarioCreacion", (object?)modelo.UsuarioCreacion ?? DBNull.Value);
                 cmd.ExecuteNonQuery();
             }
             return RedirectToAction("Index");
