@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Configuration;
-using System.Data.SqlClient;
 using Microsoft.Data.SqlClient;
 
 
 namespace proyecto_termotasajero.Controllers
 {
-    [Route("[controller]")]
     public class ParametrosOperacionCirculacionAguaController : Controller
     {
         private readonly ILogger<ParametrosOperacionCirculacionAguaController> _logger;
@@ -21,7 +19,7 @@ namespace proyecto_termotasajero.Controllers
         public ParametrosOperacionCirculacionAguaController(ILogger<ParametrosOperacionCirculacionAguaController> logger, IConfiguration configuration)
         {
             _logger = logger;
-            _connectionString = configuration.GetConnectionString("sqlConUser");
+            _connectionString = configuration.GetConnectionString("sql");
         }
 
         // Listar registros usando procedimiento almacenado
@@ -38,61 +36,67 @@ namespace proyecto_termotasajero.Controllers
                 {
                     while (reader.Read())
                     {
-                        lista.Add(new proyecto_termotasajero.Models.ParametrosOperacionCirculacionAgua
-                        {
-                            ID = reader.GetInt32(reader.GetOrdinal("ID")),
-                            Inicio = reader.GetDateTime(reader.GetOrdinal("Inicio")),
-                            Finalizacion = reader.GetDateTime(reader.GetOrdinal("Finalizacion")),
-                            CorreoElectronico = reader.IsDBNull(reader.GetOrdinal("CorreoElectronico")) ? null : reader.GetString(reader.GetOrdinal("CorreoElectronico")),
-                            Nombre = reader.IsDBNull(reader.GetOrdinal("Nombre")) ? null : reader.GetString(reader.GetOrdinal("Nombre")),
-                            OperadorTurno = reader.IsDBNull(reader.GetOrdinal("OperadorTurno")) ? null : reader.GetString(reader.GetOrdinal("OperadorTurno")),
-                            BAC_B_Estado = reader.IsDBNull(reader.GetOrdinal("BAC_B_Estado")) ? null : reader.GetString(reader.GetOrdinal("BAC_B_Estado")),
-                            BAC_A_Estado = reader.IsDBNull(reader.GetOrdinal("BAC_A_Estado")) ? null : reader.GetString(reader.GetOrdinal("BAC_A_Estado")),
-                            BAC_C_Estado = reader.IsDBNull(reader.GetOrdinal("BAC_C_Estado")) ? null : reader.GetString(reader.GetOrdinal("BAC_C_Estado")),
-                            PI308_A_Presion = reader.GetDecimal(reader.GetOrdinal("PI308_A_Presion")),
-                            PI308_B_Presion = reader.GetDecimal(reader.GetOrdinal("PI308_B_Presion")),
-                            PI308_C_Presion = reader.GetDecimal(reader.GetOrdinal("PI308_C_Presion")),
-                            FiltroLubricacion_Antes = reader.GetDecimal(reader.GetOrdinal("FiltroLubricacion_Antes")),
-                            FiltroLubricacion_Despues = reader.GetDecimal(reader.GetOrdinal("FiltroLubricacion_Despues")),
-                            FS212A_Flujo = reader.GetDecimal(reader.GetOrdinal("FS212A_Flujo")),
-                            FS212B_Flujo = reader.GetDecimal(reader.GetOrdinal("FS212B_Flujo")),
-                            FS212C_Flujo = reader.GetDecimal(reader.GetOrdinal("FS212C_Flujo")),
-                            BbaRiegoPatio_A_Estado = reader.IsDBNull(reader.GetOrdinal("BbaRiegoPatio_A_Estado")) ? null : reader.GetString(reader.GetOrdinal("BbaRiegoPatio_A_Estado")),
-                            BbaRiegoPatio_B_Estado = reader.IsDBNull(reader.GetOrdinal("BbaRiegoPatio_B_Estado")) ? null : reader.GetString(reader.GetOrdinal("BbaRiegoPatio_B_Estado")),
-                            PresionRiegoPatio_A = reader.GetDecimal(reader.GetOrdinal("PresionRiegoPatio_A")),
-                            PresionRiegoPatio_B = reader.GetDecimal(reader.GetOrdinal("PresionRiegoPatio_B")),
-                            LavadoTamiz_A_Estado = reader.IsDBNull(reader.GetOrdinal("LavadoTamiz_A_Estado")) ? null : reader.GetString(reader.GetOrdinal("LavadoTamiz_A_Estado")),
-                            LavadoTamiz_B_Estado = reader.IsDBNull(reader.GetOrdinal("LavadoTamiz_B_Estado")) ? null : reader.GetString(reader.GetOrdinal("LavadoTamiz_B_Estado")),
-                            LavadoTamiz_C_Estado = reader.IsDBNull(reader.GetOrdinal("LavadoTamiz_C_Estado")) ? null : reader.GetString(reader.GetOrdinal("LavadoTamiz_C_Estado")),
-                            PresionBbaTamiz_A = reader.GetDecimal(reader.GetOrdinal("PresionBbaTamiz_A")),
-                            PresionBbaTamiz_B = reader.GetDecimal(reader.GetOrdinal("PresionBbaTamiz_B")),
-                            PresionBbaTamiz_C = reader.GetDecimal(reader.GetOrdinal("PresionBbaTamiz_C")),
-                            BbaAguaCruda_A_Estado = reader.IsDBNull(reader.GetOrdinal("BbaAguaCruda_A_Estado")) ? null : reader.GetString(reader.GetOrdinal("BbaAguaCruda_A_Estado")),
-                            BbaAguaCruda_B_Estado = reader.IsDBNull(reader.GetOrdinal("BbaAguaCruda_B_Estado")) ? null : reader.GetString(reader.GetOrdinal("BbaAguaCruda_B_Estado")),
-                            PresionCruda_A = reader.GetDecimal(reader.GetOrdinal("PresionCruda_A")),
-                            PresionCruda_B = reader.GetDecimal(reader.GetOrdinal("PresionCruda_B")),
-                            BbaLavadoCeniza_B_Estado = reader.IsDBNull(reader.GetOrdinal("BbaLavadoCeniza_B_Estado")) ? null : reader.GetString(reader.GetOrdinal("BbaLavadoCeniza_B_Estado")),
-                            BbaLavadoCeniza_A_Estado = reader.IsDBNull(reader.GetOrdinal("BbaLavadoCeniza_A_Estado")) ? null : reader.GetString(reader.GetOrdinal("BbaLavadoCeniza_A_Estado")),
-                            PresionCeniza_A = reader.GetDecimal(reader.GetOrdinal("PresionCeniza_A")),
-                            PresionCeniza_B = reader.GetDecimal(reader.GetOrdinal("PresionCeniza_B")),
-                            BbaLubric_A_Estado = reader.IsDBNull(reader.GetOrdinal("BbaLubric_A_Estado")) ? null : reader.GetString(reader.GetOrdinal("BbaLubric_A_Estado")),
-                            BbaLubric_B_Estado = reader.IsDBNull(reader.GetOrdinal("BbaLubric_B_Estado")) ? null : reader.GetString(reader.GetOrdinal("BbaLubric_B_Estado")),
-                            PresionLubric_A = reader.GetDecimal(reader.GetOrdinal("PresionLubric_A")),
-                            PresionLubric_B = reader.GetDecimal(reader.GetOrdinal("PresionLubric_B")),
-                            BombaEnfriamientoAlterno_Estado = reader.IsDBNull(reader.GetOrdinal("BombaEnfriamientoAlterno_Estado")) ? null : reader.GetString(reader.GetOrdinal("BombaEnfriamientoAlterno_Estado")),
-                            PresionEnfriamientoAlterno = reader.GetDecimal(reader.GetOrdinal("PresionEnfriamientoAlterno")),
-                            VoltajeBAT1 = reader.GetDecimal(reader.GetOrdinal("VoltajeBAT1")),
-                            CorrienteBAT1 = reader.GetDecimal(reader.GetOrdinal("CorrienteBAT1")),
-                            VoltajeBAT2 = reader.GetDecimal(reader.GetOrdinal("VoltajeBAT2")),
-                            CorrienteBAT2 = reader.GetDecimal(reader.GetOrdinal("CorrienteBAT2")),
-                            PresionTkPulmon = reader.GetDecimal(reader.GetOrdinal("PresionTkPulmon")),
-                            PresionCompresor_A = reader.GetDecimal(reader.GetOrdinal("PresionCompresor_A")),
-                            PresionCompresor_B = reader.GetDecimal(reader.GetOrdinal("PresionCompresor_B"))
-                        });
+                        var item = new proyecto_termotasajero.Models.ParametrosOperacionCirculacionAgua();
+
+                        item.ID = reader.GetInt32(reader.GetOrdinal("ID"));
+                        item.Inicio = reader.GetDateTime(reader.GetOrdinal("Inicio"));
+                        item.Finalizacion = reader.GetDateTime(reader.GetOrdinal("Finalizacion"));
+                        item.CorreoElectronico = reader.IsDBNull(reader.GetOrdinal("CorreoElectronico")) ? null : reader.GetString(reader.GetOrdinal("CorreoElectronico"));
+                        item.Nombre = reader.IsDBNull(reader.GetOrdinal("Nombre")) ? null : reader.GetString(reader.GetOrdinal("Nombre"));
+                        item.OperadorTurno = reader.IsDBNull(reader.GetOrdinal("OperadorTurno")) ? null : reader.GetString(reader.GetOrdinal("OperadorTurno"));
+                        item.BAC_B_Estado = reader.IsDBNull(reader.GetOrdinal("BAC_B_Estado")) ? null : reader.GetString(reader.GetOrdinal("BAC_B_Estado"));
+                        item.BAC_A_Estado = reader.IsDBNull(reader.GetOrdinal("BAC_A_Estado")) ? null : reader.GetString(reader.GetOrdinal("BAC_A_Estado"));
+                        item.BAC_C_Estado = reader.IsDBNull(reader.GetOrdinal("BAC_C_Estado")) ? null : reader.GetString(reader.GetOrdinal("BAC_C_Estado"));
+                        item.PI308_A_Presion = reader.GetDecimal(reader.GetOrdinal("PI308_A_Presion"));
+                        item.PI308_B_Presion = reader.GetDecimal(reader.GetOrdinal("PI308_B_Presion"));
+                        item.PI308_C_Presion = reader.GetDecimal(reader.GetOrdinal("PI308_C_Presion"));
+                        item.FiltroLubricacion_Antes = reader.GetDecimal(reader.GetOrdinal("FiltroLubricacion_Antes"));
+                        item.FiltroLubricacion_Despues = reader.GetDecimal(reader.GetOrdinal("FiltroLubricacion_Despues"));
+                        item.FS212A_Flujo = reader.GetDecimal(reader.GetOrdinal("FS212A_Flujo"));
+                        item.FS212B_Flujo = reader.GetDecimal(reader.GetOrdinal("FS212B_Flujo"));
+                        item.FS212C_Flujo = reader.GetDecimal(reader.GetOrdinal("FS212C_Flujo"));
+                        item.BbaRiegoPatio_A_Estado = reader.IsDBNull(reader.GetOrdinal("BbaRiegoPatio_A_Estado")) ? null : reader.GetString(reader.GetOrdinal("BbaRiegoPatio_A_Estado"));
+                        item.BbaRiegoPatio_B_Estado = reader.IsDBNull(reader.GetOrdinal("BbaRiegoPatio_B_Estado")) ? null : reader.GetString(reader.GetOrdinal("BbaRiegoPatio_B_Estado"));
+                        item.PresionRiegoPatio_A = reader.GetDecimal(reader.GetOrdinal("PresionRiegoPatio_A"));
+                        item.PresionRiegoPatio_B = reader.GetDecimal(reader.GetOrdinal("PresionRiegoPatio_B"));
+                        item.LavadoTamiz_A_Estado = reader.IsDBNull(reader.GetOrdinal("LavadoTamiz_A_Estado")) ? null : reader.GetString(reader.GetOrdinal("LavadoTamiz_A_Estado"));
+                        item.LavadoTamiz_B_Estado = reader.IsDBNull(reader.GetOrdinal("LavadoTamiz_B_Estado")) ? null : reader.GetString(reader.GetOrdinal("LavadoTamiz_B_Estado"));
+                        item.LavadoTamiz_C_Estado = reader.IsDBNull(reader.GetOrdinal("LavadoTamiz_C_Estado")) ? null : reader.GetString(reader.GetOrdinal("LavadoTamiz_C_Estado"));
+                        item.PresionBbaTamiz_A = reader.GetDecimal(reader.GetOrdinal("PresionBbaTamiz_A"));
+                        item.PresionBbaTamiz_B = reader.GetDecimal(reader.GetOrdinal("PresionBbaTamiz_B"));
+                        item.PresionBbaTamiz_C = reader.GetDecimal(reader.GetOrdinal("PresionBbaTamiz_C"));
+                        item.BbaAguaCruda_A_Estado = reader.IsDBNull(reader.GetOrdinal("BbaAguaCruda_A_Estado")) ? null : reader.GetString(reader.GetOrdinal("BbaAguaCruda_A_Estado"));
+                        item.BbaAguaCruda_B_Estado = reader.IsDBNull(reader.GetOrdinal("BbaAguaCruda_B_Estado")) ? null : reader.GetString(reader.GetOrdinal("BbaAguaCruda_B_Estado"));
+                        item.PresionCruda_A = reader.GetDecimal(reader.GetOrdinal("PresionCruda_A"));
+                        item.PresionCruda_B = reader.GetDecimal(reader.GetOrdinal("PresionCruda_B"));
+                        item.BbaLavadoCeniza_B_Estado = reader.IsDBNull(reader.GetOrdinal("BbaLavadoCeniza_B_Estado")) ? null : reader.GetString(reader.GetOrdinal("BbaLavadoCeniza_B_Estado"));
+                        item.BbaLavadoCeniza_A_Estado = reader.IsDBNull(reader.GetOrdinal("BbaLavadoCeniza_A_Estado")) ? null : reader.GetString(reader.GetOrdinal("BbaLavadoCeniza_A_Estado"));
+                        item.PresionCeniza_A = reader.GetDecimal(reader.GetOrdinal("PresionCeniza_A"));
+                        item.PresionCeniza_B = reader.GetDecimal(reader.GetOrdinal("PresionCeniza_B"));
+                        item.BbaLubric_A_Estado = reader.IsDBNull(reader.GetOrdinal("BbaLubric_A_Estado")) ? null : reader.GetString(reader.GetOrdinal("BbaLubric_A_Estado"));
+                        item.BbaLubric_B_Estado = reader.IsDBNull(reader.GetOrdinal("BbaLubric_B_Estado")) ? null : reader.GetString(reader.GetOrdinal("BbaLubric_B_Estado"));
+                        item.PresionLubric_A = reader.GetDecimal(reader.GetOrdinal("PresionLubric_A"));
+                        item.PresionLubric_B = reader.GetDecimal(reader.GetOrdinal("PresionLubric_B"));
+                        item.BombaEnfriamientoAlterno_Estado = reader.IsDBNull(reader.GetOrdinal("BombaEnfriamientoAlterno_Estado")) ? null : reader.GetString(reader.GetOrdinal("BombaEnfriamientoAlterno_Estado"));
+                        item.PresionEnfriamientoAlterno = reader.GetDecimal(reader.GetOrdinal("PresionEnfriamientoAlterno"));
+                        item.VoltajeBAT1 = reader.GetDecimal(reader.GetOrdinal("VoltajeBAT1"));
+                        item.CorrienteBAT1 = reader.GetDecimal(reader.GetOrdinal("CorrienteBAT1"));
+                        item.VoltajeBAT2 = reader.GetDecimal(reader.GetOrdinal("VoltajeBAT2"));
+                        item.CorrienteBAT2 = reader.GetDecimal(reader.GetOrdinal("CorrienteBAT2"));
+                        item.PresionTkPulmon = reader.GetDecimal(reader.GetOrdinal("PresionTkPulmon"));
+                        item.PresionCompresor_A = reader.GetDecimal(reader.GetOrdinal("PresionCompresor_A"));
+                        item.PresionCompresor_B = reader.GetDecimal(reader.GetOrdinal("PresionCompresor_B"));
+                        lista.Add(item);
                     }
                 }
             }
             return View(lista);
+        }
+
+        [HttpGet]
+        public IActionResult Registrar()
+        {
+            return View("Registrar");
         }
 
         // Registrar nuevo registro usando procedimiento almacenado

@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Configuration;
-using System.Data.SqlClient;
 using Microsoft.Data.SqlClient;
 
 
 namespace proyecto_termotasajero.Controllers
 {
-    [Route("[controller]")]
     public class HorometrosMaquinariaPesadaController : Controller
     {
         private readonly ILogger<HorometrosMaquinariaPesadaController> _logger;
@@ -21,7 +19,7 @@ namespace proyecto_termotasajero.Controllers
         public HorometrosMaquinariaPesadaController(ILogger<HorometrosMaquinariaPesadaController> logger, IConfiguration configuration)
         {
             _logger = logger;
-            _connectionString = configuration.GetConnectionString("sqlConUser");
+            _connectionString = configuration.GetConnectionString("sql");
         }
 
         // Listar registros usando procedimiento almacenado
@@ -38,29 +36,34 @@ namespace proyecto_termotasajero.Controllers
                 {
                     while (reader.Read())
                     {
-                        lista.Add(new proyecto_termotasajero.Models.HorometrosMaquinariaPesada
-                        {
-                            ID = reader.GetInt32(reader.GetOrdinal("ID")),
-                            HoraInicio = reader.GetDateTime(reader.GetOrdinal("HoraInicio")),
-                            HoraFinalizacion = reader.GetDateTime(reader.GetOrdinal("HoraFinalizacion")),
-                            CorreoElectronico = reader.IsDBNull(reader.GetOrdinal("CorreoElectronico")) ? null : reader.GetString(reader.GetOrdinal("CorreoElectronico")),
-                            Nombre = reader.IsDBNull(reader.GetOrdinal("Nombre")) ? null : reader.GetString(reader.GetOrdinal("Nombre")),
-                            HorometroCoaldozer2 = reader.GetDouble(reader.GetOrdinal("HorometroCoaldozer2")),
-                            HorometroCoaldozer3 = reader.GetDouble(reader.GetOrdinal("HorometroCoaldozer3")),
-                            HorometroCoaldozer4 = reader.GetDouble(reader.GetOrdinal("HorometroCoaldozer4")),
-                            HorometroCargador1 = reader.GetDouble(reader.GetOrdinal("HorometroCargador1")),
-                            HorometroCargador2 = reader.GetDouble(reader.GetOrdinal("HorometroCargador2")),
-                            HorometroClasificadoraCarbon = reader.GetDouble(reader.GetOrdinal("HorometroClasificadoraCarbon")),
-                            HorometroRetrocargadorKOMATSU = reader.GetDouble(reader.GetOrdinal("HorometroRetrocargadorKOMATSU")),
-                            HorometroMiniCargadorBOBCAT = reader.GetDouble(reader.GetOrdinal("HorometroMiniCargadorBOBCAT"))
-                        });
+                        var item = new proyecto_termotasajero.Models.HorometrosMaquinariaPesada();
+                        item.ID = reader.GetInt32(reader.GetOrdinal("ID"));
+                        item.HoraInicio = reader.GetDateTime(reader.GetOrdinal("HoraInicio"));
+                        item.HoraFinalizacion = reader.GetDateTime(reader.GetOrdinal("HoraFinalizacion"));
+                        item.CorreoElectronico = reader.IsDBNull(reader.GetOrdinal("CorreoElectronico")) ? null : reader.GetString(reader.GetOrdinal("CorreoElectronico"));
+                        item.Nombre = reader.IsDBNull(reader.GetOrdinal("Nombre")) ? null : reader.GetString(reader.GetOrdinal("Nombre"));
+                        item.HorometroCoaldozer2 = reader.GetDouble(reader.GetOrdinal("HorometroCoaldozer2"));
+                        item.HorometroCoaldozer3 = reader.GetDouble(reader.GetOrdinal("HorometroCoaldozer3"));
+                        item.HorometroCoaldozer4 = reader.GetDouble(reader.GetOrdinal("HorometroCoaldozer4"));
+                        item.HorometroCargador1 = reader.GetDouble(reader.GetOrdinal("HorometroCargador1"));
+                        item.HorometroCargador2 = reader.GetDouble(reader.GetOrdinal("HorometroCargador2"));
+                        item.HorometroClasificadoraCarbon = reader.GetDouble(reader.GetOrdinal("HorometroClasificadoraCarbon"));
+                        item.HorometroRetrocargadorKOMATSU = reader.GetDouble(reader.GetOrdinal("HorometroRetrocargadorKOMATSU"));
+                        item.HorometroMiniCargadorBOBCAT = reader.GetDouble(reader.GetOrdinal("HorometroMiniCargadorBOBCAT"));
+                        lista.Add(item);
                     }
                 }
             }
             return View(lista);
         }
 
-        // Registrar nuevo registro usando procedimiento almacenado
+        [HttpGet]
+        public IActionResult Registrar()
+        {
+            return View("Registrar");
+        }
+
+        // Registrar usando procedimiento almacenado
         [HttpPost]
         public IActionResult Registrar(proyecto_termotasajero.Models.HorometrosMaquinariaPesada modelo)
         {

@@ -1,0 +1,144 @@
+﻿@model IEnumerable<proyecto_termotasajero.Models.ParametrosOperacionCirculacionAgua>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Parametros Operacion Circulacion Agua</h1>
+
+<p>
+    <a asp-action="Registrar">Registrar</a>
+</p>
+
+<div id="paginado-listado">
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr id="header-row">
+                    <!-- Los headers se llenan por JS -->
+                </tr> 
+            </thead>
+            <tbody id="body-rows">
+                <!-- Las filas se llenan por JS -->
+            </tbody>
+        </table>
+    </div>
+    <div class="d-flex justify-content-between mt-3">
+        <button class="btn btn-secondary" id="prevSectionBtn" style="display:none;">Anterior sección</button>
+        <button class="btn btn-primary" id="nextSectionBtn">Siguiente sección</button>
+    </div>
+</div>
+ 
+@section Scripts {
+    <script>
+        // Obtén los datos del modelo en JS
+        const data = [
+        @foreach (var item in Model)
+        {
+            @:{
+            @:ID: @(item.ID),
+            @:Inicio: '@item.Inicio',
+            @:Finalizacion: '@item.Finalizacion',
+            @:CorreoElectronico: '@item.CorreoElectronico',
+            @:Nombre: '@item.Nombre',
+            @:OperadorTurno: '@item.OperadorTurno',
+            @:BAC_B_Estado: '@item.BAC_B_Estado',
+            @:BAC_A_Estado: '@item.BAC_A_Estado',
+            @:BAC_C_Estado: '@item.BAC_C_Estado',
+            @:PI308_A_Presion: @(item.PI308_A_Presion),
+            @:PI308_B_Presion: @(item.PI308_B_Presion),
+            @:PI308_C_Presion: @(item.PI308_C_Presion),
+            @:FiltroLubricacion_Antes: @(item.FiltroLubricacion_Antes),
+            @:FiltroLubricacion_Despues: @(item.FiltroLubricacion_Despues),
+            @:FS212A_Flujo: @(item.FS212A_Flujo),
+            @:FS212B_Flujo: @(item.FS212B_Flujo),
+            @:FS212C_Flujo: @(item.FS212C_Flujo),
+            @:BbaRiegoPatio_A_Estado: '@item.BbaRiegoPatio_A_Estado',
+            @:BbaRiegoPatio_B_Estado: '@item.BbaRiegoPatio_B_Estado',
+            @:PresionRiegoPatio_A: @(item.PresionRiegoPatio_A),
+            @:PresionRiegoPatio_B: @(item.PresionRiegoPatio_B),
+            @:LavadoTamiz_A_Estado: '@item.LavadoTamiz_A_Estado',
+            @:LavadoTamiz_B_Estado: '@item.LavadoTamiz_B_Estado',
+            @:LavadoTamiz_C_Estado: '@item.LavadoTamiz_C_Estado',
+            @:PresionBbaTamiz_A: @(item.PresionBbaTamiz_A),
+            @:PresionBbaTamiz_B: @(item.PresionBbaTamiz_B),
+            @:PresionBbaTamiz_C: @(item.PresionBbaTamiz_C),
+            @:BbaAguaCruda_A_Estado: '@item.BbaAguaCruda_A_Estado',
+            @:BbaAguaCruda_B_Estado: '@item.BbaAguaCruda_B_Estado',
+            @:PresionCruda_A: @(item.PresionCruda_A),
+            @:PresionCruda_B: @(item.PresionCruda_B),
+            @:BbaLavadoCeniza_B_Estado: '@item.BbaLavadoCeniza_B_Estado',
+            @:BbaLavadoCeniza_A_Estado: '@item.BbaLavadoCeniza_A_Estado',
+            @:PresionCeniza_A: @(item.PresionCeniza_A),
+            @:PresionCeniza_B: @(item.PresionCeniza_B),
+            @:BbaLubric_A_Estado: '@item.BbaLubric_A_Estado',
+            @:BbaLubric_B_Estado: '@item.BbaLubric_B_Estado',
+            @:PresionLubric_A: @(item.PresionLubric_A),
+            @:PresionLubric_B: @(item.PresionLubric_B),
+            @:BombaEnfriamientoAlterno_Estado: '@item.BombaEnfriamientoAlterno_Estado',
+            @:PresionEnfriamientoAlterno: @(item.PresionEnfriamientoAlterno),
+            @:VoltajeBAT1: @(item.VoltajeBAT1),
+            @:CorrienteBAT1: @(item.CorrienteBAT1),
+            @:VoltajeBAT2: @(item.VoltajeBAT2),
+            @:CorrienteBAT2: @(item.CorrienteBAT2),
+            @:PresionTkPulmon: @(item.PresionTkPulmon),
+            @:PresionCompresor_A: @(item.PresionCompresor_A),
+            @:PresionCompresor_B: @(item.PresionCompresor_B),
+            @:},
+        }
+            ];
+        // Nombres de columnas en orden
+        const columns = [
+            'ID', 'Inicio', 'Finalizacion', 'CorreoElectronico', 'Nombre', 'OperadorTurno', 'BAC_B_Estado', 'BAC_A_Estado', 'BAC_C_Estado', 'PI308_A_Presion', 'PI308_B_Presion', 'PI308_C_Presion', 'FiltroLubricacion_Antes', 'FiltroLubricacion_Despues', 'FS212A_Flujo', 'FS212B_Flujo', 'FS212C_Flujo', 'BbaRiegoPatio_A_Estado', 'BbaRiegoPatio_B_Estado', 'PresionRiegoPatio_A', 'PresionRiegoPatio_B', 'LavadoTamiz_A_Estado', 'LavadoTamiz_B_Estado', 'LavadoTamiz_C_Estado', 'PresionBbaTamiz_A', 'PresionBbaTamiz_B', 'PresionBbaTamiz_C', 'BbaAguaCruda_A_Estado', 'BbaAguaCruda_B_Estado', 'PresionCruda_A', 'PresionCruda_B', 'BbaLavadoCeniza_B_Estado', 'BbaLavadoCeniza_A_Estado', 'PresionCeniza_A', 'PresionCeniza_B', 'BbaLubric_A_Estado', 'BbaLubric_B_Estado', 'PresionLubric_A', 'PresionLubric_B', 'BombaEnfriamientoAlterno_Estado', 'PresionEnfriamientoAlterno', 'VoltajeBAT1', 'CorrienteBAT1', 'VoltajeBAT2', 'CorrienteBAT2', 'PresionTkPulmon', 'PresionCompresor_A', 'PresionCompresor_B'
+        ];
+        // Nombres legibles para los headers (puedes personalizar estos nombres)
+        const columnHeaders = columns.map(c => c);
+        // Paginación de columnas
+        const pageSize = 8;
+        let currentSection = 0;
+        function renderTable() {
+            // Renderiza los headers y las filas según la sección actual
+            const start = currentSection * pageSize;
+            const end = Math.min(start + pageSize, columns.length);
+            const visibleColumns = columns.slice(start, end);
+            const visibleHeaders = columnHeaders.slice(start, end);
+            // Render headers
+            const headerRow = document.getElementById('header-row');
+            headerRow.innerHTML = '';
+            visibleHeaders.forEach(h => {
+                const th = document.createElement('th');
+                th.textContent = h;
+                headerRow.appendChild(th);
+            });
+            // Render rows
+            const bodyRows = document.getElementById('body-rows');
+            bodyRows.innerHTML = '';
+            data.forEach(row => {
+                const tr = document.createElement('tr');
+                visibleColumns.forEach(col => {
+                    const td = document.createElement('td');
+                    td.textContent = row[col];
+                    tr.appendChild(td);
+                });
+                bodyRows.appendChild(tr);
+            });
+            // Botones
+            document.getElementById('prevSectionBtn').style.display = currentSection > 0 ? '' : 'none';
+            document.getElementById('nextSectionBtn').style.display = end < columns.length ? '' : 'none';
+        }
+        document.getElementById('prevSectionBtn').onclick = function () {
+            if (currentSection > 0) {
+                currentSection--;
+                renderTable();
+            }
+        };
+        document.getElementById('nextSectionBtn').onclick = function () {
+            if ((currentSection + 1) * pageSize < columns.length) {
+                currentSection++;
+                renderTable();
+            }
+        };
+        renderTable();
+    </script>
+}
