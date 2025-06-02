@@ -361,3 +361,5 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/proyecto-termotasajero/Views/ParametrosOperacionGeneracionVapor/Index.cshtml
+/proyecto-termotasajero/Views/ParametrosOperacionGeneracionVapor/Registrar.cshtml

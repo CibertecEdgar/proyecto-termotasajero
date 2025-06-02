@@ -7,345 +7,403 @@
 
 <h1>Registrar</h1>
 
-<h4>ParametrosOperacionGeneracionVapor</h4>
+<h4>Parametros Operacion Generacion Vapor</h4>
 <hr />
 <div class="row">
-    <div class="col-md-4">
-        <form asp-action="Registrar">
+    <div class="col-md-12">
+        <form asp-action="Registrar" id="multiStepForm">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="ID" class="control-label"></label>
-                <input asp-for="ID" class="form-control" />
-                <span asp-validation-for="ID" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="FechaHoraInicio" class="control-label"></label>
-                <input asp-for="FechaHoraInicio" class="form-control" />
-                <span asp-validation-for="FechaHoraInicio" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="FechaHoraFinalizacion" class="control-label"></label>
-                <input asp-for="FechaHoraFinalizacion" class="form-control" />
-                <span asp-validation-for="FechaHoraFinalizacion" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CorreoElectronico" class="control-label"></label>
-                <input asp-for="CorreoElectronico" class="form-control" />
-                <span asp-validation-for="CorreoElectronico" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="NombreOperador" class="control-label"></label>
-                <input asp-for="NombreOperador" class="form-control" />
-                <span asp-validation-for="NombreOperador" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="OperadorTurno" class="control-label"></label>
-                <input asp-for="OperadorTurno" class="form-control" />
-                <span asp-validation-for="OperadorTurno" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="AirePurgaA" class="control-label"></label>
-                <input asp-for="AirePurgaA" class="form-control" />
-                <span asp-validation-for="AirePurgaA" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="AirePurgaB" class="control-label"></label>
-                <input asp-for="AirePurgaB" class="form-control" />
-                <span asp-validation-for="AirePurgaB" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CorrienteAirePurgaA" class="control-label"></label>
-                <input asp-for="CorrienteAirePurgaA" class="form-control" />
-                <span asp-validation-for="CorrienteAirePurgaA" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CorrienteAirePurgaB" class="control-label"></label>
-                <input asp-for="CorrienteAirePurgaB" class="form-control" />
-                <span asp-validation-for="CorrienteAirePurgaB" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="VTIA_PresionAceiteEntrada" class="control-label"></label>
-                <input asp-for="VTIA_PresionAceiteEntrada" class="form-control" />
-                <span asp-validation-for="VTIA_PresionAceiteEntrada" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="VTIA_PresionAceiteSalida" class="control-label"></label>
-                <input asp-for="VTIA_PresionAceiteSalida" class="form-control" />
-                <span asp-validation-for="VTIA_PresionAceiteSalida" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="VTIA_TempAceiteEntrada" class="control-label"></label>
-                <input asp-for="VTIA_TempAceiteEntrada" class="form-control" />
-                <span asp-validation-for="VTIA_TempAceiteEntrada" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="VTIA_TempAceiteSalida" class="control-label"></label>
-                <input asp-for="VTIA_TempAceiteSalida" class="form-control" />
-                <span asp-validation-for="VTIA_TempAceiteSalida" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="VTIB_PresionAceiteEntrada" class="control-label"></label>
-                <input asp-for="VTIB_PresionAceiteEntrada" class="form-control" />
-                <span asp-validation-for="VTIB_PresionAceiteEntrada" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="VTIB_PresionAceiteSalida" class="control-label"></label>
-                <input asp-for="VTIB_PresionAceiteSalida" class="form-control" />
-                <span asp-validation-for="VTIB_PresionAceiteSalida" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="VTIB_TempAceiteEntrada" class="control-label"></label>
-                <input asp-for="VTIB_TempAceiteEntrada" class="form-control" />
-                <span asp-validation-for="VTIB_TempAceiteEntrada" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="VTIB_TempAceiteSalida" class="control-label"></label>
-                <input asp-for="VTIB_TempAceiteSalida" class="form-control" />
-                <span asp-validation-for="VTIB_TempAceiteSalida" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="PresionFluidizadorA" class="control-label"></label>
-                <input asp-for="PresionFluidizadorA" class="form-control" />
-                <span asp-validation-for="PresionFluidizadorA" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="PresionFluidizadorB" class="control-label"></label>
-                <input asp-for="PresionFluidizadorB" class="form-control" />
-                <span asp-validation-for="PresionFluidizadorB" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="SopladorFluidizadorA" class="control-label"></label>
-                <input asp-for="SopladorFluidizadorA" class="form-control" />
-                <span asp-validation-for="SopladorFluidizadorA" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="SopladorFluidizadorB" class="control-label"></label>
-                <input asp-for="SopladorFluidizadorB" class="form-control" />
-                <span asp-validation-for="SopladorFluidizadorB" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="SopladorTransporteA" class="control-label"></label>
-                <input asp-for="SopladorTransporteA" class="form-control" />
-                <span asp-validation-for="SopladorTransporteA" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="SopladorTransporteB" class="control-label"></label>
-                <input asp-for="SopladorTransporteB" class="form-control" />
-                <span asp-validation-for="SopladorTransporteB" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="VTFB_PresionEntrada" class="control-label"></label>
-                <input asp-for="VTFB_PresionEntrada" class="form-control" />
-                <span asp-validation-for="VTFB_PresionEntrada" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="VTFB_PresionSalida" class="control-label"></label>
-                <input asp-for="VTFB_PresionSalida" class="form-control" />
-                <span asp-validation-for="VTFB_PresionSalida" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="VTFB_TempEntrada" class="control-label"></label>
-                <input asp-for="VTFB_TempEntrada" class="form-control" />
-                <span asp-validation-for="VTFB_TempEntrada" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="VTFB_TempSalida" class="control-label"></label>
-                <input asp-for="VTFB_TempSalida" class="form-control" />
-                <span asp-validation-for="VTFB_TempSalida" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="VTFA_PresionEntrada" class="control-label"></label>
-                <input asp-for="VTFA_PresionEntrada" class="form-control" />
-                <span asp-validation-for="VTFA_PresionEntrada" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="VTFA_PresionSalida" class="control-label"></label>
-                <input asp-for="VTFA_PresionSalida" class="form-control" />
-                <span asp-validation-for="VTFA_PresionSalida" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="VTFA_TempEntrada" class="control-label"></label>
-                <input asp-for="VTFA_TempEntrada" class="form-control" />
-                <span asp-validation-for="VTFA_TempEntrada" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="VTFA_TempSalida" class="control-label"></label>
-                <input asp-for="VTFA_TempSalida" class="form-control" />
-                <span asp-validation-for="VTFA_TempSalida" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="BandaAC1" class="control-label"></label>
-                <input asp-for="BandaAC1" class="form-control" />
-                <span asp-validation-for="BandaAC1" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Scrapper" class="control-label"></label>
-                <input asp-for="Scrapper" class="form-control" />
-                <span asp-validation-for="Scrapper" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="PresionAguaLadoA" class="control-label"></label>
-                <input asp-for="PresionAguaLadoA" class="form-control" />
-                <span asp-validation-for="PresionAguaLadoA" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="PresionAguaLadoB" class="control-label"></label>
-                <input asp-for="PresionAguaLadoB" class="form-control" />
-                <span asp-validation-for="PresionAguaLadoB" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="TempAceiteMolinoD" class="control-label"></label>
-                <input asp-for="TempAceiteMolinoD" class="form-control" />
-                <span asp-validation-for="TempAceiteMolinoD" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="TempAceiteMolinoC" class="control-label"></label>
-                <input asp-for="TempAceiteMolinoC" class="form-control" />
-                <span asp-validation-for="TempAceiteMolinoC" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="TempAceiteMolinoB" class="control-label"></label>
-                <input asp-for="TempAceiteMolinoB" class="form-control" />
-                <span asp-validation-for="TempAceiteMolinoB" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="TempAceiteMolinoA" class="control-label"></label>
-                <input asp-for="TempAceiteMolinoA" class="form-control" />
-                <span asp-validation-for="TempAceiteMolinoA" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="PresionCojineteSoporteA" class="control-label"></label>
-                <input asp-for="PresionCojineteSoporteA" class="form-control" />
-                <span asp-validation-for="PresionCojineteSoporteA" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="PresionCojineteSoporteB" class="control-label"></label>
-                <input asp-for="PresionCojineteSoporteB" class="form-control" />
-                <span asp-validation-for="PresionCojineteSoporteB" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="PresionCojineteSoporteC" class="control-label"></label>
-                <input asp-for="PresionCojineteSoporteC" class="form-control" />
-                <span asp-validation-for="PresionCojineteSoporteC" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="PresionCojineteSoporteD" class="control-label"></label>
-                <input asp-for="PresionCojineteSoporteD" class="form-control" />
-                <span asp-validation-for="PresionCojineteSoporteD" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="LjungstromB" class="control-label"></label>
-                <input asp-for="LjungstromB" class="form-control" />
-                <span asp-validation-for="LjungstromB" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="LjungstromA" class="control-label"></label>
-                <input asp-for="LjungstromA" class="form-control" />
-                <span asp-validation-for="LjungstromA" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="PresionTk" class="control-label"></label>
-                <input asp-for="PresionTk" class="form-control" />
-                <span asp-validation-for="PresionTk" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Apertura" class="control-label"></label>
-                <input asp-for="Apertura" class="form-control" />
-                <span asp-validation-for="Apertura" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="VibradorA" class="control-label"></label>
-                <input asp-for="VibradorA" class="form-control" />
-                <span asp-validation-for="VibradorA" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="VibradorB" class="control-label"></label>
-                <input asp-for="VibradorB" class="form-control" />
-                <span asp-validation-for="VibradorB" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="VibradorC" class="control-label"></label>
-                <input asp-for="VibradorC" class="form-control" />
-                <span asp-validation-for="VibradorC" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ZarandaA" class="control-label"></label>
-                <input asp-for="ZarandaA" class="form-control" />
-                <span asp-validation-for="ZarandaA" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="TrituradorA" class="control-label"></label>
-                <input asp-for="TrituradorA" class="form-control" />
-                <span asp-validation-for="TrituradorA" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ZarandaB" class="control-label"></label>
-                <input asp-for="ZarandaB" class="form-control" />
-                <span asp-validation-for="ZarandaB" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="TrituradorB" class="control-label"></label>
-                <input asp-for="TrituradorB" class="form-control" />
-                <span asp-validation-for="TrituradorB" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="FluidizadorB" class="control-label"></label>
-                <input asp-for="FluidizadorB" class="form-control" />
-                <span asp-validation-for="FluidizadorB" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="FluidizadorA" class="control-label"></label>
-                <input asp-for="FluidizadorA" class="form-control" />
-                <span asp-validation-for="FluidizadorA" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Observaciones" class="control-label"></label>
-                <input asp-for="Observaciones" class="form-control" />
-                <span asp-validation-for="Observaciones" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="TrenSeleccionadoSubirCarbon" class="control-label"></label>
-                <input asp-for="TrenSeleccionadoSubirCarbon" class="form-control" />
-                <span asp-validation-for="TrenSeleccionadoSubirCarbon" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="MolinoD_Seleccion" class="control-label"></label>
-                <input asp-for="MolinoD_Seleccion" class="form-control" />
-                <span asp-validation-for="MolinoD_Seleccion" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="MolinoC_Seleccion" class="control-label"></label>
-                <input asp-for="MolinoC_Seleccion" class="form-control" />
-                <span asp-validation-for="MolinoC_Seleccion" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="MolinoB_Seleccion" class="control-label"></label>
-                <input asp-for="MolinoB_Seleccion" class="form-control" />
-                <span asp-validation-for="MolinoB_Seleccion" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="MolinoA_Seleccion" class="control-label"></label>
-                <input asp-for="MolinoA_Seleccion" class="form-control" />
-                <span asp-validation-for="MolinoA_Seleccion" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="LjungstromA_Seleccion" class="control-label"></label>
-                <input asp-for="LjungstromA_Seleccion" class="form-control" />
-                <span asp-validation-for="LjungstromA_Seleccion" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="LjungstromB_Seleccion" class="control-label"></label>
-                <input asp-for="LjungstromB_Seleccion" class="form-control" />
-                <span asp-validation-for="LjungstromB_Seleccion" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+            <!-- Sección 1 -->
+            <div class="form-section" id="section-1">
+                <div class="form-group">
+                    <label asp-for="FechaHoraInicio"></label>
+                    <input asp-for="FechaHoraInicio" class="form-control" />
+                    <span asp-validation-for="FechaHoraInicio" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="FechaHoraFinalizacion"></label>
+                    <input asp-for="FechaHoraFinalizacion" class="form-control" />
+                    <span asp-validation-for="FechaHoraFinalizacion" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CorreoElectronico"></label>
+                    <input asp-for="CorreoElectronico" class="form-control" />
+                    <span asp-validation-for="CorreoElectronico" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="NombreOperador"></label>
+                    <input asp-for="NombreOperador" class="form-control" />
+                    <span asp-validation-for="NombreOperador" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="OperadorTurno"></label>
+                    <input asp-for="OperadorTurno" class="form-control" />
+                    <span asp-validation-for="OperadorTurno" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="AirePurgaA"></label>
+                    <input asp-for="AirePurgaA" class="form-control" />
+                    <span asp-validation-for="AirePurgaA" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="AirePurgaB"></label>
+                    <input asp-for="AirePurgaB" class="form-control" />
+                    <span asp-validation-for="AirePurgaB" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CorrienteAirePurgaA"></label>
+                    <input asp-for="CorrienteAirePurgaA" class="form-control" />
+                    <span asp-validation-for="CorrienteAirePurgaA" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CorrienteAirePurgaB"></label>
+                    <input asp-for="CorrienteAirePurgaB" class="form-control" />
+                    <span asp-validation-for="CorrienteAirePurgaB" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="VTIA_PresionAceiteEntrada"></label>
+                    <input asp-for="VTIA_PresionAceiteEntrada" class="form-control" />
+                    <span asp-validation-for="VTIA_PresionAceiteEntrada" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="VTIA_PresionAceiteSalida"></label>
+                    <input asp-for="VTIA_PresionAceiteSalida" class="form-control" />
+                    <span asp-validation-for="VTIA_PresionAceiteSalida" class="text-danger"></span>
+                </div>
+                <div class="form-group mt-3">
+                    <button type="button" class="btn btn-primary" id="nextBtn1">Siguiente</button>
+                </div>
+            </div>
+            <!-- Sección 2 -->
+            <div class="form-section" id="section-2" style="display:none;">
+                <div class="form-group">
+                    <label asp-for="VTIA_TempAceiteEntrada"></label>
+                    <input asp-for="VTIA_TempAceiteEntrada" class="form-control" />
+                    <span asp-validation-for="VTIA_TempAceiteEntrada" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="VTIA_TempAceiteSalida"></label>
+                    <input asp-for="VTIA_TempAceiteSalida" class="form-control" />
+                    <span asp-validation-for="VTIA_TempAceiteSalida" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="VTIB_PresionAceiteEntrada"></label>
+                    <input asp-for="VTIB_PresionAceiteEntrada" class="form-control" />
+                    <span asp-validation-for="VTIB_PresionAceiteEntrada" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="VTIB_PresionAceiteSalida"></label>
+                    <input asp-for="VTIB_PresionAceiteSalida" class="form-control" />
+                    <span asp-validation-for="VTIB_PresionAceiteSalida" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="VTIB_TempAceiteEntrada"></label>
+                    <input asp-for="VTIB_TempAceiteEntrada" class="form-control" />
+                    <span asp-validation-for="VTIB_TempAceiteEntrada" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="VTIB_TempAceiteSalida"></label>
+                    <input asp-for="VTIB_TempAceiteSalida" class="form-control" />
+                    <span asp-validation-for="VTIB_TempAceiteSalida" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PresionFluidizadorA"></label>
+                    <input asp-for="PresionFluidizadorA" class="form-control" />
+                    <span asp-validation-for="PresionFluidizadorA" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PresionFluidizadorB"></label>
+                    <input asp-for="PresionFluidizadorB" class="form-control" />
+                    <span asp-validation-for="PresionFluidizadorB" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="SopladorFluidizadorA"></label>
+                    <input asp-for="SopladorFluidizadorA" class="form-control" />
+                    <span asp-validation-for="SopladorFluidizadorA" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="SopladorFluidizadorB"></label>
+                    <input asp-for="SopladorFluidizadorB" class="form-control" />
+                    <span asp-validation-for="SopladorFluidizadorB" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="SopladorTransporteA"></label>
+                    <input asp-for="SopladorTransporteA" class="form-control" />
+                    <span asp-validation-for="SopladorTransporteA" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="SopladorTransporteB"></label>
+                    <input asp-for="SopladorTransporteB" class="form-control" />
+                    <span asp-validation-for="SopladorTransporteB" class="text-danger"></span>
+                </div>
+                <div class="form-group mt-3">
+                    <button type="button" class="btn btn-secondary" id="prevBtn2">Volver</button>
+                    <button type="button" class="btn btn-primary" id="nextBtn2">Siguiente</button>
+                </div>
+            </div>
+            <!-- Sección 3 -->
+            <div class="form-section" id="section-3" style="display:none;">
+                <div class="form-group">
+                    <label asp-for="VTFB_PresionEntrada"></label>
+                    <input asp-for="VTFB_PresionEntrada" class="form-control" />
+                    <span asp-validation-for="VTFB_PresionEntrada" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="VTFB_PresionSalida"></label>
+                    <input asp-for="VTFB_PresionSalida" class="form-control" />
+                    <span asp-validation-for="VTFB_PresionSalida" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="VTFB_TempEntrada"></label>
+                    <input asp-for="VTFB_TempEntrada" class="form-control" />
+                    <span asp-validation-for="VTFB_TempEntrada" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="VTFB_TempSalida"></label>
+                    <input asp-for="VTFB_TempSalida" class="form-control" />
+                    <span asp-validation-for="VTFB_TempSalida" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="VTFA_PresionEntrada"></label>
+                    <input asp-for="VTFA_PresionEntrada" class="form-control" />
+                    <span asp-validation-for="VTFA_PresionEntrada" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="VTFA_PresionSalida"></label>
+                    <input asp-for="VTFA_PresionSalida" class="form-control" />
+                    <span asp-validation-for="VTFA_PresionSalida" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="VTFA_TempEntrada"></label>
+                    <input asp-for="VTFA_TempEntrada" class="form-control" />
+                    <span asp-validation-for="VTFA_TempEntrada" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="VTFA_TempSalida"></label>
+                    <input asp-for="VTFA_TempSalida" class="form-control" />
+                    <span asp-validation-for="VTFA_TempSalida" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="BandaAC1"></label>
+                    <input asp-for="BandaAC1" class="form-control" />
+                    <span asp-validation-for="BandaAC1" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Scrapper"></label>
+                    <input asp-for="Scrapper" class="form-control" />
+                    <span asp-validation-for="Scrapper" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PresionAguaLadoA"></label>
+                    <input asp-for="PresionAguaLadoA" class="form-control" />
+                    <span asp-validation-for="PresionAguaLadoA" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PresionAguaLadoB"></label>
+                    <input asp-for="PresionAguaLadoB" class="form-control" />
+                    <span asp-validation-for="PresionAguaLadoB" class="text-danger"></span>
+                </div>
+                <div class="form-group mt-3">
+                    <button type="button" class="btn btn-secondary" id="prevBtn3">Volver</button>
+                    <button type="button" class="btn btn-primary" id="nextBtn3">Siguiente</button>
+                </div>
+            </div>
+            <!-- Sección 4 -->
+            <div class="form-section" id="section-4" style="display:none;">
+                <div class="form-group">
+                    <label asp-for="TempAceiteMolinoD"></label>
+                    <input asp-for="TempAceiteMolinoD" class="form-control" />
+                    <span asp-validation-for="TempAceiteMolinoD" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="TempAceiteMolinoC"></label>
+                    <input asp-for="TempAceiteMolinoC" class="form-control" />
+                    <span asp-validation-for="TempAceiteMolinoC" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="TempAceiteMolinoB"></label>
+                    <input asp-for="TempAceiteMolinoB" class="form-control" />
+                    <span asp-validation-for="TempAceiteMolinoB" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="TempAceiteMolinoA"></label>
+                    <input asp-for="TempAceiteMolinoA" class="form-control" />
+                    <span asp-validation-for="TempAceiteMolinoA" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PresionCojineteSoporteA"></label>
+                    <input asp-for="PresionCojineteSoporteA" class="form-control" />
+                    <span asp-validation-for="PresionCojineteSoporteA" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PresionCojineteSoporteB"></label>
+                    <input asp-for="PresionCojineteSoporteB" class="form-control" />
+                    <span asp-validation-for="PresionCojineteSoporteB" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PresionCojineteSoporteC"></label>
+                    <input asp-for="PresionCojineteSoporteC" class="form-control" />
+                    <span asp-validation-for="PresionCojineteSoporteC" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PresionCojineteSoporteD"></label>
+                    <input asp-for="PresionCojineteSoporteD" class="form-control" />
+                    <span asp-validation-for="PresionCojineteSoporteD" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="LjungstromB"></label>
+                    <input asp-for="LjungstromB" class="form-control" />
+                    <span asp-validation-for="LjungstromB" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="LjungstromA"></label>
+                    <input asp-for="LjungstromA" class="form-control" />
+                    <span asp-validation-for="LjungstromA" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PresionTk"></label>
+                    <input asp-for="PresionTk" class="form-control" />
+                    <span asp-validation-for="PresionTk" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Apertura"></label>
+                    <input asp-for="Apertura" class="form-control" />
+                    <span asp-validation-for="Apertura" class="text-danger"></span>
+                </div>
+                <div class="form-group mt-3">
+                    <button type="button" class="btn btn-secondary" id="prevBtn4">Volver</button>
+                    <button type="button" class="btn btn-primary" id="nextBtn4">Siguiente</button>
+                </div>
+            </div>
+            <!-- Sección 5 -->
+            <div class="form-section" id="section-5" style="display:none;">
+                <div class="form-group">
+                    <label asp-for="VibradorA"></label>
+                    <input asp-for="VibradorA" class="form-control" />
+                    <span asp-validation-for="VibradorA" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="VibradorB"></label>
+                    <input asp-for="VibradorB" class="form-control" />
+                    <span asp-validation-for="VibradorB" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="VibradorC"></label>
+                    <input asp-for="VibradorC" class="form-control" />
+                    <span asp-validation-for="VibradorC" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ZarandaA"></label>
+                    <input asp-for="ZarandaA" class="form-control" />
+                    <span asp-validation-for="ZarandaA" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="TrituradorA"></label>
+                    <input asp-for="TrituradorA" class="form-control" />
+                    <span asp-validation-for="TrituradorA" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ZarandaB"></label>
+                    <input asp-for="ZarandaB" class="form-control" />
+                    <span asp-validation-for="ZarandaB" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="TrituradorB"></label>
+                    <input asp-for="TrituradorB" class="form-control" />
+                    <span asp-validation-for="TrituradorB" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="FluidizadorB"></label>
+                    <input asp-for="FluidizadorB" class="form-control" />
+                    <span asp-validation-for="FluidizadorB" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="FluidizadorA"></label>
+                    <input asp-for="FluidizadorA" class="form-control" />
+                    <span asp-validation-for="FluidizadorA" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Observaciones"></label>
+                    <input asp-for="Observaciones" class="form-control" />
+                    <span asp-validation-for="Observaciones" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="TrenSeleccionadoSubirCarbon"></label>
+                    <input asp-for="TrenSeleccionadoSubirCarbon" class="form-control" />
+                    <span asp-validation-for="TrenSeleccionadoSubirCarbon" class="text-danger"></span>
+                </div>
+                <div class="form-group mt-3">
+                    <button type="button" class="btn btn-secondary" id="prevBtn5">Volver</button>
+                    <button type="button" class="btn btn-primary" id="nextBtn5">Siguiente</button>
+                </div>
+            </div>
+            <!-- Sección 6 -->
+            <div class="form-section" id="section-6" style="display:none;">
+                <div class="form-group">
+                    <label asp-for="MolinoD_Seleccion"></label>
+                    <input asp-for="MolinoD_Seleccion" class="form-control" />
+                    <span asp-validation-for="MolinoD_Seleccion" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="MolinoC_Seleccion"></label>
+                    <input asp-for="MolinoC_Seleccion" class="form-control" />
+                    <span asp-validation-for="MolinoC_Seleccion" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="MolinoB_Seleccion"></label>
+                    <input asp-for="MolinoB_Seleccion" class="form-control" />
+                    <span asp-validation-for="MolinoB_Seleccion" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="MolinoA_Seleccion"></label>
+                    <input asp-for="MolinoA_Seleccion" class="form-control" />
+                    <span asp-validation-for="MolinoA_Seleccion" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="LjungstromA_Seleccion"></label>
+                    <input asp-for="LjungstromA_Seleccion" class="form-control" />
+                    <span asp-validation-for="LjungstromA_Seleccion" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="LjungstromB_Seleccion"></label>
+                    <input asp-for="LjungstromB_Seleccion" class="form-control" />
+                    <span asp-validation-for="LjungstromB_Seleccion" class="text-danger"></span>
+                </div>
+                <div class="form-group mt-3">
+                    <button type="button" class="btn btn-secondary" id="prevBtn6">Volver</button>
+                    <input type="submit" value="Registrar" class="btn btn-success" />
+                </div>
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Regresar a la Lista</a>
 </div>
+
+@section Scripts {
+    <script>
+        // Control de secciones
+        let currentSection = 1;
+        const totalSections = 6; // Ajusta si agregas más secciones
+        function showSection(n) {
+            for (let i = 1; i <= totalSections; i++) {
+                document.getElementById('section-' + i).style.display = (i === n) ? '' : 'none';
+            }
+            currentSection = n;
+        }
+        // Botones de navegación
+        document.getElementById('nextBtn1').onclick = function () { showSection(2); };
+        document.getElementById('prevBtn2').onclick = function () { showSection(1); };
+        document.getElementById('nextBtn2').onclick = function () { showSection(3); };
+        document.getElementById('prevBtn3').onclick = function () { showSection(2); };
+        document.getElementById('nextBtn3').onclick = function () { showSection(4); };
+        document.getElementById('prevBtn4').onclick = function () { showSection(3); };
+        document.getElementById('nextBtn4').onclick = function () { showSection(5); };
+        document.getElementById('prevBtn5').onclick = function () { showSection(4); };
+        document.getElementById('nextBtn5').onclick = function () { showSection(6); };
+        document.getElementById('prevBtn6').onclick = function () { showSection(5); };
+    </script>
+}
 

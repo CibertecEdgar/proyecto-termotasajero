@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Configuration;
-using System.Data.SqlClient;
 using Microsoft.Data.SqlClient;
 
 namespace proyecto_termotasajero.Controllers
 {
-    [Route("[controller]")]
+   
     public class ContadorAuxiliarController : Controller
     {
         private readonly ILogger<ContadorAuxiliarController> _logger;
@@ -20,7 +19,7 @@ namespace proyecto_termotasajero.Controllers
         public ContadorAuxiliarController(ILogger<ContadorAuxiliarController> logger, IConfiguration configuration)
         {
             _logger = logger;
-            _connectionString = configuration.GetConnectionString("sqlConUser");
+            _connectionString = configuration.GetConnectionString("sql");
         }
 
         // Listar registros usando procedimiento almacenado
@@ -37,28 +36,34 @@ namespace proyecto_termotasajero.Controllers
                 {
                     while (reader.Read())
                     {
-                        lista.Add(new proyecto_termotasajero.Models.ContadorAuxiliar
-                        {
-                            ID = reader.GetInt32(reader.GetOrdinal("ID")),
-                            HoraInicio = reader.GetDateTime(reader.GetOrdinal("HoraInicio")),
-                            HoraFinalizacion = reader.GetDateTime(reader.GetOrdinal("HoraFinalizacion")),
-                            CorreoElectronico = reader.IsDBNull(reader.GetOrdinal("CorreoElectronico")) ? null : reader.GetString(reader.GetOrdinal("CorreoElectronico")),
-                            Nombre = reader.IsDBNull(reader.GetOrdinal("Nombre")) ? null : reader.GetString(reader.GetOrdinal("Nombre")),
-                            FechaDeCorte = reader.GetDateTime(reader.GetOrdinal("FechaDeCorte")),
-                            Operador = reader.IsDBNull(reader.GetOrdinal("Operador")) ? null : reader.GetString(reader.GetOrdinal("Operador")),
-                            ContadorAguaServicios = reader.GetDouble(reader.GetOrdinal("ContadorAguaServicios")),
-                            ContadorACPM = reader.GetDouble(reader.GetOrdinal("ContadorACPM")),
-                            ContadorAguaPotable = reader.GetDouble(reader.GetOrdinal("ContadorAguaPotable")),
-                            ContadorAguaDEMI = reader.GetDouble(reader.GetOrdinal("ContadorAguaDEMI")),
-                            ContadorAguaDescargadorRotatorio = reader.GetDouble(reader.GetOrdinal("ContadorAguaDescargadorRotatorio"))
-                        });
+                        var item = new proyecto_termotasajero.Models.ContadorAuxiliar();
+
+                        item.ID = reader.GetInt32(reader.GetOrdinal("ID"));
+                        item.HoraInicio = reader.GetDateTime(reader.GetOrdinal("HoraInicio"));
+                        item.HoraFinalizacion = reader.GetDateTime(reader.GetOrdinal("HoraFinalizacion"));
+                        item.CorreoElectronico = reader.IsDBNull(reader.GetOrdinal("CorreoElectronico")) ? null : reader.GetString(reader.GetOrdinal("CorreoElectronico"));
+                        item.Nombre = reader.IsDBNull(reader.GetOrdinal("Nombre")) ? null : reader.GetString(reader.GetOrdinal("Nombre"));
+                        item.FechaDeCorte = reader.GetDateTime(reader.GetOrdinal("FechaDeCorte"));
+                        item.Operador = reader.IsDBNull(reader.GetOrdinal("Operador")) ? null : reader.GetString(reader.GetOrdinal("Operador"));
+                        item.ContadorAguaServicios = reader.GetDouble(reader.GetOrdinal("ContadorAguaServicios"));
+                        item.ContadorACPM = reader.GetDouble(reader.GetOrdinal("ContadorACPM"));
+                        item.ContadorAguaPotable = reader.GetDouble(reader.GetOrdinal("ContadorAguaPotable"));
+                        item.ContadorAguaDEMI = reader.GetDouble(reader.GetOrdinal("ContadorAguaDEMI"));
+                        item.ContadorAguaDescargadorRotatorio = reader.GetDouble(reader.GetOrdinal("ContadorAguaDescargadorRotatorio"));
+                        lista.Add(item);
                     }
                 }
             }
             return View(lista);
         }
 
-        // Registrar nuevo registro usando procedimiento almacenado
+        [HttpGet]
+        public IActionResult Registrar()
+        {
+            return View("Registrar");
+        }
+
+        // Registrar usando procedimiento almacenado
         [HttpPost]
         public IActionResult Registrar(proyecto_termotasajero.Models.ContadorAuxiliar modelo)
         {

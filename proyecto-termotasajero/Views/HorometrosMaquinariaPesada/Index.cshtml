@@ -1,0 +1,109 @@
+﻿@model IEnumerable<proyecto_termotasajero.Models.HorometrosMaquinariaPesada>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Horometros Maquinaria Pesada</h1>
+
+<p>
+    <a asp-action="Registrar">Registrar</a>
+</p>
+
+<div id="paginado-listado">
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr id="header-row">
+                    <!-- Los headers se llenan por JS -->
+                </tr>
+            </thead>
+            <tbody id="body-rows">
+                <!-- Las filas se llenan por JS -->
+            </tbody>
+        </table>
+    </div>
+    <div class="d-flex justify-content-between mt-3">
+        <button class="btn btn-secondary" id="prevSectionBtn" style="display:none;">Anterior sección</button>
+        <button class="btn btn-primary" id="nextSectionBtn">Siguiente sección</button>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // Obtén los datos del modelo en JS
+        const data = [
+        @foreach (var item in Model)
+        {
+            @:{
+            @:ID: @(item.ID),
+            @:HoraInicio: '@item.HoraInicio',
+            @:HoraFinalizacion: '@item.HoraFinalizacion',
+            @:CorreoElectronico: '@item.CorreoElectronico',
+            @:Nombre: '@item.Nombre',
+            @:HorometroCoaldozer2: @(item.HorometroCoaldozer2),
+            @:HorometroCoaldozer3: @(item.HorometroCoaldozer3),
+            @:HorometroCoaldozer4: @(item.HorometroCoaldozer4),
+            @:HorometroCargador1: @(item.HorometroCargador1),
+            @:HorometroCargador2: @(item.HorometroCargador2),
+            @:HorometroClasificadoraCarbon: @(item.HorometroClasificadoraCarbon),
+            @:HorometroRetrocargadorKOMATSU: @(item.HorometroRetrocargadorKOMATSU),
+            @:HorometroMiniCargadorBOBCAT: @(item.HorometroMiniCargadorBOBCAT),
+            @:},
+        }
+            ];
+        // Nombres de columnas en orden
+        const columns = [
+            'ID', 'HoraInicio', 'HoraFinalizacion', 'CorreoElectronico', 'Nombre', 'HorometroCoaldozer2', 'HorometroCoaldozer3', 'HorometroCoaldozer4', 'HorometroCargador1', 'HorometroCargador2', 'HorometroClasificadoraCarbon', 'HorometroRetrocargadorKOMATSU', 'HorometroMiniCargadorBOBCAT'
+        ];
+        // Nombres legibles para los headers (puedes personalizar estos nombres)
+        const columnHeaders = columns.map(c => c);
+        // Paginación de columnas
+        const pageSize = 6;
+        let currentSection = 0;
+        function renderTable() {
+            // Renderiza los headers y las filas según la sección actual
+            const start = currentSection * pageSize;
+            const end = Math.min(start + pageSize, columns.length);
+            const visibleColumns = columns.slice(start, end);
+            const visibleHeaders = columnHeaders.slice(start, end);
+            // Render headers
+            const headerRow = document.getElementById('header-row');
+            headerRow.innerHTML = '';
+            visibleHeaders.forEach(h => {
+                const th = document.createElement('th');
+                th.textContent = h;
+                headerRow.appendChild(th);
+            });
+            // Render rows
+            const bodyRows = document.getElementById('body-rows');
+            bodyRows.innerHTML = '';
+            data.forEach(row => {
+                const tr = document.createElement('tr');
+                visibleColumns.forEach(col => {
+                    const td = document.createElement('td');
+                    td.textContent = row[col];
+                    tr.appendChild(td);
+                });
+                bodyRows.appendChild(tr);
+            });
+            // Botones
+            document.getElementById('prevSectionBtn').style.display = currentSection > 0 ? '' : 'none';
+            document.getElementById('nextSectionBtn').style.display = end < columns.length ? '' : 'none';
+        }
+        document.getElementById('prevSectionBtn').onclick = function () {
+            if (currentSection > 0) {
+                currentSection--;
+                renderTable();
+            }
+        };
+        document.getElementById('nextSectionBtn').onclick = function () {
+            if ((currentSection + 1) * pageSize < columns.length) {
+                currentSection++;
+                renderTable();
+            }
+        };
+        renderTable();
+    </script>
+}

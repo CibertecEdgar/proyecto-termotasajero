@@ -18,7 +18,7 @@ namespace proyecto_termotasajero.Controllers
         public ParametrosOperacionCapacitacionAguaController(ILogger<ParametrosOperacionCapacitacionAguaController> logger, IConfiguration configuration)
         {
             _logger = logger;
-            _connectionString = configuration.GetConnectionString("sqlConUser");
+            _connectionString = configuration.GetConnectionString("sql");
         }
 
         // Listar registros
