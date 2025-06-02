@@ -7,7 +7,7 @@ namespace proyecto_termotasajero.Models
 {
     public class ParametrosOperacionCapacitacionAgua
     {
-        public int ID { get; set; }
+        public int? ID { get; set; }
         public DateTime Inicio { get; set; }
         public DateTime Finalizacion { get; set; }
         public string? CorreoElectronico { get; set; }

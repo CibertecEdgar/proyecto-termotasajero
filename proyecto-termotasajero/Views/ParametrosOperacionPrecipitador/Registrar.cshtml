@@ -12,7 +12,8 @@
     <div class="col-md-12">
         <form asp-action="Registrar" id="multiStepForm">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <!-- Sección 1 -->
+            
+            <!-- Sección 1 (10 campos) -->
             <div class="form-section" id="section-1">
                 <div class="form-group">
                     <label asp-for="FechaHoraInicio"></label>
@@ -68,7 +69,8 @@
                     <button type="button" class="btn btn-primary" id="nextBtn1">Siguiente</button>
                 </div>
             </div>
-            <!-- Sección 2 -->
+
+            <!-- Sección 2 (10 campos) -->
             <div class="form-section" id="section-2" style="display:none;">
                 <div class="form-group">
                     <label asp-for="IPF11"></label>
@@ -120,18 +122,19 @@
                     <input asp-for="IPF2" class="form-control" />
                     <span asp-validation-for="IPF2" class="text-danger"></span>
                 </div>
-                <div class="form-group">
-                    <label asp-for="IPF1"></label>
-                    <input asp-for="IPF1" class="form-control" />
-                    <span asp-validation-for="IPF1" class="text-danger"></span>
-                </div>
                 <div class="form-group mt-3">
                     <button type="button" class="btn btn-secondary" id="prevBtn2">Volver</button>
                     <button type="button" class="btn btn-primary" id="nextBtn2">Siguiente</button>
                 </div>
             </div>
-            <!-- Sección 3 -->
+
+            <!-- Sección 3 (10 campos) -->
             <div class="form-section" id="section-3" style="display:none;">
+                <div class="form-group">
+                    <label asp-for="IPF1"></label>
+                    <input asp-for="IPF1" class="form-control" />
+                    <span asp-validation-for="IPF1" class="text-danger"></span>
+                </div>
                 <div class="form-group">
                     <label asp-for="Temp1B2"></label>
                     <input asp-for="Temp1B2" class="form-control" />
@@ -177,18 +180,19 @@
                     <input asp-for="Temp4B1" class="form-control" />
                     <span asp-validation-for="Temp4B1" class="text-danger"></span>
                 </div>
-                <div class="form-group">
-                    <label asp-for="Nivel4B1"></label>
-                    <input asp-for="Nivel4B1" class="form-control" />
-                    <span asp-validation-for="Nivel4B1" class="text-danger"></span>
-                </div>
                 <div class="form-group mt-3">
                     <button type="button" class="btn btn-secondary" id="prevBtn3">Volver</button>
                     <button type="button" class="btn btn-primary" id="nextBtn3">Siguiente</button>
                 </div>
             </div>
-            <!-- Sección 4 -->
+
+            <!-- Sección 4 (10 campos) -->
             <div class="form-section" id="section-4" style="display:none;">
+                <div class="form-group">
+                    <label asp-for="Nivel4B1"></label>
+                    <input asp-for="Nivel4B1" class="form-control" />
+                    <span asp-validation-for="Nivel4B1" class="text-danger"></span>
+                </div>
                 <div class="form-group">
                     <label asp-for="Temp3B1"></label>
                     <input asp-for="Temp3B1" class="form-control" />
@@ -234,18 +238,19 @@
                     <input asp-for="Temp2A2" class="form-control" />
                     <span asp-validation-for="Temp2A2" class="text-danger"></span>
                 </div>
-                <div class="form-group">
-                    <label asp-for="Nivel2A2"></label>
-                    <input asp-for="Nivel2A2" class="form-control" />
-                    <span asp-validation-for="Nivel2A2" class="text-danger"></span>
-                </div>
                 <div class="form-group mt-3">
                     <button type="button" class="btn btn-secondary" id="prevBtn4">Volver</button>
                     <button type="button" class="btn btn-primary" id="nextBtn4">Siguiente</button>
                 </div>
             </div>
-            <!-- Sección 5 -->
+
+            <!-- Sección 5 (10 campos) -->
             <div class="form-section" id="section-5" style="display:none;">
+                <div class="form-group">
+                    <label asp-for="Nivel2A2"></label>
+                    <input asp-for="Nivel2A2" class="form-control" />
+                    <span asp-validation-for="Nivel2A2" class="text-danger"></span>
+                </div>
                 <div class="form-group">
                     <label asp-for="Temp3A2"></label>
                     <input asp-for="Temp3A2" class="form-control" />
@@ -291,18 +296,19 @@
                     <input asp-for="Temp2A1" class="form-control" />
                     <span asp-validation-for="Temp2A1" class="text-danger"></span>
                 </div>
-                <div class="form-group">
-                    <label asp-for="Nivel2A1"></label>
-                    <input asp-for="Nivel2A1" class="form-control" />
-                    <span asp-validation-for="Nivel2A1" class="text-danger"></span>
-                </div>
                 <div class="form-group mt-3">
                     <button type="button" class="btn btn-secondary" id="prevBtn5">Volver</button>
                     <button type="button" class="btn btn-primary" id="nextBtn5">Siguiente</button>
                 </div>
             </div>
-            <!-- Sección 6 -->
+
+            <!-- Sección 6 (10 campos) -->
             <div class="form-section" id="section-6" style="display:none;">
+                <div class="form-group">
+                    <label asp-for="Nivel2A1"></label>
+                    <input asp-for="Nivel2A1" class="form-control" />
+                    <span asp-validation-for="Nivel2A1" class="text-danger"></span>
+                </div>
                 <div class="form-group">
                     <label asp-for="Temp1A1"></label>
                     <input asp-for="Temp1A1" class="form-control" />
@@ -348,18 +354,19 @@
                     <input asp-for="Campo1A1_Deg" class="form-control" />
                     <span asp-validation-for="Campo1A1_Deg" class="text-danger"></span>
                 </div>
-                <div class="form-group">
-                    <label asp-for="Campo1A2_Amps"></label>
-                    <input asp-for="Campo1A2_Amps" class="form-control" />
-                    <span asp-validation-for="Campo1A2_Amps" class="text-danger"></span>
-                </div>
                 <div class="form-group mt-3">
                     <button type="button" class="btn btn-secondary" id="prevBtn6">Volver</button>
                     <button type="button" class="btn btn-primary" id="nextBtn6">Siguiente</button>
                 </div>
             </div>
-            <!-- Sección 7 -->
+
+            <!-- Sección 7 (10 campos) -->
             <div class="form-section" id="section-7" style="display:none;">
+                <div class="form-group">
+                    <label asp-for="Campo1A2_Amps"></label>
+                    <input asp-for="Campo1A2_Amps" class="form-control" />
+                    <span asp-validation-for="Campo1A2_Amps" class="text-danger"></span>
+                </div>
                 <div class="form-group">
                     <label asp-for="Campo1A2_Volts"></label>
                     <input asp-for="Campo1A2_Volts" class="form-control" />
@@ -405,18 +412,19 @@
                     <input asp-for="Campo1B1_mA" class="form-control" />
                     <span asp-validation-for="Campo1B1_mA" class="text-danger"></span>
                 </div>
-                <div class="form-group">
-                    <label asp-for="Campo1B1_KV"></label>
-                    <input asp-for="Campo1B1_KV" class="form-control" />
-                    <span asp-validation-for="Campo1B1_KV" class="text-danger"></span>
-                </div>
                 <div class="form-group mt-3">
                     <button type="button" class="btn btn-secondary" id="prevBtn7">Volver</button>
                     <button type="button" class="btn btn-primary" id="nextBtn7">Siguiente</button>
                 </div>
             </div>
-            <!-- Sección 8 -->
+
+            <!-- Sección 8 (10 campos) -->
             <div class="form-section" id="section-8" style="display:none;">
+                <div class="form-group">
+                    <label asp-for="Campo1B1_KV"></label>
+                    <input asp-for="Campo1B1_KV" class="form-control" />
+                    <span asp-validation-for="Campo1B1_KV" class="text-danger"></span>
+                </div>
                 <div class="form-group">
                     <label asp-for="Campo1B1_SPM"></label>
                     <input asp-for="Campo1B1_SPM" class="form-control" />
@@ -431,6 +439,49 @@
                     <label asp-for="Campo1B1_Deg"></label>
                     <input asp-for="Campo1B1_Deg" class="form-control" />
                     <span asp-validation-for="Campo1B1_Deg" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo1B2_Amps"></label>
+                    <input asp-for="Campo1B2_Amps" class="form-control" />
+                    <span asp-validation-for="Campo1B2_Amps" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo1B2_Volts"></label>
+                    <input asp-for="Campo1B2_Volts" class="form-control" />
+                    <span asp-validation-for="Campo1B2_Volts" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo1B2_mA"></label>
+                    <input asp-for="Campo1B2_mA" class="form-control" />
+                    <span asp-validation-for="Campo1B2_mA" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo1B2_KV"></label>
+                    <input asp-for="Campo1B2_KV" class="form-control" />
+                    <span asp-validation-for="Campo1B2_KV" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo1B2_SPM"></label>
+                    <input asp-for="Campo1B2_SPM" class="form-control" />
+                    <span asp-validation-for="Campo1B2_SPM" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo1B2_KW"></label>
+                    <input asp-for="Campo1B2_KW" class="form-control" />
+                    <span asp-validation-for="Campo1B2_KW" class="text-danger"></span>
+                </div>
+                <div class="form-group mt-3">
+                    <button type="button" class="btn btn-secondary" id="prevBtn8">Volver</button>
+                    <button type="button" class="btn btn-primary" id="nextBtn8">Siguiente</button>
+                </div>
+            </div>
+
+            <!-- Sección 9 (10 campos) -->
+            <div class="form-section" id="section-9" style="display:none;">
+                <div class="form-group">
+                    <label asp-for="Campo1B2_Deg"></label>
+                    <input asp-for="Campo1B2_Deg" class="form-control" />
+                    <span asp-validation-for="Campo1B2_Deg" class="text-danger"></span>
                 </div>
                 <div class="form-group">
                     <label asp-for="Campo2A1_Amps"></label>
@@ -467,13 +518,49 @@
                     <input asp-for="Campo2A1_Deg" class="form-control" />
                     <span asp-validation-for="Campo2A1_Deg" class="text-danger"></span>
                 </div>
+                <div class="form-group">
+                    <label asp-for="Campo2B2_Amps"></label>
+                    <input asp-for="Campo2B2_Amps" class="form-control" />
+                    <span asp-validation-for="Campo2B2_Amps" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo2B2_Volts"></label>
+                    <input asp-for="Campo2B2_Volts" class="form-control" />
+                    <span asp-validation-for="Campo2B2_Volts" class="text-danger"></span>
+                </div>
                 <div class="form-group mt-3">
-                    <button type="button" class="btn btn-secondary" id="prevBtn8">Volver</button>
-                    <button type="button" class="btn btn-primary" id="nextBtn8">Siguiente</button>
+                    <button type="button" class="btn btn-secondary" id="prevBtn9">Volver</button>
+                    <button type="button" class="btn btn-primary" id="nextBtn9">Siguiente</button>
                 </div>
             </div>
-            <!-- Sección 9 -->
-            <div class="form-section" id="section-9" style="display:none;">
+
+            <!-- Sección 10 (10 campos) -->
+            <div class="form-section" id="section-10" style="display:none;">
+                <div class="form-group">
+                    <label asp-for="Campo2B2_mA"></label>
+                    <input asp-for="Campo2B2_mA" class="form-control" />
+                    <span asp-validation-for="Campo2B2_mA" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo2B2_KV"></label>
+                    <input asp-for="Campo2B2_KV" class="form-control" />
+                    <span asp-validation-for="Campo2B2_KV" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo2B2_SPM"></label>
+                    <input asp-for="Campo2B2_SPM" class="form-control" />
+                    <span asp-validation-for="Campo2B2_SPM" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo2B2_KW"></label>
+                    <input asp-for="Campo2B2_KW" class="form-control" />
+                    <span asp-validation-for="Campo2B2_KW" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Campo2B2_Deg"></label>
+                    <input asp-for="Campo2B2_Deg" class="form-control" />
+                    <span asp-validation-for="Campo2B2_Deg" class="text-danger"></span>
+                </div>
                 <div class="form-group">
                     <label asp-for="Campo2B1_Amps"></label>
                     <input asp-for="Campo2B1_Amps" class="form-control" />
@@ -499,6 +586,14 @@
                     <input asp-for="Campo2B1_SPM" class="form-control" />
                     <span asp-validation-for="Campo2B1_SPM" class="text-danger"></span>
                 </div>
+                <div class="form-group mt-3">
+                    <button type="button" class="btn btn-secondary" id="prevBtn10">Volver</button>
+                    <button type="button" class="btn btn-primary" id="nextBtn10">Siguiente</button>
+                </div>
+            </div>
+
+            <!-- Sección 11 (10 campos) -->
+            <div class="form-section" id="section-11" style="display:none;">
                 <div class="form-group">
                     <label asp-for="Campo2B1_KW"></label>
                     <input asp-for="Campo2B1_KW" class="form-control" />
@@ -519,13 +614,6 @@
                     <input asp-for="Campo2A2_Volts" class="form-control" />
                     <span asp-validation-for="Campo2A2_Volts" class="text-danger"></span>
                 </div>
-                <div class="form-group mt-3">
-                    <button type="button" class="btn btn-secondary" id="prevBtn9">Volver</button>
-                    <button type="button" class="btn btn-primary" id="nextBtn9">Siguiente</button>
-                </div>
-            </div>
-            <!-- Sección 10 -->
-            <div class="form-section" id="section-10" style="display:none;">
                 <div class="form-group">
                     <label asp-for="Campo2A2_mA"></label>
                     <input asp-for="Campo2A2_mA" class="form-control" />
@@ -556,6 +644,14 @@
                     <input asp-for="Campo3A1_Amps" class="form-control" />
                     <span asp-validation-for="Campo3A1_Amps" class="text-danger"></span>
                 </div>
+                <div class="form-group mt-3">
+                    <button type="button" class="btn btn-secondary" id="prevBtn11">Volver</button>
+                    <button type="button" class="btn btn-primary" id="nextBtn11">Siguiente</button>
+                </div>
+            </div>
+
+            <!-- Sección 12 (10 campos) -->
+            <div class="form-section" id="section-12" style="display:none;">
                 <div class="form-group">
                     <label asp-for="Campo3A1_Volts"></label>
                     <input asp-for="Campo3A1_Volts" class="form-control" />
@@ -591,13 +687,6 @@
                     <input asp-for="Campo3A2_Amps" class="form-control" />
                     <span asp-validation-for="Campo3A2_Amps" class="text-danger"></span>
                 </div>
-                <div class="form-group mt-3">
-                    <button type="button" class="btn btn-secondary" id="prevBtn10">Volver</button>
-                    <button type="button" class="btn btn-primary" id="nextBtn10">Siguiente</button>
-                </div>
-            </div>
-            <!-- Sección 11 -->
-            <div class="form-section" id="section-11" style="display:none;">
                 <div class="form-group">
                     <label asp-for="Campo3A2_Volts"></label>
                     <input asp-for="Campo3A2_Volts" class="form-control" />
@@ -613,6 +702,14 @@
                     <input asp-for="Campo3A2_KV" class="form-control" />
                     <span asp-validation-for="Campo3A2_KV" class="text-danger"></span>
                 </div>
+                <div class="form-group mt-3">
+                    <button type="button" class="btn btn-secondary" id="prevBtn12">Volver</button>
+                    <button type="button" class="btn btn-primary" id="nextBtn12">Siguiente</button>
+                </div>
+            </div>
+
+            <!-- Sección 13 (10 campos) -->
+            <div class="form-section" id="section-13" style="display:none;">
                 <div class="form-group">
                     <label asp-for="Campo3A2_SCR"></label>
                     <input asp-for="Campo3A2_SCR" class="form-control" />
@@ -663,18 +760,19 @@
                     <input asp-for="Campo4A1_SM" class="form-control" />
                     <span asp-validation-for="Campo4A1_SM" class="text-danger"></span>
                 </div>
+                <div class="form-group mt-3">
+                    <button type="button" class="btn btn-secondary" id="prevBtn13">Volver</button>
+                    <button type="button" class="btn btn-primary" id="nextBtn13">Siguiente</button>
+                </div>
+            </div>
+
+            <!-- Sección 14 (10 campos) -->
+            <div class="form-section" id="section-14" style="display:none;">
                 <div class="form-group">
                     <label asp-for="Campo4A2_Amps"></label>
                     <input asp-for="Campo4A2_Amps" class="form-control" />
                     <span asp-validation-for="Campo4A2_Amps" class="text-danger"></span>
                 </div>
-                <div class="form-group mt-3">
-                    <button type="button" class="btn btn-secondary" id="prevBtn11">Volver</button>
-                    <button type="button" class="btn btn-primary" id="nextBtn11">Siguiente</button>
-                </div>
-            </div>
-            <!-- Sección 12 -->
-            <div class="form-section" id="section-12" style="display:none;">
                 <div class="form-group">
                     <label asp-for="Campo4A2_Volts"></label>
                     <input asp-for="Campo4A2_Volts" class="form-control" />
@@ -720,6 +818,14 @@
                     <input asp-for="Campo3B1_mA" class="form-control" />
                     <span asp-validation-for="Campo3B1_mA" class="text-danger"></span>
                 </div>
+                <div class="form-group mt-3">
+                    <button type="button" class="btn btn-secondary" id="prevBtn14">Volver</button>
+                    <button type="button" class="btn btn-primary" id="nextBtn14">Siguiente</button>
+                </div>
+            </div>
+
+            <!-- Sección 15 (10 campos) -->
+            <div class="form-section" id="section-15" style="display:none;">
                 <div class="form-group">
                     <label asp-for="Campo3B1_KV"></label>
                     <input asp-for="Campo3B1_KV" class="form-control" />
@@ -745,13 +851,6 @@
                     <input asp-for="Campo3B2_Amps" class="form-control" />
                     <span asp-validation-for="Campo3B2_Amps" class="text-danger"></span>
                 </div>
-                <div class="form-group mt-3">
-                    <button type="button" class="btn btn-secondary" id="prevBtn12">Volver</button>
-                    <button type="button" class="btn btn-primary" id="nextBtn12">Siguiente</button>
-                </div>
-            </div>
-            <!-- Sección 13 -->
-            <div class="form-section" id="section-13" style="display:none;">
                 <div class="form-group">
                     <label asp-for="Campo3B2_Volts"></label>
                     <input asp-for="Campo3B2_Volts" class="form-control" />
@@ -777,6 +876,14 @@
                     <input asp-for="Campo3B2_KW" class="form-control" />
                     <span asp-validation-for="Campo3B2_KW" class="text-danger"></span>
                 </div>
+                <div class="form-group mt-3">
+                    <button type="button" class="btn btn-secondary" id="prevBtn15">Volver</button>
+                    <button type="button" class="btn btn-primary" id="nextBtn15">Siguiente</button>
+                </div>
+            </div>
+
+            <!-- Sección 16 (10 campos) -->
+            <div class="form-section" id="section-16" style="display:none;">
                 <div class="form-group">
                     <label asp-for="Campo3B2_SM"></label>
                     <input asp-for="Campo3B2_SM" class="form-control" />
@@ -822,18 +929,19 @@
                     <input asp-for="Campo4B2_Amps" class="form-control" />
                     <span asp-validation-for="Campo4B2_Amps" class="text-danger"></span>
                 </div>
-                <div class="form-group mt-3">
-                    <button type="button" class="btn btn-secondary" id="prevBtn13">Volver</button>
-                    <button type="button" class="btn btn-primary" id="nextBtn13">Siguiente</button>
-                </div>
-            </div>
-            <!-- Sección 14 -->
-            <div class="form-section" id="section-14" style="display:none;">
                 <div class="form-group">
                     <label asp-for="Campo4B2_Volts"></label>
                     <input asp-for="Campo4B2_Volts" class="form-control" />
                     <span asp-validation-for="Campo4B2_Volts" class="text-danger"></span>
                 </div>
+                <div class="form-group mt-3">
+                    <button type="button" class="btn btn-secondary" id="prevBtn16">Volver</button>
+                    <button type="button" class="btn btn-primary" id="nextBtn16">Siguiente</button>
+                </div>
+            </div>
+
+            <!-- Sección 17 (6 campos) -->
+            <div class="form-section" id="section-17" style="display:none;">
                 <div class="form-group">
                     <label asp-for="Campo4B2_mA"></label>
                     <input asp-for="Campo4B2_mA" class="form-control" />
@@ -866,7 +974,7 @@
                 </div>
 
                 <div class="form-group mt-3">
-                    <button type="button" class="btn btn-secondary" id="prevBtn14">Volver</button>
+                    <button type="button" class="btn btn-secondary" id="prevBtn17">Volver</button>
                     <input type="submit" value="Registrar" class="btn btn-success" />
                 </div>
             </div>
@@ -882,7 +990,7 @@
     <script>
         // Control de secciones
         let currentSection = 1;
-        const totalSections = 14; // Ajusta si agregas más secciones
+        const totalSections = 17;
         function showSection(n) {
             for (let i = 1; i <= totalSections; i++) {
                 document.getElementById('section-' + i).style.display = (i === n) ? '' : 'none';
@@ -916,6 +1024,11 @@
         document.getElementById('prevBtn13').onclick = function () { showSection(12); };
         document.getElementById('nextBtn13').onclick = function () { showSection(14); };
         document.getElementById('prevBtn14').onclick = function () { showSection(13); };
+        document.getElementById('nextBtn14').onclick = function () { showSection(15); };
+        document.getElementById('prevBtn15').onclick = function () { showSection(14); };
+        document.getElementById('nextBtn15').onclick = function () { showSection(16); };
+        document.getElementById('prevBtn16').onclick = function () { showSection(15); };
+        document.getElementById('nextBtn16').onclick = function () { showSection(17); };
+        document.getElementById('prevBtn17').onclick = function () { showSection(16); };
     </script>
 }
-

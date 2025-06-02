@@ -99,7 +99,6 @@ namespace proyecto_termotasajero.Controllers
                 conn.Open();
                 var cmd = new SqlCommand("Sp_InsertParametrosOperacionCapacitacionAgua", conn);
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@ID", modelo.ID);
                 cmd.Parameters.AddWithValue("@Inicio", modelo.Inicio);
                 cmd.Parameters.AddWithValue("@Finalizacion", modelo.Finalizacion);
                 cmd.Parameters.AddWithValue("@CorreoElectronico", (object?)modelo.CorreoElectronico ?? DBNull.Value);

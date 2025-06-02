@@ -36,7 +36,6 @@ namespace proyecto_termotasajero.Controllers
                     while (reader.Read())
                     {
                         var item = new proyecto_termotasajero.Models.ParametrosOperacionPrecipitador();
-                        // Asignar propiedades aquí según corresponda (por brevedad, solo ejemplo de algunos campos)
                         item.ID = reader.GetInt32(reader.GetOrdinal("ID"));
                         item.FechaHoraInicio = reader.GetDateTime(reader.GetOrdinal("FechaHoraInicio"));
                         item.FechaHoraFinalizacion = reader.GetDateTime(reader.GetOrdinal("FechaHoraFinalizacion"));
@@ -91,6 +90,119 @@ namespace proyecto_termotasajero.Controllers
                         item.Nivel2A1 = reader.IsDBNull(reader.GetOrdinal("Nivel2A1")) ? null : reader.GetString(reader.GetOrdinal("Nivel2A1"));
                         item.Temp1A1 = reader.GetDecimal(reader.GetOrdinal("Temp1A1"));
                         item.Nivel1A1 = reader.IsDBNull(reader.GetOrdinal("Nivel1A1")) ? null : reader.GetString(reader.GetOrdinal("Nivel1A1"));
+                        item.Campo1A1_Amps = reader.GetDecimal(reader.GetOrdinal("Campo1A1_Amps"));
+                        item.Campo1A1_Volts = reader.GetDecimal(reader.GetOrdinal("Campo1A1_Volts"));
+                        item.Campo1A1_mA = reader.GetDecimal(reader.GetOrdinal("Campo1A1_mA"));
+                        item.Campo1A1_KV = reader.GetDecimal(reader.GetOrdinal("Campo1A1_KV"));
+                        item.Campo1A1_SPM = reader.IsDBNull(reader.GetOrdinal("Campo1A1_SPM")) ? null : reader.GetString(reader.GetOrdinal("Campo1A1_SPM"));
+                        item.Campo1A1_KW = reader.GetDecimal(reader.GetOrdinal("Campo1A1_KW"));
+                        item.Campo1A1_Deg = reader.GetDecimal(reader.GetOrdinal("Campo1A1_Deg"));
+                        item.Campo1A2_Amps = reader.GetDecimal(reader.GetOrdinal("Campo1A2_Amps"));
+                        item.Campo1A2_Volts = reader.GetDecimal(reader.GetOrdinal("Campo1A2_Volts"));
+                        item.Campo1A2_mA = reader.GetDecimal(reader.GetOrdinal("Campo1A2_mA"));
+                        item.Campo1A2_KV = reader.GetDecimal(reader.GetOrdinal("Campo1A2_KV"));
+                        item.Campo1A2_SPM = reader.IsDBNull(reader.GetOrdinal("Campo1A2_SPM")) ? null : reader.GetString(reader.GetOrdinal("Campo1A2_SPM"));
+                        item.Campo1A2_KW = reader.GetDecimal(reader.GetOrdinal("Campo1A2_KW"));
+                        item.Campo1A2_Deg = reader.GetDecimal(reader.GetOrdinal("Campo1A2_Deg"));
+                        item.Campo1B1_Amps = reader.GetDecimal(reader.GetOrdinal("Campo1B1_Amps"));
+                        item.Campo1B1_Volts = reader.GetDecimal(reader.GetOrdinal("Campo1B1_Volts"));
+                        item.Campo1B1_mA = reader.GetDecimal(reader.GetOrdinal("Campo1B1_mA"));
+                        item.Campo1B1_KV = reader.GetDecimal(reader.GetOrdinal("Campo1B1_KV"));
+                        item.Campo1B1_SPM = reader.IsDBNull(reader.GetOrdinal("Campo1B1_SPM")) ? null : reader.GetString(reader.GetOrdinal("Campo1B1_SPM"));
+                        item.Campo1B1_KW = reader.GetDecimal(reader.GetOrdinal("Campo1B1_KW"));
+                        item.Campo1B1_Deg = reader.GetDecimal(reader.GetOrdinal("Campo1B1_Deg"));
+                        item.Campo1B2_Amps = reader.GetDecimal(reader.GetOrdinal("Campo1B2_Amps"));
+                        item.Campo1B2_Volts = reader.GetDecimal(reader.GetOrdinal("Campo1B2_Volts"));
+                        item.Campo1B2_mA = reader.GetDecimal(reader.GetOrdinal("Campo1B2_mA"));
+                        item.Campo1B2_KV = reader.GetDecimal(reader.GetOrdinal("Campo1B2_KV"));
+                        item.Campo1B2_SPM = reader.IsDBNull(reader.GetOrdinal("Campo1B2_SPM")) ? null : reader.GetString(reader.GetOrdinal("Campo1B2_SPM"));
+                        item.Campo1B2_KW = reader.GetDecimal(reader.GetOrdinal("Campo1B2_KW"));
+                        item.Campo1B2_Deg = reader.GetDecimal(reader.GetOrdinal("Campo1B2_Deg"));
+                        item.Campo2A1_Amps = reader.GetDecimal(reader.GetOrdinal("Campo2A1_Amps"));
+                        item.Campo2A1_Volts = reader.GetDecimal(reader.GetOrdinal("Campo2A1_Volts"));
+                        item.Campo2A1_mA = reader.GetDecimal(reader.GetOrdinal("Campo2A1_mA"));
+                        item.Campo2A1_KV = reader.GetDecimal(reader.GetOrdinal("Campo2A1_KV"));
+                        item.Campo2A1_SPM = reader.IsDBNull(reader.GetOrdinal("Campo2A1_SPM")) ? null : reader.GetString(reader.GetOrdinal("Campo2A1_SPM"));
+                        item.Campo2A1_KW = reader.GetDecimal(reader.GetOrdinal("Campo2A1_KW"));
+                        item.Campo2A1_Deg = reader.GetDecimal(reader.GetOrdinal("Campo2A1_Deg"));
+                        item.Campo2B2_Amps = reader.GetDecimal(reader.GetOrdinal("Campo2B2_Amps"));
+                        item.Campo2B2_Volts = reader.GetDecimal(reader.GetOrdinal("Campo2B2_Volts"));
+                        item.Campo2B2_mA = reader.GetDecimal(reader.GetOrdinal("Campo2B2_mA"));
+                        item.Campo2B2_KV = reader.GetDecimal(reader.GetOrdinal("Campo2B2_KV"));
+                        item.Campo2B2_SPM = reader.IsDBNull(reader.GetOrdinal("Campo2B2_SPM")) ? null : reader.GetString(reader.GetOrdinal("Campo2B2_SPM"));
+                        item.Campo2B2_KW = reader.GetDecimal(reader.GetOrdinal("Campo2B2_KW"));
+                        item.Campo2B2_Deg = reader.GetDecimal(reader.GetOrdinal("Campo2B2_Deg"));
+                        item.Campo2B1_Amps = reader.GetDecimal(reader.GetOrdinal("Campo2B1_Amps"));
+                        item.Campo2B1_Volts = reader.GetDecimal(reader.GetOrdinal("Campo2B1_Volts"));
+                        item.Campo2B1_mA = reader.GetDecimal(reader.GetOrdinal("Campo2B1_mA"));
+                        item.Campo2B1_KV = reader.GetDecimal(reader.GetOrdinal("Campo2B1_KV"));
+                        item.Campo2B1_SPM = reader.IsDBNull(reader.GetOrdinal("Campo2B1_SPM")) ? null : reader.GetString(reader.GetOrdinal("Campo2B1_SPM"));
+                        item.Campo2B1_KW = reader.GetDecimal(reader.GetOrdinal("Campo2B1_KW"));
+                        item.Campo2B1_Deg = reader.GetDecimal(reader.GetOrdinal("Campo2B1_Deg"));
+                        item.Campo2A2_Amps = reader.GetDecimal(reader.GetOrdinal("Campo2A2_Amps"));
+                        item.Campo2A2_Volts = reader.GetDecimal(reader.GetOrdinal("Campo2A2_Volts"));
+                        item.Campo2A2_mA = reader.GetDecimal(reader.GetOrdinal("Campo2A2_mA"));
+                        item.Campo2A2_KV = reader.GetDecimal(reader.GetOrdinal("Campo2A2_KV"));
+                        item.Campo2A2_SPM = reader.IsDBNull(reader.GetOrdinal("Campo2A2_SPM")) ? null : reader.GetString(reader.GetOrdinal("Campo2A2_SPM"));
+                        item.Campo2A2_KW = reader.GetDecimal(reader.GetOrdinal("Campo2A2_KW"));
+                        item.Campo2A2_Deg = reader.GetDecimal(reader.GetOrdinal("Campo2A2_Deg"));
+                        item.Campo3A1_Amps = reader.GetDecimal(reader.GetOrdinal("Campo3A1_Amps"));
+                        item.Campo3A1_Volts = reader.GetDecimal(reader.GetOrdinal("Campo3A1_Volts"));
+                        item.Campo3A1_mA = reader.GetDecimal(reader.GetOrdinal("Campo3A1_mA"));
+                        item.Campo3A1_KV = reader.GetDecimal(reader.GetOrdinal("Campo3A1_KV"));
+                        item.Campo3A1_SCR = reader.IsDBNull(reader.GetOrdinal("Campo3A1_SCR")) ? null : reader.GetString(reader.GetOrdinal("Campo3A1_SCR"));
+                        item.Campo3A1_KW = reader.GetDecimal(reader.GetOrdinal("Campo3A1_KW"));
+                        item.Campo3A1_SM = reader.IsDBNull(reader.GetOrdinal("Campo3A1_SM")) ? null : reader.GetString(reader.GetOrdinal("Campo3A1_SM"));
+                        item.Campo3A2_Amps = reader.GetDecimal(reader.GetOrdinal("Campo3A2_Amps"));
+                        item.Campo3A2_Volts = reader.GetDecimal(reader.GetOrdinal("Campo3A2_Volts"));
+                        item.Campo3A2_mA = reader.GetDecimal(reader.GetOrdinal("Campo3A2_mA"));
+                        item.Campo3A2_KV = reader.GetDecimal(reader.GetOrdinal("Campo3A2_KV"));
+                        item.Campo3A2_SCR = reader.IsDBNull(reader.GetOrdinal("Campo3A2_SCR")) ? null : reader.GetString(reader.GetOrdinal("Campo3A2_SCR"));
+                        item.Campo3A2_KW = reader.GetDecimal(reader.GetOrdinal("Campo3A2_KW"));
+                        item.Campo3A2_SM = reader.IsDBNull(reader.GetOrdinal("Campo3A2_SM")) ? null : reader.GetString(reader.GetOrdinal("Campo3A2_SM"));
+                        item.Campo4A1_Amps = reader.GetDecimal(reader.GetOrdinal("Campo4A1_Amps"));
+                        item.Campo4A1_Volts = reader.GetDecimal(reader.GetOrdinal("Campo4A1_Volts"));
+                        item.Campo4A1_mA = reader.GetDecimal(reader.GetOrdinal("Campo4A1_mA"));
+                        item.Campo4A1_KV = reader.GetDecimal(reader.GetOrdinal("Campo4A1_KV"));
+                        item.Campo4A1_SCR = reader.IsDBNull(reader.GetOrdinal("Campo4A1_SCR")) ? null : reader.GetString(reader.GetOrdinal("Campo4A1_SCR"));
+                        item.Campo4A1_KW = reader.GetDecimal(reader.GetOrdinal("Campo4A1_KW"));
+                        item.Campo4A1_SM = reader.IsDBNull(reader.GetOrdinal("Campo4A1_SM")) ? null : reader.GetString(reader.GetOrdinal("Campo4A1_SM"));
+                        item.Campo4A2_Amps = reader.GetDecimal(reader.GetOrdinal("Campo4A2_Amps"));
+                        item.Campo4A2_Volts = reader.GetDecimal(reader.GetOrdinal("Campo4A2_Volts"));
+                        item.Campo4A2_mA = reader.GetDecimal(reader.GetOrdinal("Campo4A2_mA"));
+                        item.Campo4A2_KV = reader.GetDecimal(reader.GetOrdinal("Campo4A2_KV"));
+                        item.Campo4A2_SCR = reader.IsDBNull(reader.GetOrdinal("Campo4A2_SCR")) ? null : reader.GetString(reader.GetOrdinal("Campo4A2_SCR"));
+                        item.Campo4A2_KW = reader.GetDecimal(reader.GetOrdinal("Campo4A2_KW"));
+                        item.Campo4A2_SM = reader.IsDBNull(reader.GetOrdinal("Campo4A2_SM")) ? null : reader.GetString(reader.GetOrdinal("Campo4A2_SM"));
+                        item.Campo3B1_Amps = reader.GetDecimal(reader.GetOrdinal("Campo3B1_Amps"));
+                        item.Campo3B1_Volts = reader.GetDecimal(reader.GetOrdinal("Campo3B1_Volts"));
+                        item.Campo3B1_mA = reader.GetDecimal(reader.GetOrdinal("Campo3B1_mA"));
+                        item.Campo3B1_KV = reader.GetDecimal(reader.GetOrdinal("Campo3B1_KV"));
+                        item.Campo3B1_SCR = reader.IsDBNull(reader.GetOrdinal("Campo3B1_SCR")) ? null : reader.GetString(reader.GetOrdinal("Campo3B1_SCR"));
+                        item.Campo3B1_KW = reader.GetDecimal(reader.GetOrdinal("Campo3B1_KW"));
+                        item.Campo3B1_SM = reader.IsDBNull(reader.GetOrdinal("Campo3B1_SM")) ? null : reader.GetString(reader.GetOrdinal("Campo3B1_SM"));
+                        item.Campo3B2_Amps = reader.GetDecimal(reader.GetOrdinal("Campo3B2_Amps"));
+                        item.Campo3B2_Volts = reader.GetDecimal(reader.GetOrdinal("Campo3B2_Volts"));
+                        item.Campo3B2_mA = reader.GetDecimal(reader.GetOrdinal("Campo3B2_mA"));
+                        item.Campo3B2_KV = reader.GetDecimal(reader.GetOrdinal("Campo3B2_KV"));
+                        item.Campo3B2_SCR = reader.IsDBNull(reader.GetOrdinal("Campo3B2_SCR")) ? null : reader.GetString(reader.GetOrdinal("Campo3B2_SCR"));
+                        item.Campo3B2_KW = reader.GetDecimal(reader.GetOrdinal("Campo3B2_KW"));
+                        item.Campo3B2_SM = reader.IsDBNull(reader.GetOrdinal("Campo3B2_SM")) ? null : reader.GetString(reader.GetOrdinal("Campo3B2_SM"));
+                        item.Campo4B1_Amps = reader.GetDecimal(reader.GetOrdinal("Campo4B1_Amps"));
+                        item.Campo4B1_Volts = reader.GetDecimal(reader.GetOrdinal("Campo4B1_Volts"));
+                        item.Campo4B1_mA = reader.GetDecimal(reader.GetOrdinal("Campo4B1_mA"));
+                        item.Campo4B1_KV = reader.GetDecimal(reader.GetOrdinal("Campo4B1_KV"));
+                        item.Campo4B1_SCR = reader.IsDBNull(reader.GetOrdinal("Campo4B1_SCR")) ? null : reader.GetString(reader.GetOrdinal("Campo4B1_SCR"));
+                        item.Campo4B1_KW = reader.GetDecimal(reader.GetOrdinal("Campo4B1_KW"));
+                        item.Campo4B1_SM = reader.IsDBNull(reader.GetOrdinal("Campo4B1_SM")) ? null : reader.GetString(reader.GetOrdinal("Campo4B1_SM"));
+                        item.Campo4B2_Amps = reader.GetDecimal(reader.GetOrdinal("Campo4B2_Amps"));
+                        item.Campo4B2_Volts = reader.GetDecimal(reader.GetOrdinal("Campo4B2_Volts"));
+                        item.Campo4B2_mA = reader.GetDecimal(reader.GetOrdinal("Campo4B2_mA"));
+                        item.Campo4B2_KV = reader.GetDecimal(reader.GetOrdinal("Campo4B2_KV"));
+                        item.Campo4B2_SCR = reader.IsDBNull(reader.GetOrdinal("Campo4B2_SCR")) ? null : reader.GetString(reader.GetOrdinal("Campo4B2_SCR"));
+                        item.Campo4B2_KW = reader.GetDecimal(reader.GetOrdinal("Campo4B2_KW"));
+                        item.Campo4B2_SM = reader.IsDBNull(reader.GetOrdinal("Campo4B2_SM")) ? null : reader.GetString(reader.GetOrdinal("Campo4B2_SM"));
+                        item.Observaciones = reader.IsDBNull(reader.GetOrdinal("Observaciones")) ? null : reader.GetString(reader.GetOrdinal("Observaciones"));
                         lista.Add(item);
                     }
                 }
@@ -109,7 +221,7 @@ namespace proyecto_termotasajero.Controllers
         public IActionResult Registrar(proyecto_termotasajero.Models.ParametrosOperacionPrecipitador modelo)
         {
             if (!ModelState.IsValid)
-                return View("Index", modelo);
+                return View("Registrar", modelo);
 
             using (var conn = new SqlConnection(_connectionString))
             {
