@@ -1,5 +1,8 @@
 var builder = WebApplication.CreateBuilder(args);
 
+// Habilitar autenticación Windows
+builder.Services.AddAuthentication(Microsoft.AspNetCore.Server.IISIntegration.IISDefaults.AuthenticationScheme);
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
@@ -18,6 +21,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication(); // <-- Importante para Windows Auth
 app.UseAuthorization();
 
 app.MapControllerRoute(
