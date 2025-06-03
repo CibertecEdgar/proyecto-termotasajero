@@ -26,6 +26,7 @@ namespace proyecto_termotasajero.Controllers
         [HttpGet]
         public IActionResult Index()
         {
+            _logger.LogInformation("Entrando a Index de ContadorAuxiliarController");
             var lista = new List<proyecto_termotasajero.Models.ContadorAuxiliar>();
             using (var conn = new SqlConnection(_connectionString))
             {
@@ -45,21 +46,23 @@ namespace proyecto_termotasajero.Controllers
                         item.Nombre = reader.IsDBNull(reader.GetOrdinal("Nombre")) ? null : reader.GetString(reader.GetOrdinal("Nombre"));
                         item.FechaDeCorte = reader.GetDateTime(reader.GetOrdinal("FechaDeCorte"));
                         item.Operador = reader.IsDBNull(reader.GetOrdinal("Operador")) ? null : reader.GetString(reader.GetOrdinal("Operador"));
-                        item.ContadorAguaServicios = reader.GetDouble(reader.GetOrdinal("ContadorAguaServicios"));
-                        item.ContadorACPM = reader.GetDouble(reader.GetOrdinal("ContadorACPM"));
-                        item.ContadorAguaPotable = reader.GetDouble(reader.GetOrdinal("ContadorAguaPotable"));
-                        item.ContadorAguaDEMI = reader.GetDouble(reader.GetOrdinal("ContadorAguaDEMI"));
-                        item.ContadorAguaDescargadorRotatorio = reader.GetDouble(reader.GetOrdinal("ContadorAguaDescargadorRotatorio"));
+                        item.ContadorAguaServicios = reader.GetDecimal(reader.GetOrdinal("ContadorAguaServicios"));
+                        item.ContadorACPM = reader.GetDecimal(reader.GetOrdinal("ContadorACPM"));
+                        item.ContadorAguaPotable = reader.GetDecimal(reader.GetOrdinal("ContadorAguaPotable"));
+                        item.ContadorAguaDEMI = reader.GetDecimal(reader.GetOrdinal("ContadorAguaDEMI"));
+                        item.ContadorAguaDescargadorRotatorio = reader.GetDecimal(reader.GetOrdinal("ContadorAguaDescargadorRotatorio"));
                         lista.Add(item);
                     }
                 }
             }
+            _logger.LogInformation($"Se listaron {lista.Count} registros de ContadorAuxiliar");
             return View(lista);
         }
 
         [HttpGet]
         public IActionResult Registrar()
         {
+            _logger.LogInformation("Entrando a Registrar (GET) de ContadorAuxiliarController");
             return View("Registrar");
         }
 
@@ -67,8 +70,12 @@ namespace proyecto_termotasajero.Controllers
         [HttpPost]
         public IActionResult Registrar(proyecto_termotasajero.Models.ContadorAuxiliar modelo)
         {
+            _logger.LogInformation("Entrando a Registrar (POST) de ContadorAuxiliarController");
             if (!ModelState.IsValid)
+            {
+                _logger.LogWarning("ModelState inválido en Registrar (POST) de ContadorAuxiliarController");
                 return View("Index", modelo);
+            }
 
             using (var conn = new SqlConnection(_connectionString))
             {
@@ -88,12 +95,14 @@ namespace proyecto_termotasajero.Controllers
                 cmd.Parameters.AddWithValue("@ContadorAguaDescargadorRotatorio", modelo.ContadorAguaDescargadorRotatorio);
                 cmd.ExecuteNonQuery();
             }
+            _logger.LogInformation($"Registro insertado correctamente para el operador: {modelo.Operador}, fecha de corte: {modelo.FechaDeCorte}");
             return RedirectToAction("Index");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
+            _logger.LogError("Se ha accedido a la acción Error en ContadorAuxiliarController");
             return View("Error!");
         }
     }

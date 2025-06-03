@@ -10,7 +10,9 @@ namespace proyecto_termotasajero.Models
         public int ID { get; set; }
         public DateTime HoraInicio { get; set; }
         public DateTime HoraFinalizacion { get; set; }
+        public string? CorreoElectronico { get; set; }
+        public string? Nombre { get; set; }
         public string? OperadorTurno { get; set; }
-        public double NivelSiloVolatilMetros { get; set; }
+        public decimal NivelSiloVolatilMetros { get; set; }
     }
 }

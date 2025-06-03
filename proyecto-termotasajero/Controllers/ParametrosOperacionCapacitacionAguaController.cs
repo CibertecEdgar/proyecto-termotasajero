@@ -25,6 +25,7 @@ namespace proyecto_termotasajero.Controllers
         [HttpGet]
         public IActionResult Index()
         {
+            _logger.LogInformation("Entrando a Index de ParametrosOperacionCapacitacionAguaController");
             var lista = new List<proyecto_termotasajero.Models.ParametrosOperacionCapacitacionAgua>();
             using (var conn = new SqlConnection(_connectionString))
             {
@@ -78,12 +79,14 @@ namespace proyecto_termotasajero.Controllers
                     }
                 }
             }
+            _logger.LogInformation($"Se listaron {lista.Count} registros de ParametrosOperacionCapacitacionAgua");
             return View(lista);
         }
 
         [HttpGet]
         public IActionResult Registrar()
         {
+            _logger.LogInformation("Entrando a Registrar (GET) de ParametrosOperacionCapacitacionAguaController");
             return View("Registrar");
         }
 
@@ -91,8 +94,12 @@ namespace proyecto_termotasajero.Controllers
         [HttpPost]
         public IActionResult Registrar(proyecto_termotasajero.Models.ParametrosOperacionCapacitacionAgua modelo)
         {
+            _logger.LogInformation("Entrando a Registrar (POST) de ParametrosOperacionCapacitacionAguaController");
             if (!ModelState.IsValid)
+            {
+                _logger.LogWarning("ModelState inválido en Registrar (POST) de ParametrosOperacionCapacitacionAguaController");
                 return View("Index", modelo);
+            }
 
             using (var conn = new SqlConnection(_connectionString))
             {
@@ -137,12 +144,14 @@ namespace proyecto_termotasajero.Controllers
                 cmd.Parameters.AddWithValue("@PresDescargaCabezal_kgcm2", modelo.PresDescargaCabezal_kgcm2);
                 cmd.ExecuteNonQuery();
             }
+            _logger.LogInformation($"Registro insertado correctamente para el operador: {modelo.OperadorTurno}, inicio: {modelo.Inicio}");
             return RedirectToAction("Index");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
+            _logger.LogError("Se ha accedido a la acción Error en ParametrosOperacionCapacitacionAguaController");
             return View("Error!");
         }
     }

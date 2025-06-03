@@ -14,10 +14,10 @@ namespace proyecto_termotasajero.Models
         public string? Nombre { get; set; }
         public DateTime FechaDeCorte { get; set; }
         public string? Operador { get; set; }
-        public double ContadorAguaServicios { get; set; }
-        public double ContadorACPM { get; set; }
-        public double ContadorAguaPotable { get; set; }
-        public double ContadorAguaDEMI { get; set; }
-        public double ContadorAguaDescargadorRotatorio { get; set; }
+        public decimal ContadorAguaServicios { get; set; }
+        public decimal ContadorACPM { get; set; }
+        public decimal ContadorAguaPotable { get; set; }
+        public decimal ContadorAguaDEMI { get; set; }
+        public decimal ContadorAguaDescargadorRotatorio { get; set; }
     }
 }

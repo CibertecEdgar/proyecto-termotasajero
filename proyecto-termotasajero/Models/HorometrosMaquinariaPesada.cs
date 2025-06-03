@@ -12,13 +12,13 @@ namespace proyecto_termotasajero.Models
         public DateTime HoraFinalizacion { get; set; }
         public string? CorreoElectronico { get; set; }
         public string? Nombre { get; set; }
-        public double HorometroCoaldozer2 { get; set; }
-        public double HorometroCoaldozer3 { get; set; }
-        public double HorometroCoaldozer4 { get; set; }
-        public double HorometroCargador1 { get; set; }
-        public double HorometroCargador2 { get; set; }
-        public double HorometroClasificadoraCarbon { get; set; }
-        public double HorometroRetrocargadorKOMATSU { get; set; }
-        public double HorometroMiniCargadorBOBCAT { get; set; }
+        public decimal HorometroCoaldozer2 { get; set; }
+        public decimal HorometroCoaldozer3 { get; set; }
+        public decimal HorometroCoaldozer4 { get; set; }
+        public decimal HorometroCargador1 { get; set; }
+        public decimal HorometroCargador2 { get; set; }
+        public decimal HorometroClasificadoraCarbon { get; set; }
+        public decimal HorometroRetrocargadorKOMATSU { get; set; }
+        public decimal HorometroMiniCargadorBOBCAT { get; set; }
     }
 }

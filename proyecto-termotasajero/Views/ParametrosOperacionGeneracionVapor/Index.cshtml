@@ -77,14 +77,16 @@
             @:TempAceiteMolinoC: @(item.TempAceiteMolinoC),
             @:TempAceiteMolinoB: @(item.TempAceiteMolinoB),
             @:TempAceiteMolinoA: @(item.TempAceiteMolinoA),
-            @:PresionCojineteSoporteA: @(item.PresionCojineteSoporteA),
-            @:PresionCojineteSoporteB: @(item.PresionCojineteSoporteB),
-            @:PresionCojineteSoporteC: @(item.PresionCojineteSoporteC),
-            @:PresionCojineteSoporteD: @(item.PresionCojineteSoporteD),
+            @:ClasificadorMolinosB: @(item.ClasificadorMolinosB),
+            @:ClasificadorMolinosC: @(item.ClasificadorMolinosC),
+            @:ClasificadorMolinosD: @(item.ClasificadorMolinosD),
             @:LjungstromB: '@item.LjungstromB',
             @:LjungstromA: '@item.LjungstromA',
             @:PresionTk: @(item.PresionTk),
             @:Apertura: '@item.Apertura',
+            @:LjungstromPrecionGuia_A: '@item.LjungstromPrecionGuia_A',
+            @:LjungstromPrecionGuia_B: '@item.LjungstromPrecionGuia_B',
+            @:Observaciones: '@item.Observaciones',
             @:VibradorA: '@item.VibradorA',
             @:VibradorB: '@item.VibradorB',
             @:VibradorC: '@item.VibradorC',
@@ -94,20 +96,12 @@
             @:TrituradorB: '@item.TrituradorB',
             @:FluidizadorB: '@item.FluidizadorB',
             @:FluidizadorA: '@item.FluidizadorA',
-            @:Observaciones: '@item.Observaciones',
-            @:TrenSeleccionadoSubirCarbon: '@item.TrenSeleccionadoSubirCarbon',
-            @:MolinoD_Seleccion: '@item.MolinoD_Seleccion',
-            @:MolinoC_Seleccion: '@item.MolinoC_Seleccion',
-            @:MolinoB_Seleccion: '@item.MolinoB_Seleccion',
-            @:MolinoA_Seleccion: '@item.MolinoA_Seleccion',
-            @:LjungstromA_Seleccion: '@item.LjungstromA_Seleccion',
-            @:LjungstromB_Seleccion: '@item.LjungstromB_Seleccion',
             @:},
         }
             ];
         // Nombres de columnas en orden
         const columns = [
-            'ID', 'FechaHoraInicio', 'FechaHoraFinalizacion', 'CorreoElectronico', 'NombreOperador', 'OperadorTurno', 'AirePurgaA', 'AirePurgaB', 'CorrienteAirePurgaA', 'CorrienteAirePurgaB', 'VTIA_PresionAceiteEntrada', 'VTIA_PresionAceiteSalida', 'VTIA_TempAceiteEntrada', 'VTIA_TempAceiteSalida', 'VTIB_PresionAceiteEntrada', 'VTIB_PresionAceiteSalida', 'VTIB_TempAceiteEntrada', 'VTIB_TempAceiteSalida', 'PresionFluidizadorA', 'PresionFluidizadorB', 'SopladorFluidizadorA', 'SopladorFluidizadorB', 'SopladorTransporteA', 'SopladorTransporteB', 'VTFB_PresionEntrada', 'VTFB_PresionSalida', 'VTFB_TempEntrada', 'VTFB_TempSalida', 'VTFA_PresionEntrada', 'VTFA_PresionSalida', 'VTFA_TempEntrada', 'VTFA_TempSalida', 'BandaAC1', 'Scrapper', 'PresionAguaLadoA', 'PresionAguaLadoB', 'TempAceiteMolinoD', 'TempAceiteMolinoC', 'TempAceiteMolinoB', 'TempAceiteMolinoA', 'PresionCojineteSoporteA', 'PresionCojineteSoporteB', 'PresionCojineteSoporteC', 'PresionCojineteSoporteD', 'LjungstromB', 'LjungstromA', 'PresionTk', 'Apertura', 'VibradorA', 'VibradorB', 'VibradorC', 'ZarandaA', 'TrituradorA', 'ZarandaB', 'TrituradorB', 'FluidizadorB', 'FluidizadorA', 'Observaciones', 'TrenSeleccionadoSubirCarbon', 'MolinoD_Seleccion', 'MolinoC_Seleccion', 'MolinoB_Seleccion', 'MolinoA_Seleccion', 'LjungstromA_Seleccion', 'LjungstromB_Seleccion'
+            'ID', 'FechaHoraInicio', 'FechaHoraFinalizacion', 'CorreoElectronico', 'NombreOperador', 'OperadorTurno', 'AirePurgaA', 'AirePurgaB', 'CorrienteAirePurgaA', 'CorrienteAirePurgaB', 'VTIA_PresionAceiteEntrada', 'VTIA_PresionAceiteSalida', 'VTIA_TempAceiteEntrada', 'VTIA_TempAceiteSalida', 'VTIB_PresionAceiteEntrada', 'VTIB_PresionAceiteSalida', 'VTIB_TempAceiteEntrada', 'VTIB_TempAceiteSalida', 'PresionFluidizadorA', 'PresionFluidizadorB', 'SopladorFluidizadorA', 'SopladorFluidizadorB', 'SopladorTransporteA', 'SopladorTransporteB', 'VTFB_PresionEntrada', 'VTFB_PresionSalida', 'VTFB_TempEntrada', 'VTFB_TempSalida', 'VTFA_PresionEntrada', 'VTFA_PresionSalida', 'VTFA_TempEntrada', 'VTFA_TempSalida', 'BandaAC1', 'Scrapper', 'PresionAguaLadoA', 'PresionAguaLadoB', 'TempAceiteMolinoD', 'TempAceiteMolinoC', 'TempAceiteMolinoB', 'TempAceiteMolinoA', 'ClasificadorMolinosB', 'ClasificadorMolinosC', 'ClasificadorMolinosD', 'LjungstromB', 'LjungstromA', 'PresionTk', 'Apertura', 'LjungstromPrecionGuia_A', 'LjungstromPrecionGuia_B', 'Observaciones', 'VibradorA', 'VibradorB', 'VibradorC', 'ZarandaA', 'TrituradorA', 'ZarandaB', 'TrituradorB', 'FluidizadorB', 'FluidizadorA'
         ];
         // Nombres legibles para los headers (puedes personalizar estos nombres)
         const columnHeaders = columns.map(c => c);

@@ -76,14 +76,16 @@ namespace proyecto_termotasajero.Controllers
                         item.TempAceiteMolinoC = reader.GetDecimal(reader.GetOrdinal("TempAceiteMolinoC"));
                         item.TempAceiteMolinoB = reader.GetDecimal(reader.GetOrdinal("TempAceiteMolinoB"));
                         item.TempAceiteMolinoA = reader.GetDecimal(reader.GetOrdinal("TempAceiteMolinoA"));
-                        item.PresionCojineteSoporteA = reader.GetDecimal(reader.GetOrdinal("PresionCojineteSoporteA"));
-                        item.PresionCojineteSoporteB = reader.GetDecimal(reader.GetOrdinal("PresionCojineteSoporteB"));
-                        item.PresionCojineteSoporteC = reader.GetDecimal(reader.GetOrdinal("PresionCojineteSoporteC"));
-                        item.PresionCojineteSoporteD = reader.GetDecimal(reader.GetOrdinal("PresionCojineteSoporteD"));
+                        item.ClasificadorMolinosB = reader.GetDecimal(reader.GetOrdinal("ClasificadorMolinosB"));
+                        item.ClasificadorMolinosC = reader.GetDecimal(reader.GetOrdinal("ClasificadorMolinosC"));
+                        item.ClasificadorMolinosD = reader.GetDecimal(reader.GetOrdinal("ClasificadorMolinosD"));
                         item.LjungstromB = reader.IsDBNull(reader.GetOrdinal("LjungstromB")) ? null : reader.GetString(reader.GetOrdinal("LjungstromB"));
                         item.LjungstromA = reader.IsDBNull(reader.GetOrdinal("LjungstromA")) ? null : reader.GetString(reader.GetOrdinal("LjungstromA"));
                         item.PresionTk = reader.GetDecimal(reader.GetOrdinal("PresionTk"));
                         item.Apertura = reader.IsDBNull(reader.GetOrdinal("Apertura")) ? null : reader.GetString(reader.GetOrdinal("Apertura"));
+                        item.LjungstromPrecionGuia_A = reader.IsDBNull(reader.GetOrdinal("LjungstromPrecionGuia_A")) ? null : reader.GetString(reader.GetOrdinal("LjungstromPrecionGuia_A"));
+                        item.LjungstromPrecionGuia_B = reader.IsDBNull(reader.GetOrdinal("LjungstromPrecionGuia_B")) ? null : reader.GetString(reader.GetOrdinal("LjungstromPrecionGuia_B"));
+                        item.Observaciones = reader.IsDBNull(reader.GetOrdinal("Observaciones")) ? null : reader.GetString(reader.GetOrdinal("Observaciones"));
                         item.VibradorA = reader.IsDBNull(reader.GetOrdinal("VibradorA")) ? null : reader.GetString(reader.GetOrdinal("VibradorA"));
                         item.VibradorB = reader.IsDBNull(reader.GetOrdinal("VibradorB")) ? null : reader.GetString(reader.GetOrdinal("VibradorB"));
                         item.VibradorC = reader.IsDBNull(reader.GetOrdinal("VibradorC")) ? null : reader.GetString(reader.GetOrdinal("VibradorC"));
@@ -93,14 +95,6 @@ namespace proyecto_termotasajero.Controllers
                         item.TrituradorB = reader.IsDBNull(reader.GetOrdinal("TrituradorB")) ? null : reader.GetString(reader.GetOrdinal("TrituradorB"));
                         item.FluidizadorB = reader.IsDBNull(reader.GetOrdinal("FluidizadorB")) ? null : reader.GetString(reader.GetOrdinal("FluidizadorB"));
                         item.FluidizadorA = reader.IsDBNull(reader.GetOrdinal("FluidizadorA")) ? null : reader.GetString(reader.GetOrdinal("FluidizadorA"));
-                        item.Observaciones = reader.IsDBNull(reader.GetOrdinal("Observaciones")) ? null : reader.GetString(reader.GetOrdinal("Observaciones"));
-                        item.TrenSeleccionadoSubirCarbon = reader.IsDBNull(reader.GetOrdinal("TrenSeleccionadoSubirCarbon")) ? null : reader.GetString(reader.GetOrdinal("TrenSeleccionadoSubirCarbon"));
-                        item.MolinoD_Seleccion = reader.IsDBNull(reader.GetOrdinal("MolinoD_Seleccion")) ? null : reader.GetString(reader.GetOrdinal("MolinoD_Seleccion"));
-                        item.MolinoC_Seleccion = reader.IsDBNull(reader.GetOrdinal("MolinoC_Seleccion")) ? null : reader.GetString(reader.GetOrdinal("MolinoC_Seleccion"));
-                        item.MolinoB_Seleccion = reader.IsDBNull(reader.GetOrdinal("MolinoB_Seleccion")) ? null : reader.GetString(reader.GetOrdinal("MolinoB_Seleccion"));
-                        item.MolinoA_Seleccion = reader.IsDBNull(reader.GetOrdinal("MolinoA_Seleccion")) ? null : reader.GetString(reader.GetOrdinal("MolinoA_Seleccion"));
-                        item.LjungstromA_Seleccion = reader.IsDBNull(reader.GetOrdinal("LjungstromA_Seleccion")) ? null : reader.GetString(reader.GetOrdinal("LjungstromA_Seleccion"));
-                        item.LjungstromB_Seleccion = reader.IsDBNull(reader.GetOrdinal("LjungstromB_Seleccion")) ? null : reader.GetString(reader.GetOrdinal("LjungstromB_Seleccion"));
                         lista.Add(item);
                     }
                 }
@@ -165,14 +159,16 @@ namespace proyecto_termotasajero.Controllers
                 cmd.Parameters.AddWithValue("@TempAceiteMolinoC", modelo.TempAceiteMolinoC);
                 cmd.Parameters.AddWithValue("@TempAceiteMolinoB", modelo.TempAceiteMolinoB);
                 cmd.Parameters.AddWithValue("@TempAceiteMolinoA", modelo.TempAceiteMolinoA);
-                cmd.Parameters.AddWithValue("@PresionCojineteSoporteA", modelo.PresionCojineteSoporteA);
-                cmd.Parameters.AddWithValue("@PresionCojineteSoporteB", modelo.PresionCojineteSoporteB);
-                cmd.Parameters.AddWithValue("@PresionCojineteSoporteC", modelo.PresionCojineteSoporteC);
-                cmd.Parameters.AddWithValue("@PresionCojineteSoporteD", modelo.PresionCojineteSoporteD);
+                cmd.Parameters.AddWithValue("@ClasificadorMolinosB", modelo.ClasificadorMolinosB);
+                cmd.Parameters.AddWithValue("@ClasificadorMolinosC", modelo.ClasificadorMolinosC);
+                cmd.Parameters.AddWithValue("@ClasificadorMolinosD", modelo.ClasificadorMolinosD);
                 cmd.Parameters.AddWithValue("@LjungstromB", (object?)modelo.LjungstromB ?? DBNull.Value);
                 cmd.Parameters.AddWithValue("@LjungstromA", (object?)modelo.LjungstromA ?? DBNull.Value);
                 cmd.Parameters.AddWithValue("@PresionTk", modelo.PresionTk);
                 cmd.Parameters.AddWithValue("@Apertura", (object?)modelo.Apertura ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@LjungstromPrecionGuia_A", (object?)modelo.LjungstromPrecionGuia_A ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@LjungstromPrecionGuia_B", (object?)modelo.LjungstromPrecionGuia_B ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@Observaciones", (object?)modelo.Observaciones ?? DBNull.Value);
                 cmd.Parameters.AddWithValue("@VibradorA", (object?)modelo.VibradorA ?? DBNull.Value);
                 cmd.Parameters.AddWithValue("@VibradorB", (object?)modelo.VibradorB ?? DBNull.Value);
                 cmd.Parameters.AddWithValue("@VibradorC", (object?)modelo.VibradorC ?? DBNull.Value);
@@ -182,14 +178,6 @@ namespace proyecto_termotasajero.Controllers
                 cmd.Parameters.AddWithValue("@TrituradorB", (object?)modelo.TrituradorB ?? DBNull.Value);
                 cmd.Parameters.AddWithValue("@FluidizadorB", (object?)modelo.FluidizadorB ?? DBNull.Value);
                 cmd.Parameters.AddWithValue("@FluidizadorA", (object?)modelo.FluidizadorA ?? DBNull.Value);
-                cmd.Parameters.AddWithValue("@Observaciones", (object?)modelo.Observaciones ?? DBNull.Value);
-                cmd.Parameters.AddWithValue("@TrenSeleccionadoSubirCarbon", (object?)modelo.TrenSeleccionadoSubirCarbon ?? DBNull.Value);
-                cmd.Parameters.AddWithValue("@MolinoD_Seleccion", (object?)modelo.MolinoD_Seleccion ?? DBNull.Value);
-                cmd.Parameters.AddWithValue("@MolinoC_Seleccion", (object?)modelo.MolinoC_Seleccion ?? DBNull.Value);
-                cmd.Parameters.AddWithValue("@MolinoB_Seleccion", (object?)modelo.MolinoB_Seleccion ?? DBNull.Value);
-                cmd.Parameters.AddWithValue("@MolinoA_Seleccion", (object?)modelo.MolinoA_Seleccion ?? DBNull.Value);
-                cmd.Parameters.AddWithValue("@LjungstromA_Seleccion", (object?)modelo.LjungstromA_Seleccion ?? DBNull.Value);
-                cmd.Parameters.AddWithValue("@LjungstromB_Seleccion", (object?)modelo.LjungstromB_Seleccion ?? DBNull.Value);
                 cmd.ExecuteNonQuery();
             }
             return RedirectToAction("Index");

@@ -47,14 +47,16 @@ namespace proyecto_termotasajero.Models
         public decimal TempAceiteMolinoC { get; set; }
         public decimal TempAceiteMolinoB { get; set; }
         public decimal TempAceiteMolinoA { get; set; }
-        public decimal PresionCojineteSoporteA { get; set; }
-        public decimal PresionCojineteSoporteB { get; set; }
-        public decimal PresionCojineteSoporteC { get; set; }
-        public decimal PresionCojineteSoporteD { get; set; }
+        public decimal ClasificadorMolinosB { get; set; }
+        public decimal ClasificadorMolinosC { get; set; }
+        public decimal ClasificadorMolinosD { get; set; }
         public string? LjungstromB { get; set; }
         public string? LjungstromA { get; set; }
         public decimal PresionTk { get; set; }
         public string? Apertura { get; set; }
+        public string? LjungstromPrecionGuia_A { get; set; }
+        public string? LjungstromPrecionGuia_B { get; set; }
+        public string? Observaciones { get; set; }
         public string? VibradorA { get; set; }
         public string? VibradorB { get; set; }
         public string? VibradorC { get; set; }
@@ -64,13 +66,5 @@ namespace proyecto_termotasajero.Models
         public string? TrituradorB { get; set; }
         public string? FluidizadorB { get; set; }
         public string? FluidizadorA { get; set; }
-        public string? Observaciones { get; set; }
-        public string? TrenSeleccionadoSubirCarbon { get; set; }
-        public string? MolinoD_Seleccion { get; set; }
-        public string? MolinoC_Seleccion { get; set; }
-        public string? MolinoB_Seleccion { get; set; }
-        public string? MolinoA_Seleccion { get; set; }
-        public string? LjungstromA_Seleccion { get; set; }
-        public string? LjungstromB_Seleccion { get; set; }
     }
 }
