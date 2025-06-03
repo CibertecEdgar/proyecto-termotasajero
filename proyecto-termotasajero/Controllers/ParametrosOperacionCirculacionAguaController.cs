@@ -7,10 +7,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Data.SqlClient;
-
+using Microsoft.AspNetCore.Authorization;
 
 namespace proyecto_termotasajero.Controllers
 {
+    [Authorize]
     public class ParametrosOperacionCirculacionAguaController : Controller
     {
         private readonly ILogger<ParametrosOperacionCirculacionAguaController> _logger;

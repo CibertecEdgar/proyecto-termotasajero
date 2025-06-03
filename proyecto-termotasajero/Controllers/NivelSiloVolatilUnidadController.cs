@@ -8,9 +8,11 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Configuration;
 using System.Data.SqlClient;
 using Microsoft.Data.SqlClient;
+using Microsoft.AspNetCore.Authorization;
 
 namespace proyecto_termotasajero.Controllers
 {
+    [Authorize]
     public class NivelSiloVolatilUnidadController : Controller
     {
         private readonly ILogger<NivelSiloVolatilUnidadController> _logger;
