@@ -5,9 +5,8 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Registrar</h1>
+<h4>Registrar Horometro Maquinaria Pesada</h4>
 
-<h4>HorometrosMaquinariaPesada</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -15,73 +14,74 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
            
             <div class="form-group">
-                <label asp-for="HoraInicio" class="control-label"></label>
+                <label asp-for="HoraInicio" class="control-label">Hora de Incio</label>
                 <input asp-for="HoraInicio" class="form-control" />
                 <span asp-validation-for="HoraInicio" class="text-danger"></span>
-            </div>
+            </div><br />
             <div class="form-group">
-                <label asp-for="HoraFinalizacion" class="control-label"></label>
+                <label asp-for="HoraFinalizacion" class="control-label">Hora de Finalización</label>
                 <input asp-for="HoraFinalizacion" class="form-control" />
                 <span asp-validation-for="HoraFinalizacion" class="text-danger"></span>
-            </div>
+            </div><br />
             <div class="form-group">
-                <label asp-for="CorreoElectronico" class="control-label"></label>
+                <label asp-for="CorreoElectronico" class="control-label">Correo Electronico</label>
                 <input asp-for="CorreoElectronico" class="form-control" />
                 <span asp-validation-for="CorreoElectronico" class="text-danger"></span>
-            </div>
+            </div><br />
             <div class="form-group">
-                <label asp-for="Nombre" class="control-label"></label>
+                <label asp-for="Nombre" class="control-label">Nombre</label>
                 <input asp-for="Nombre" class="form-control" />
                 <span asp-validation-for="Nombre" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="HorometroCoaldozer2" class="control-label"></label>
+                <label asp-for="HorometroCoaldozer2" class="control-label">Horometro Coaldoze #2</label>
                 <input asp-for="HorometroCoaldozer2" class="form-control" />
                 <span asp-validation-for="HorometroCoaldozer2" class="text-danger"></span>
-            </div>
+            </div><br />
             <div class="form-group">
-                <label asp-for="HorometroCoaldozer3" class="control-label"></label>
+                <label asp-for="HorometroCoaldozer3" class="control-label">Horometro Coaldozer #3</label>
                 <input asp-for="HorometroCoaldozer3" class="form-control" />
                 <span asp-validation-for="HorometroCoaldozer3" class="text-danger"></span>
-            </div>
+            </div><br />
             <div class="form-group">
-                <label asp-for="HorometroCoaldozer4" class="control-label"></label>
+                <label asp-for="HorometroCoaldozer4" class="control-label">Horometro Coaldozer #4</label>
                 <input asp-for="HorometroCoaldozer4" class="form-control" />
                 <span asp-validation-for="HorometroCoaldozer4" class="text-danger"></span>
-            </div>
+            </div><br />
             <div class="form-group">
-                <label asp-for="HorometroCargador1" class="control-label"></label>
+                <label asp-for="HorometroCargador1" class="control-label">Horometro Cargador #1</label>
                 <input asp-for="HorometroCargador1" class="form-control" />
                 <span asp-validation-for="HorometroCargador1" class="text-danger"></span>
-            </div>
+            </div><br />
             <div class="form-group">
-                <label asp-for="HorometroCargador2" class="control-label"></label>
+                <label asp-for="HorometroCargador2" class="control-label">Horometro Cargador #2</label>
                 <input asp-for="HorometroCargador2" class="form-control" />
                 <span asp-validation-for="HorometroCargador2" class="text-danger"></span>
-            </div>
+            </div><br />
             <div class="form-group">
-                <label asp-for="HorometroClasificadoraCarbon" class="control-label"></label>
+                <label asp-for="HorometroClasificadoraCarbon" class="control-label">Horometro Clasificadora de Carbon</label>
                 <input asp-for="HorometroClasificadoraCarbon" class="form-control" />
                 <span asp-validation-for="HorometroClasificadoraCarbon" class="text-danger"></span>
-            </div>
+            </div><br />
             <div class="form-group">
-                <label asp-for="HorometroRetrocargadorKOMATSU" class="control-label"></label>
+                <label asp-for="HorometroRetrocargadorKOMATSU" class="control-label">Horometro Retrocargador KOMATSU</label>
                 <input asp-for="HorometroRetrocargadorKOMATSU" class="form-control" />
                 <span asp-validation-for="HorometroRetrocargadorKOMATSU" class="text-danger"></span>
-            </div>
+            </div><br />
             <div class="form-group">
-                <label asp-for="HorometroMiniCargadorBOBCAT" class="control-label"></label>
+                <label asp-for="HorometroMiniCargadorBOBCAT" class="control-label">Horometro Mini Cargador BOBCAT</label>
                 <input asp-for="HorometroMiniCargadorBOBCAT" class="form-control" />
                 <span asp-validation-for="HorometroMiniCargadorBOBCAT" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Registrar" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
-
+<br />
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Regresar a la lista</a>
 </div>
 

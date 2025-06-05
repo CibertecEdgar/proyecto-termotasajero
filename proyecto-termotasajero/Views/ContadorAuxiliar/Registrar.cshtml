@@ -5,77 +5,87 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Registrar</h1>
+<h4>Registrar Contador Auxiliar</h4>
 
-<h4>ContadorAuxiliar</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Registrar">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="HoraInicio" class="control-label"></label>
+                <label asp-for="HoraInicio" class="control-label">Hora de Inicio</label>
                 <input asp-for="HoraInicio" class="form-control" />
                 <span asp-validation-for="HoraInicio" class="text-danger"></span>
             </div>
+            <br/>
             <div class="form-group">
-                <label asp-for="HoraFinalizacion" class="control-label"></label>
+                <label asp-for="HoraFinalizacion" class="control-label">Hora de Finalización</label>
                 <input asp-for="HoraFinalizacion" class="form-control" />
                 <span asp-validation-for="HoraFinalizacion" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
-                <label asp-for="CorreoElectronico" class="control-label"></label>
+                <label asp-for="CorreoElectronico" class="control-label">Correo Electronico</label>
                 <input asp-for="CorreoElectronico" class="form-control" />
                 <span asp-validation-for="CorreoElectronico" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
-                <label asp-for="Nombre" class="control-label"></label>
+                <label asp-for="Nombre" class="control-label">Nombre</label>
                 <input asp-for="Nombre" class="form-control" />
                 <span asp-validation-for="Nombre" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
-                <label asp-for="FechaDeCorte" class="control-label"></label>
+                <label asp-for="FechaDeCorte" class="control-label">Fecha de Corte</label>
                 <input asp-for="FechaDeCorte" class="form-control" />
                 <span asp-validation-for="FechaDeCorte" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
-                <label asp-for="Operador" class="control-label"></label>
+                <label asp-for="Operador" class="control-label">Operador</label>
                 <input asp-for="Operador" class="form-control" />
                 <span asp-validation-for="Operador" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
-                <label asp-for="ContadorAguaServicios" class="control-label"></label>
+                <label asp-for="ContadorAguaServicios" class="control-label">Contador Agua de Servicios </label>
                 <input asp-for="ContadorAguaServicios" class="form-control" />
                 <span asp-validation-for="ContadorAguaServicios" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
-                <label asp-for="ContadorACPM" class="control-label"></label>
+                <label asp-for="ContadorACPM" class="control-label">Contador de ACPM</label>
                 <input asp-for="ContadorACPM" class="form-control" />
                 <span asp-validation-for="ContadorACPM" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
-                <label asp-for="ContadorAguaPotable" class="control-label"></label>
+                <label asp-for="ContadorAguaPotable" class="control-label">Contador de Agua Potable</label>
                 <input asp-for="ContadorAguaPotable" class="form-control" />
                 <span asp-validation-for="ContadorAguaPotable" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
-                <label asp-for="ContadorAguaDEMI" class="control-label"></label>
+                <label asp-for="ContadorAguaDEMI" class="control-label">Contador de Agua DEMI</label>
                 <input asp-for="ContadorAguaDEMI" class="form-control" />
                 <span asp-validation-for="ContadorAguaDEMI" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
-                <label asp-for="ContadorAguaDescargadorRotatorio" class="control-label"></label>
+                <label asp-for="ContadorAguaDescargadorRotatorio" class="control-label">Contador de Agua Descargador Rotatorio</label>
                 <input asp-for="ContadorAguaDescargadorRotatorio" class="form-control" />
                 <span asp-validation-for="ContadorAguaDescargadorRotatorio" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Crear" class="btn btn-success" />
             </div>
         </form>
     </div>
 </div>
-
+<br />
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Regresar a la lista</a>
 </div>
 

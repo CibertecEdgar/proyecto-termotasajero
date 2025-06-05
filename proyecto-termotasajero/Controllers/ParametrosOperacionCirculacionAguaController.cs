@@ -119,7 +119,7 @@ namespace proyecto_termotasajero.Controllers
             if (!ModelState.IsValid)
             {
                 _logger.LogWarning("ModelState inválido en Registrar (POST) de ParametrosOperacionCirculacionAguaController");
-                return View("Index", modelo);
+                return View("Registrar", modelo);
             }
             try
             {

@@ -127,12 +127,14 @@
         document.getElementById('prevSectionBtn').style.display = currentSection === 0 ? 'none' : '';
         document.getElementById('nextSectionBtn').style.display = ((currentSection + 1) * pageSize < columns.length) ? '' : 'none';
     }
+
     document.getElementById('nextSectionBtn').onclick = function () {
         if ((currentSection + 1) * pageSize < columns.length) {
             currentSection++;
             renderTableSection();
         }
     };
+
     document.getElementById('prevSectionBtn').onclick = function () {
         if (currentSection > 0) {
             currentSection--;

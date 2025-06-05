@@ -78,6 +78,7 @@ namespace proyecto_termotasajero.Controllers
                         item.TempAceiteMolinoC = reader.GetDecimal(reader.GetOrdinal("TempAceiteMolinoC"));
                         item.TempAceiteMolinoB = reader.GetDecimal(reader.GetOrdinal("TempAceiteMolinoB"));
                         item.TempAceiteMolinoA = reader.GetDecimal(reader.GetOrdinal("TempAceiteMolinoA"));
+                        item.ClasificadorMolinosA = reader.GetDecimal(reader.GetOrdinal("ClasificadorMolinosA"));
                         item.ClasificadorMolinosB = reader.GetDecimal(reader.GetOrdinal("ClasificadorMolinosB"));
                         item.ClasificadorMolinosC = reader.GetDecimal(reader.GetOrdinal("ClasificadorMolinosC"));
                         item.ClasificadorMolinosD = reader.GetDecimal(reader.GetOrdinal("ClasificadorMolinosD"));
@@ -161,6 +162,7 @@ namespace proyecto_termotasajero.Controllers
                 cmd.Parameters.AddWithValue("@TempAceiteMolinoC", modelo.TempAceiteMolinoC);
                 cmd.Parameters.AddWithValue("@TempAceiteMolinoB", modelo.TempAceiteMolinoB);
                 cmd.Parameters.AddWithValue("@TempAceiteMolinoA", modelo.TempAceiteMolinoA);
+                cmd.Parameters.AddWithValue("@ClasificadorMolinosA", modelo.ClasificadorMolinosA);
                 cmd.Parameters.AddWithValue("@ClasificadorMolinosB", modelo.ClasificadorMolinosB);
                 cmd.Parameters.AddWithValue("@ClasificadorMolinosC", modelo.ClasificadorMolinosC);
                 cmd.Parameters.AddWithValue("@ClasificadorMolinosD", modelo.ClasificadorMolinosD);

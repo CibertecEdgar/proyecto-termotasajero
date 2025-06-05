@@ -47,6 +47,7 @@ namespace proyecto_termotasajero.Models
         public decimal TempAceiteMolinoC { get; set; }
         public decimal TempAceiteMolinoB { get; set; }
         public decimal TempAceiteMolinoA { get; set; }
+        public decimal ClasificadorMolinosA { get; set; }
         public decimal ClasificadorMolinosB { get; set; }
         public decimal ClasificadorMolinosC { get; set; }
         public decimal ClasificadorMolinosD { get; set; }
