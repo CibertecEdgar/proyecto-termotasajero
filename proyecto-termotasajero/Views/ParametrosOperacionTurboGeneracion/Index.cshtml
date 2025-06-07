@@ -5,28 +5,43 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
-
-<p>
-    <a asp-action="Registrar">Create New</a>
-</p>
-
-<div id="paginado-listado">
-    <div class="table-responsive">
-        <table class="table">
-            <thead>
-                <tr id="header-row">
-                    <!-- Los headers se llenan por JS -->
-                </tr>
-            </thead>
-            <tbody id="body-rows">
-                <!-- Las filas se llenan por JS -->
-            </tbody>
-        </table>
+<div class="container-fluid py-3 py-md-4">
+    <div class="row mb-3 mb-md-4">
+        <div class="col-12">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-2">
+                <h1 class="h2 text-black fw-bold mb-2 mb-md-0">Parámetros Operación Turbo Generación</h1>
+                <a asp-action="Registrar" class="btn btn-primary">
+                    <i class="fas fa-plus-circle me-2"></i>Registrar
+                </a>
+            </div>
+        </div>
     </div>
-    <div class="d-flex justify-content-between mt-3">
-        <button class="btn btn-secondary" id="prevSectionBtn" style="display:none;">Anterior sección</button>
-        <button class="btn btn-primary" id="nextSectionBtn">Siguiente sección</button>
+
+    <div class="card shadow-sm">
+        <div class="card-body p-2 p-md-3">
+            <div id="paginado-listado">
+                <div class="table-responsive">
+                    <table class="table table-hover table-striped mb-0">
+                        <thead class="table-light">
+                            <tr id="header-row">
+                                <!-- Los headers se llenan por JS -->
+                            </tr>
+                        </thead>
+                        <tbody id="body-rows">
+                            <!-- Las filas se llenan por JS -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2 mt-3 mt-md-4">
+                    <button class="btn btn-outline-primary" id="prevSectionBtn" style="display:none;">
+                        <i class="fas fa-chevron-left me-2"></i>Anterior sección
+                    </button>
+                    <button class="btn btn-primary" id="nextSectionBtn">
+                        Siguiente sección<i class="fas fa-chevron-right ms-2"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -227,8 +242,79 @@
     const columns = [
         'ID','FechaHoraInicio','FechaHoraFinalizacion','CorreoElectronico','NombreOperador','OperadorTurno','EnfriadorAguaAguaA','EnfriadorAguaAguaB','BombaReforzadoraA','BombaReforzadoraB','TempEntradaCircuitoCerrado','TempSalidaCircuitoAbierto','PresionDescargaReforzadoraA','PresionDescargaReforzadoraB','DeltaPFiltroBombasReforzadoras','BbaSelloLadoH2','BbaSelloLadoAire','BbaSelloEmergencia','BbaSelloFlotante','ExtractorTanqueBucle','PresionRefuerzo','PresionAceiteLadoH2','PresionAceiteLadoAire','TemperaturaAceiteLadoH2','TemperaturaAceiteLadoAire','EstadoSecadorH2','DewPointEntrada','DewPointSalida','VlaControlNivelCalentadorBP1CV221','BbaVacioA','BbaVacioB','PresionSuccionBbaVacioA','PresionAguaSelloBbaVacioB','EnfriadorA','EnfriadorB','TemperaturaSalidaAgua','AperturaValvulaControl','ExtraccionA','ExtraccionB','PresionSuccionExtraccionAireA','PresionSuccionExtraccionAireB','PurificadorAceite','PresionTkAceiteTurbina','NivelTkAceiteTurbina','CargadorA220Vdc','CargadorB220Vdc','CargadorA125Vdc','CargadorB125Vdc','CargadorA24Vdc','CargadorB24Vdc','CorrienteCargador220ES','CorrienteCargador124ES','CorrienteCargador24ES','BAAC_Estado','BAAC_TempRetornoAceiteRodamientoLadoInterior','BAAC_TempRetornoAceiteRodamientoLadoExterior','BAAC_TempAguaSelloLadoInterior','BAAC_TempAguaSelloLadoExterior','BAAC_PresionAceiteRodamientoLadoInterior','BAAC_PresionAceiteRodamientoLadoExterior','BAAC_PresionEntradaAguaSello','BAAC_PresionDiferencialFiltroAguaSello','BAAC_PresionDiferencialFiltroSuccion','BAAC_AperturaAguaSelloLadoInterior','BAAC_AperturaAguaSelloLadoExterior','AcopleBAAC_TempMetalRadial1','AcopleBAAC_TempMetalRadial2','AcopleBAAC_TempMetalRadial3','AcopleBAAC_TempMetalRadial4','AcopleBAAC_TempMetalRadial5','AcopleBAAC_TempMetalRadial6','AcopleBAAC_TempAceiteTrabajoEntradaEnfriador','AcopleBAAC_PresionAceiteLubricacion','AcopleBAAC_PresionDiferencialFiltroAceite','AcopleBAAC_TempAceiteLubricacionEntradaEnfriador','AcopleBAAC_TempAceiteLubricacionSalidaEnfriador','AcopleBAAC_TempAceiteTrabajoSalidaEnfriador','BAAB_Estado','BAAB_TempRetornoAceiteRodamientoLadoInterior','BAAB_TempRetornoAceiteRodamientoLadoExterior','BAAB_TempAguaSelloLadoInterior','BAAB_TempAguaSelloLadoExterior','BAAB_PresionAceiteRodamientoLadoInterior','BAAB_PresionAceiteRodamientoLadoExterior','BAAB_PresionEntradaAguaSello','BAAB_PresionDiferencialFiltroAguaSello','BAAB_PresionDiferencialFiltroSuccion','BAAB_AperturaAguaSelloLadoInterior','BAAB_AperturaAguaSelloLadoExterior','AcopleBAAB_TempMetalRadial1','AcopleBAAB_TempMetalRadial2','AcopleBAAB_TempMetalRadial3','AcopleBAAB_TempMetalRadial4','AcopleBAAB_TempMetalRadial5','AcopleBAAB_TempMetalRadial6','AcopleBAAB_TempAceiteTrabajoEntradaEnfriador','AcopleBAAB_PresionAceiteLubricacion','AcopleBAAB_PresionDiferencialFiltroAceite','AcopleBAAB_TempAceiteLubricacionEntradaEnfriador','AcopleBAAB_TempAceiteLubricacionSalidaEnfriador','AcopleBAAB_TempAceiteTrabajoSalidaEnfriador','BAAA_Estado','BAAA_TempRetornoAceiteRodamientoLadoInterior','BAAA_TempRetornoAceiteRodamientoLadoExterior','BAAA_TempAguaSelloLadoInterior','BAAA_TempAguaSelloLadoExterior','BAAA_PresionAceiteRodamientoLadoInterior','BAAA_PresionAceiteRodamientoLadoExterior','BAAA_PresionEntradaAguaSello','BAAA_PresionDiferencialFiltroAguaSello','BAAA_PresionDiferencialFiltroSuccion','BAAA_AperturaAguaSelloLadoInterior','BAAA_AperturaAguaSelloLadoExterior','AcopleBAAA_TempMetalRadial1','AcopleBAAA_TempMetalRadial2','AcopleBAAA_TempMetalRadial3','AcopleBAAA_TempMetalRadial4','AcopleBAAA_TempMetalRadial5','AcopleBAAA_TempMetalRadial6','AcopleBAAA_TempAceiteTrabajoEntradaEnfriador','AcopleBAAA_PresionAceiteLubricacion','AcopleBAAA_PresionDiferencialFiltroAceite','AcopleBAAA_TempAceiteLubricacionEntradaEnfriador','AcopleBAAA_TempAceiteLubricacionSalidaEnfriador','AcopleBAAA_TempAceiteTrabajoSalidaEnfriador','SecadorAireA','SecadorAireB','TempDewPointSecadorA','TempDewPointSecadorB','CompresorC_Estado','CompresorC_TempT1Descarga','CompresorC_TempT2LadoSeco','CompresorC_PresionP1Carter','CompresorC_PresionP2Linea','CompresorC_PresionP4Aceite','CompresorC_PresionDP1Separador','CompresorC_PresionDP2FiltroAceite','CompresorC_PresionDP3Aceite','CompresorA_Estado','CompresorA_PresionDescargaConjunto','CompresorA_TempDescargaConjunto','CompresorA_TempDescargaFase1','CompresorA_PresionEntradaFase2','CompresorA_TempEntradaFase2','CompresorA_PresionDescargaFase2','CompresorA_TempDescargaFase2','CompresorA_TempAceiteRodamientos','CompresorA_PresionAceiteRodamientos','CompresorA_VacioEntrada','CompresorA_CaidaPresionFiltroAceite','CompresorB_Estado','CompresorB_TempDescargaUnidad','CompresorB_Temp1aFase','CompresorB_PresionAdmision2aFase','CompresorB_TempAdmision2aFase','CompresorB_PresionDescarga2aFase','CompresorB_TempDescarga2aFase','CompresorB_PresionAceiteCojinetes','CompresorB_TempAceiteCojinetes','CompresorB_VacioEntrada','CompresorB_EstadoFiltroEntrada','CompresorB_CaidaPresionFiltroAceite','VlaControlNivelCalentadorBP2CV223','CorrienteCompresorB','CorrienteCompresorC','CorrienteCompresorA','VlaControlNivelCalentadorBP3CV224','PI255_PresionAceiteAltaPresion','PI257_PresionAceiteDescargaBombaPrincipal','PI329_PresionSelloExtremoTurbina','PI328_PresionSelloExtremoGenerador','ExtractorTkBucle','PresionSuccionExtractorTkBucle','PI230_PresionVaporSelloBP','PI238_PresionVaporSalidaCamaraIntermedia','VlaControlNivelCalentadorAP5CV226','VlaControlNivelCalentadorAP6CV227','Observaciones','BombaFosfatoDomoA','BombaFosfatoDomoB','BombaHidracinaCicloA','BombaHidracinaCicloB','BombaHidracinaCtoCerradoA','BombaHidracinaCtoCerradoB'
     ];
-    // Nombres legibles para los headers (puedes personalizar estos nombres)
-    const columnHeaders = columns.map(c => c);
+    // Nombres legibles para los headers
+    const columnHeaders = [
+        'ID', 'Fecha Hora Inicio', 'Fecha Hora Finalizacion', 'Correo Electronico', 'Nombre Operador', 'Operador Turno',
+        'Enfriador Agua Agua A', 'Enfriador Agua Agua B', 'Bomba Reforzadora A', 'Bomba Reforzadora B',
+        'Temp Entrada Circuito Cerrado', 'Temp Salida Circuito Abierto', 'Presion Descarga Reforzadora A',
+        'Presion Descarga Reforzadora B', 'Delta P Filtro Bombas Reforzadoras', 'Bba Sello Lado H2',
+        'Bba Sello Lado Aire', 'Bba Sello Emergencia', 'Bba Sello Flotante', 'Extractor Tanque Bucle',
+        'Presion Refuerzo', 'Presion Aceite Lado H2', 'Presion Aceite Lado Aire', 'Temperatura Aceite Lado H2',
+        'Temperatura Aceite Lado Aire', 'Estado Secador H2', 'Dew Point Entrada', 'Dew Point Salida',
+        'Vla Control Nivel Calentador BP1CV221', 'Bba Vacio A', 'Bba Vacio B', 'Presion Succion Bba Vacio A',
+        'Presion Agua Sello Bba Vacio B', 'Enfriador A', 'Enfriador B', 'Temperatura Salida Agua',
+        'Apertura Valvula Control', 'Extraccion A', 'Extraccion B', 'Presion Succion Extraccion Aire A',
+        'Presion Succion Extraccion Aire B', 'Purificador Aceite', 'Presion Tk Aceite Turbina',
+        'Nivel Tk Aceite Turbina', 'Cargador A 220Vdc', 'Cargador B 220Vdc', 'Cargador A 125Vdc',
+        'Cargador B 125Vdc', 'Cargador A 24Vdc', 'Cargador B 24Vdc', 'Corriente Cargador 220ES',
+        'Corriente Cargador 124ES', 'Corriente Cargador 24ES', 'BAAC Estado',
+        'BAAC Temp Retorno Aceite Rodamiento Lado Interior', 'BAAC Temp Retorno Aceite Rodamiento Lado Exterior',
+        'BAAC Temp Agua Sello Lado Interior', 'BAAC Temp Agua Sello Lado Exterior',
+        'BAAC Presion Aceite Rodamiento Lado Interior', 'BAAC Presion Aceite Rodamiento Lado Exterior',
+        'BAAC Presion Entrada Agua Sello', 'BAAC Presion Diferencial Filtro Agua Sello',
+        'BAAC Presion Diferencial Filtro Succion', 'BAAC Apertura Agua Sello Lado Interior',
+        'BAAC Apertura Agua Sello Lado Exterior', 'Acople BAAC Temp Metal Radial 1',
+        'Acople BAAC Temp Metal Radial 2', 'Acople BAAC Temp Metal Radial 3', 'Acople BAAC Temp Metal Radial 4',
+        'Acople BAAC Temp Metal Radial 5', 'Acople BAAC Temp Metal Radial 6',
+        'Acople BAAC Temp Aceite Trabajo Entrada Enfriador', 'Acople BAAC Presion Aceite Lubricacion',
+        'Acople BAAC Presion Diferencial Filtro Aceite', 'Acople BAAC Temp Aceite Lubricacion Entrada Enfriador',
+        'Acople BAAC Temp Aceite Lubricacion Salida Enfriador', 'Acople BAAC Temp Aceite Trabajo Salida Enfriador',
+        'BAAB Estado', 'BAAB Temp Retorno Aceite Rodamiento Lado Interior',
+        'BAAB Temp Retorno Aceite Rodamiento Lado Exterior', 'BAAB Temp Agua Sello Lado Interior',
+        'BAAB Temp Agua Sello Lado Exterior', 'BAAB Presion Aceite Rodamiento Lado Interior',
+        'BAAB Presion Aceite Rodamiento Lado Exterior', 'BAAB Presion Entrada Agua Sello',
+        'BAAB Presion Diferencial Filtro Agua Sello', 'BAAB Presion Diferencial Filtro Succion',
+        'BAAB Apertura Agua Sello Lado Interior', 'BAAB Apertura Agua Sello Lado Exterior',
+        'Acople BAAB Temp Metal Radial 1', 'Acople BAAB Temp Metal Radial 2', 'Acople BAAB Temp Metal Radial 3',
+        'Acople BAAB Temp Metal Radial 4', 'Acople BAAB Temp Metal Radial 5', 'Acople BAAB Temp Metal Radial 6',
+        'Acople BAAB Temp Aceite Trabajo Entrada Enfriador', 'Acople BAAB Presion Aceite Lubricacion',
+        'Acople BAAB Presion Diferencial Filtro Aceite', 'Acople BAAB Temp Aceite Lubricacion Entrada Enfriador',
+        'Acople BAAB Temp Aceite Lubricacion Salida Enfriador', 'Acople BAAB Temp Aceite Trabajo Salida Enfriador',
+        'BAAA Estado', 'BAAA Temp Retorno Aceite Rodamiento Lado Interior',
+        'BAAA Temp Retorno Aceite Rodamiento Lado Exterior', 'BAAA Temp Agua Sello Lado Interior',
+        'BAAA Temp Agua Sello Lado Exterior', 'BAAA Presion Aceite Rodamiento Lado Interior',
+        'BAAA Presion Aceite Rodamiento Lado Exterior', 'BAAA Presion Entrada Agua Sello',
+        'BAAA Presion Diferencial Filtro Agua Sello', 'BAAA Presion Diferencial Filtro Succion',
+        'BAAA Apertura Agua Sello Lado Interior', 'BAAA Apertura Agua Sello Lado Exterior',
+        'Acople BAAA Temp Metal Radial 1', 'Acople BAAA Temp Metal Radial 2', 'Acople BAAA Temp Metal Radial 3',
+        'Acople BAAA Temp Metal Radial 4', 'Acople BAAA Temp Metal Radial 5', 'Acople BAAA Temp Metal Radial 6',
+        'Acople BAAA Temp Aceite Trabajo Entrada Enfriador', 'Acople BAAA Presion Aceite Lubricacion',
+        'Acople BAAA Presion Diferencial Filtro Aceite', 'Acople BAAA Temp Aceite Lubricacion Entrada Enfriador',
+        'Acople BAAA Temp Aceite Lubricacion Salida Enfriador', 'Acople BAAA Temp Aceite Trabajo Salida Enfriador',
+        'Secador Aire A', 'Secador Aire B', 'Temp Dew Point Secador A', 'Temp Dew Point Secador B',
+        'Compresor C Estado', 'Compresor C Temp T1 Descarga', 'Compresor C Temp T2 Lado Seco',
+        'Compresor C Presion P1 Carter', 'Compresor C Presion P2 Linea', 'Compresor C Presion P4 Aceite',
+        'Compresor C Presion DP1 Separador', 'Compresor C Presion DP2 Filtro Aceite',
+        'Compresor C Presion DP3 Aceite', 'Compresor A Estado', 'Compresor A Presion Descarga Conjunto',
+        'Compresor A Temp Descarga Conjunto', 'Compresor A Temp Descarga Fase 1',
+        'Compresor A Presion Entrada Fase 2', 'Compresor A Temp Entrada Fase 2',
+        'Compresor A Presion Descarga Fase 2', 'Compresor A Temp Descarga Fase 2',
+        'Compresor A Temp Aceite Rodamientos', 'Compresor A Presion Aceite Rodamientos',
+        'Compresor A Vacio Entrada', 'Compresor A Caida Presion Filtro Aceite', 'Compresor B Estado',
+        'Compresor B Temp Descarga Unidad', 'Compresor B Temp 1a Fase', 'Compresor B Presion Admision 2a Fase',
+        'Compresor B Temp Admision 2a Fase', 'Compresor B Presion Descarga 2a Fase',
+        'Compresor B Temp Descarga 2a Fase', 'Compresor B Presion Aceite Cojinetes',
+        'Compresor B Temp Aceite Cojinetes', 'Compresor B Vacio Entrada', 'Compresor B Estado Filtro Entrada',
+        'Compresor B Caida Presion Filtro Aceite', 'Vla Control Nivel Calentador BP2CV223',
+        'Corriente Compresor B', 'Corriente Compresor C', 'Corriente Compresor A',
+        'Vla Control Nivel Calentador BP3CV224', 'PI255 Presion Aceite Alta Presion',
+        'PI257 Presion Aceite Descarga Bomba Principal', 'PI329 Presion Sello Extremo Turbina',
+        'PI328 Presion Sello Extremo Generador', 'Extractor Tk Bucle', 'Presion Succion Extractor Tk Bucle',
+        'PI230 Presion Vapor Sello BP', 'PI238 Presion Vapor Salida Camara Intermedia',
+        'Vla Control Nivel Calentador AP5CV226', 'Vla Control Nivel Calentador AP6CV227',
+        'Observaciones', 'Bomba Fosfato Domo A', 'Bomba Fosfato Domo B', 'Bomba Hidracina Ciclo A',
+        'Bomba Hidracina Ciclo B', 'Bomba Hidracina Cto Cerrado A', 'Bomba Hidracina Cto Cerrado B'
+    ];
     // Paginación de columnas
     const pageSize = 8;
     let currentSection = 0;
