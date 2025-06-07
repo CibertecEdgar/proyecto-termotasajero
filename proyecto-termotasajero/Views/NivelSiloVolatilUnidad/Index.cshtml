@@ -5,62 +5,49 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
+<div class="container-fluid py-3 py-md-4">
+    <div class="row mb-3 mb-md-4">
+        <div class="col-12">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-2">
+                <h1 class="h2 text-black fw-bold mb-2 mb-md-0">Nivel Silo Volátil Unidad</h1>
+                <a asp-action="Registrar" class="btn btn-primary">
+                    <i class="fas fa-plus-circle me-2"></i>Registrar
+                </a>
+            </div>
+        </div>
+    </div>
 
-<p>
-    <a asp-action="Registrar">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.ID)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HoraInicio)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HoraFinalizacion)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CorreoElectronico)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Nombre)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.OperadorTurno)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.NivelSiloVolatilMetros)
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.ID)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HoraInicio)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HoraFinalizacion)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CorreoElectronico)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nombre)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.OperadorTurno)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NivelSiloVolatilMetros)
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+    <div class="card shadow-sm">
+        <div class="card-body p-2 p-md-3">
+            <div class="table-responsive">
+                <table class="table table-hover table-striped mb-0">
+                    <thead class="table-light">
+                        <tr>
+                            <th>@Html.DisplayNameFor(model => model.First().ID)</th>
+                            <th>Hora Inicio</th>
+                            <th>Hora Finalización</th>
+                            <th>Correo Electrónico</th>
+                            <th>Nombre</th>
+                            <th>Operador Turno</th>
+                            <th>Nivel Silo Volatil Metros</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.ID</td>
+                                <td>@item.HoraInicio</td>
+                                <td>@item.HoraFinalizacion</td>
+                                <td>@item.CorreoElectronico</td>
+                                <td>@item.Nombre</td>
+                                <td>@item.OperadorTurno</td>
+                                <td>@item.NivelSiloVolatilMetros</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -244,7 +244,7 @@ namespace proyecto_termotasajero.Controllers
                 using (var conn = new SqlConnection(_connectionString))
                 {
                     conn.Open();
-                    var cmd = new SqlCommand("Sp_InsertParametrosOperacionPrecipitador", conn);
+                    var cmd = new SqlCommand("InsertParametrosOperacionPrecipitador", conn);
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@FechaHoraInicio", modelo.FechaHoraInicio);
                     cmd.Parameters.AddWithValue("@FechaHoraFinalizacion", modelo.FechaHoraFinalizacion);
